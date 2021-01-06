@@ -1,7 +1,7 @@
 import {Text} from "drei";
 import React, {useRef} from "react"
 import {useFrame, useThree} from "react-three-fiber";
-
+import font from "../assets/font/font.woff"
 
 function HeaderText() {
     const {viewport} = useThree();
@@ -12,38 +12,78 @@ function HeaderText() {
        const posY = useControl("posY", {type: "number", value: 0.45, min: -5, max: 5})
        const posZ = useControl("posZ", {type: "number", value: 0.80, min: -1, max: 1})*/
 
-    let ref = useRef();
-    let fontSizeLimit = 0.40;
+    let ref = useRef()
+    let ref2 = useRef();
+
+    let fontSizeLimit = (viewport.width / 100.0) * 2.5;
+    let fontSizeLimit2 = (viewport.width / 100) * 2;
+
     let letterSpacingLimit = 0.10;
+    let posXLimit = (viewport.width / 100) * -4;
+
+    let refDone = false;
     useFrame((state, delta) => {
         if (ref.current.fontSize <= fontSizeLimit) {
-            ref.current.fontSize += 0.1 * delta;
+            ref.current.fontSize += 0.2 * delta;
         }
 
         if (ref.current.fontSize >= fontSizeLimit) {
             if (ref.current.letterSpacing <= letterSpacingLimit) {
                 ref.current.letterSpacing += 0.2 * delta;
-            } else if (ref.current.position.x >= -0.73) {
-                ref.current.position.x -= 0.3 * delta;
+            }else{
+                refDone = true;
+            }
+        }
+        if (refDone) {
+            ref2.current.visible =true;
+            if (ref2.current.fontSize <= fontSizeLimit2) {
+                ref2.current.fontSize += 0.1  * delta;
+            }
+            if (ref2.current.letterSpacing <= letterSpacingLimit) {
+                ref2.current.letterSpacing += 0.2 * delta;
+                refDone = true;
             }
         }
 
     });
 
     return (
-        <Text
-            ref={ref}
-            color={"#42a5f5"}
-            fontSize={0}
-            maxWidth={(viewport.width / 100)}
-            lineHeight={1.45}
-            letterSpacing={-0.5}
-            textAlign="justify"
-            position={[0, 0.45, 0.80]}
-            font="https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwK4vaqI.woff"
-        >
-            HELLO, I'M IAN PARCON. I'M A JAVA DEVELOPER.
-        </Text>
+        <>
+            <Text
+                ref={ref}
+                overflowWrap={true}
+                color={"#79edf5"}
+                fontSize={0}
+                maxWidth={(window.width / 100.0) * 10.0}
+                lineHeight={1.45}
+                letterSpacing={-0.4}
+                textAlign="justify"
+                position={[-0.05, (viewport.height / 100.0) * 30, 0]}
+                outlineWidth={0.002}
+
+                outlineColor={"blue"}
+                font={font}
+            >
+                HELLO, I'M IAN PARCON.
+            </Text>
+            <Text
+                visible={false}
+                ref={ref2}
+                overflowWrap={true}
+                color={"#e363f5"}
+                fontSize={0}
+                maxWidth={(viewport.width / 100.0) * 500.0}
+                lineHeight={1.45}
+                letterSpacing={0}
+                textAlign="justify"
+                position={[-0.05, (viewport.height / 100.0) * 24, 0]}
+                outlineWidth={0.01}
+                outlineColor={"blue"}
+                font={font}
+            >
+                A JAVA DEVELOPER & HOBBYIST GAME DEVELOPER.
+            </Text>
+        </>
     )
 }
 

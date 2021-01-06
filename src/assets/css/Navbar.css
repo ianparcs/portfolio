@@ -1,33 +1,35 @@
+
 #navbar {
     width: 100%;
-    background-color: gray;
-    opacity: 0.5;
-    padding: 0.5%;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    z-index: 99;
+    background-color: transparent;
 }
 
 #navbar a {
-    padding: 0.5%;
-    margin: 0;
+    float: right;
+    padding: 0.5% 1.5% 0.5% 1.5%;
+    color: #dddddd;
+    margin: 5px;
+    font-size: 1.15em;
+    text-decoration: none
 }
 
 #navbar a:hover {
-    background-color: #ddd;
-    color: black;
-    padding: 0.5%;
+    color: white;
+    border-bottom: white solid 2px;
 }
 
 
 #navbar a.active {
-    background-color: #4CAF50;
     color: white;
     width: 100%;
-
 }
 
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 12px;
-    background-color: #4CAF50;
 }

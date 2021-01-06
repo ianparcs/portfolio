@@ -6,7 +6,6 @@ function useHover() {
     const setHovered = useContext(Context);
     const onPointerOver = useCallback(() => setHovered(state => [...state, ref.current]), []);
     const onPointerOut = useCallback(() => setHovered(state => state.filter(mesh => mesh !== ref.current)), []);
-
     return {ref, onPointerOver, onPointerOut}
 }
 
@@ -16,8 +15,8 @@ function Pyramid() {
     return (
         <mesh
             visible
-            rotation={[0.5, -0.4, -0.5]}
-            position={[0, 0, 0]}
+            rotation={[0.5, -0.5, -0.25]}
+            position={[0, -1, 0]}
             scale={[2.5, 2.5, 2.5]}
             onClick={() => setPress(!onPress)}
             userData={onPress}
