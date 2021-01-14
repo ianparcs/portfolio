@@ -18,21 +18,20 @@ function Effects({children, mouseClick}) {
     const aspect = useMemo(() => new Vector2(size.width, size.height), [size]);
     const [hovered, set] = useState([]);
 
-    document.body.style.cursor = "url('/img/cursor.cur') 32 32, auto";
 
     useEffect(() => {
         composer.current.setSize(size.width, size.height);
     });
 
 
-    useFrame(() => composer.current.render(), 1);
+    useFrame(() => composer.current.render(), 10);
     return (
         <Context.Provider value={set}>
             {children}
 
             <effectComposer ref={composer} args={[gl]}>
                 <renderPass attachArray="passes" scene={scene} camera={camera}/>
-                <unrealBloomPass attachArray="passes" args={[aspect, 1.7, 1, 0]}/>
+                <unrealBloomPass attachArray="passes" args={[aspect, 1.5, 1, 0]}/>
                 <sMAAPass attachArray="passes"/>
                 <outlinePass
                     attachArray="passes"

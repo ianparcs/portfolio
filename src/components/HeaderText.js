@@ -24,25 +24,27 @@ function HeaderText() {
     let refDone = false;
     useFrame((state, delta) => {
         if (ref.current.fontSize <= fontSizeLimit) {
-            ref.current.fontSize += 0.2 * delta;
+            ref.current.fontSize += 0.25 * delta;
         }
 
         if (ref.current.fontSize >= fontSizeLimit) {
             if (ref.current.letterSpacing <= letterSpacingLimit) {
-                ref.current.letterSpacing += 0.2 * delta;
-            }else{
+                ref.current.letterSpacing += 0.25 * delta;
+            } else {
                 refDone = true;
             }
         }
         if (refDone) {
-            ref2.current.visible =true;
+            ref2.current.visible = true;
             if (ref2.current.fontSize <= fontSizeLimit2) {
-                ref2.current.fontSize += 0.1  * delta;
+                ref2.current.fontSize += 0.1 * delta;
             }
             if (ref2.current.letterSpacing <= letterSpacingLimit) {
                 ref2.current.letterSpacing += 0.2 * delta;
                 refDone = true;
             }
+        }else{
+            ref2.current.visible = false;
         }
 
     });
@@ -64,24 +66,23 @@ function HeaderText() {
                 outlineColor={"blue"}
                 font={font}
             >
-                HELLO, I'M IAN PARCON.
+                HELLO, I'M IAN.
             </Text>
             <Text
-                visible={false}
                 ref={ref2}
-                overflowWrap={true}
-                color={"#e363f5"}
+                color={"white"}
                 fontSize={0}
-                maxWidth={(viewport.width / 100.0) * 500.0}
+                overflowWrap={true}
+                maxWidth={(window.width / 100.0) * 10.0}
                 lineHeight={1.45}
-                letterSpacing={0}
+                letterSpacing={-0.4}
                 textAlign="justify"
                 position={[-0.05, (viewport.height / 100.0) * 24, 0]}
-                outlineWidth={0.01}
-                outlineColor={"blue"}
+                outlineWidth={0.005}
+                outlineColor={"red"}
                 font={font}
             >
-                A JAVA DEVELOPER & HOBBYIST GAME DEVELOPER.
+                A Software Developer & Hobbyist Game Developer.
             </Text>
         </>
     )

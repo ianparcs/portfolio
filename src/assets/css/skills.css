@@ -1,0 +1,52 @@
+#skill {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#skill-container {
+    width: 100%;
+}
+
+#skill div h1 {
+    padding-top: 1%;
+    margin: 0 auto;
+    color: #08090a;
+}
+
+#skill div hr {
+    width: 20%;
+    margin: 0 auto;
+    background-color: red;
+    border: 0.05vw solid red;
+    border-radius: 2px;
+}
+
+#skill-content {
+    width: 75%;
+    margin: 0 auto;
+    color: #08090a;
+}
+
+#skill-content li {
+    display: inline-block;
+    width: 9%;
+    height: 9%;
+    padding: 1%;
+    margin: 0 auto;
+}
+
+#prog-title {
+    color: black;
+    padding-bottom: 10%;
+    white-space: pre-line;
+    word-wrap: break-word;
+}
+
+.linebreak{
+    padding: 1%;
+}
+

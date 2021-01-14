@@ -1,0 +1,35 @@
+#about {
+    background-color: #08090a;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    clip-path: polygon(0 0,100% 0,100% 80%,0 100%);
+}
+
+#about div h1 {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin: 0 auto;
+}
+
+#about div hr {
+    width: 20%;
+    margin: 0 auto;
+    background-color: red;
+    border: 0.05vw solid red;
+    border-radius: 2px;
+}
+
+#content {
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    padding: 0 5% 0 5%;
+}
+
+.linebreak{
+    padding: 1%;
+}
+

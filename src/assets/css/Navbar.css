@@ -1,35 +1,38 @@
-
 #navbar {
     width: 100%;
+    display: inline;
     position: absolute;
-    top: -100px;
+    top: 0;
     left: 0;
     z-index: 99;
-    background-color: transparent;
+    background: transparent;
+
+}
+
+#navbar ul {
+    width: 100%;
+}
+
+#navbar li {
+    float: right;
+    padding: 1% 1.5% 1% 1.5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 #navbar a {
-    float: right;
-    padding: 0.5% 1.5% 0.5% 1.5%;
-    color: #dddddd;
-    margin: 5px;
-    font-size: 1.15em;
-    text-decoration: none
+    color: white;
+    display: inline;
+    text-decoration: none;
 }
 
 #navbar a:hover {
     color: white;
-    border-bottom: white solid 2px;
-}
-
-
-#navbar a.active {
-    color: white;
-    width: 100%;
 }
 
 .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
+    position: fixed !important;
+    background-color: #08090a !important;
 }
+

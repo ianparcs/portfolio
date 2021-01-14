@@ -1,0 +1,23 @@
+
+.cursor {
+    width: 2.7vw;
+    height: 2.7vw;
+    border: 0.2vw solid #fefefe;
+    border-radius: 100%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition-property: opacity, background-color, transform, mix-blend-mode;
+}
+
+.cursor--clicked {
+    transform: translate(-50%, -50%) scale(0.9);
+    background-color: #fefefe;
+}
+
+.cursor--link-hovered {
+    transform: translate(-50%, -50%) scale(1.25);
+    background-color: #fefefe;
+}
