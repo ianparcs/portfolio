@@ -48,10 +48,9 @@ const About = () => {
                     }}
                 >
                     <h1>
-                        ABOUT ME
-                        <p className={"linebreak"}>
-                            <hr/>
-                        </p>
+                        ABOUT
+                        <p className={"linebreak space"}/>
+                        <hr className={"linebreak line"}/>
                     </h1>
                 </motion.div>
                 <motion.p
@@ -75,7 +74,7 @@ const About = () => {
                     A hobbyist game developer who loves making a game come to life, reading books, articles and surfing
                     the web. When
                     coding codes should be short and concise and Design
-                    Patterns are not to be force but only use for fixing commonly occurring problem in software design.
+                    Patterns are not to be force but only use to fix commonly occurring problem in software designs.
                 </motion.p>
             </div>
         </div>

@@ -1,20 +1,17 @@
-#about {
+#portfolio {
     background-color: #08090a;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 }
 
-#about div h1 {
+#portfolio div h1 {
     padding-top: 1%;
     padding-bottom: 2%;
     margin: 0 auto;
+    color: #fefefe;
 }
 
-#about div hr {
+#portfolio div hr {
     width: 20%;
     margin: 0 auto;
     background-color: red;

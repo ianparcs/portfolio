@@ -39,9 +39,6 @@ const Skill = () => {
             opacity: 1,
             x: 0,
             transition: {
-                type: "spring",
-
-                when: "beforeChildren",
                 staggerChildren: 0.3,
                 x: 0,
 
@@ -79,6 +76,8 @@ const Skill = () => {
             sequence();
         } else {
             headerControl.start("hidden");
+        }
+        if(!contentInView){
             contentControl.start("hidden");
         }
     }, [headerControl, headerInView, contentControl, contentInView]);
@@ -106,9 +105,8 @@ const Skill = () => {
                 >
                     <h1>
                         SKILLS
-                        <p className={"linebreak"}>
-                            <hr/>
-                        </p>
+                        <p style={{paddingBottom: "0.5%", margin: 0}}/>
+                        <hr className={"linebreak"}/>
                     </h1>
                 </motion.div>
                 <motion.ul

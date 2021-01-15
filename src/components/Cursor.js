@@ -34,7 +34,7 @@ const Cursor = () => {
     };
 
     const handleLinkHoverEvents = () => {
-        document.querySelectorAll("p,a,h1").forEach(el => {
+        document.querySelectorAll("p,a,h1,img,canvas").forEach(el => {
             el.addEventListener("mouseover", () => setLinkHovered(true));
             el.addEventListener("mouseout", () => setLinkHovered(false));
         });

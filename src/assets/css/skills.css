@@ -11,18 +11,18 @@
     width: 100%;
 }
 
-#skill div h1 {
-    padding-top: 1%;
+#skill-container div h1 {
     margin: 0 auto;
     color: #08090a;
 }
 
-#skill div hr {
+#skill-container div hr {
     width: 20%;
     margin: 0 auto;
     background-color: red;
     border: 0.05vw solid red;
     border-radius: 2px;
+
 }
 
 #skill-content {
@@ -33,9 +33,9 @@
 
 #skill-content li {
     display: inline-block;
-    width: 9%;
-    height: 9%;
-    padding: 1%;
+    width: 13%;
+    padding-left: 1%;
+    padding-right: 1%;
     margin: 0 auto;
 }
 
@@ -46,7 +46,125 @@
     word-wrap: break-word;
 }
 
-.linebreak{
-    padding: 1%;
+
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+    #skill-content li {
+        width: 9%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    #skill-content li {
+        width: 10%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    #prog-title {
+        font-size: 1.5vw;
+    }
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    #skill-content li {
+        width: 13%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    #prog-title {
+        font-size: 2vw;
+    }
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    #skill-content li {
+        width: 10%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    #prog-title {
+        font-size: 2vw;
+    }
+
+}
+
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (portrait)
+  ##Screen = B/w 600px to 800px
+*/
+
+@media (min-width: 600px) and (max-width: 800px) and (orientation: portrait) {
+
+    #skill-content li {
+        width: 13%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) and (orientation: landscape){
+
+    #skill-content li {
+        width: 10%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    #prog-title {
+        font-size: 2.5vw;
+    }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    #skill-content li {
+        width: 15%;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    #prog-title {
+        font-size: 2.5vw;
+    }
 }
 

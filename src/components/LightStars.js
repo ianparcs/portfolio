@@ -7,7 +7,7 @@ function LightStars({count}) {
     let theta = 0
     useFrame(() => {
         // Some things maybe shouldn't be declarative, we're in the render-loop here with full access to the instance
-        const r = 2 * Math.sin(THREE.Math.degToRad((theta += 0.05)))
+        const r = 1.5 * Math.sin(THREE.Math.degToRad((theta += 0.05)))
         const s = Math.cos(THREE.Math.degToRad(theta * 1.5))
         group.current.rotation.set(r, r, r)
         group.current.scale.set(s, s, s)

@@ -20,6 +20,14 @@ p, a {
     background: transparent; /* make scrollbar transparent */
 }
 
+.linebreak.space {
+    margin-bottom: 0.5%;
+}
+
+.linebreak.line {
+    padding: 0.01%;
+}
+
 
 /*
   ##Device = Desktops
