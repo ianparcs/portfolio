@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.3d7a76b9.chunk.css",
-    "main.js": "/portfolio/static/js/main.0d49ae01.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.0d49ae01.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.365b0e28.chunk.css",
+    "main.js": "/portfolio/static/js/main.efe7dd65.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.efe7dd65.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.8fed2963.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.8fed2963.js.map",
-    "static/js/2.7532a736.chunk.js": "/portfolio/static/js/2.7532a736.chunk.js",
-    "static/js/2.7532a736.chunk.js.map": "/portfolio/static/js/2.7532a736.chunk.js.map",
+    "static/css/2.61f915e4.chunk.css": "/portfolio/static/css/2.61f915e4.chunk.css",
+    "static/js/2.c1114db1.chunk.js": "/portfolio/static/js/2.c1114db1.chunk.js",
+    "static/js/2.c1114db1.chunk.js.map": "/portfolio/static/js/2.c1114db1.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/css/main.3d7a76b9.chunk.css.map": "/portfolio/static/css/main.3d7a76b9.chunk.css.map",
-    "static/js/2.7532a736.chunk.js.LICENSE.txt": "/portfolio/static/js/2.7532a736.chunk.js.LICENSE.txt",
+    "static/css/2.61f915e4.chunk.css.map": "/portfolio/static/css/2.61f915e4.chunk.css.map",
+    "static/css/main.365b0e28.chunk.css.map": "/portfolio/static/css/main.365b0e28.chunk.css.map",
+    "static/js/2.c1114db1.chunk.js.LICENSE.txt": "/portfolio/static/js/2.c1114db1.chunk.js.LICENSE.txt",
     "static/media/android.e711375d.svg": "/portfolio/static/media/android.e711375d.svg",
     "static/media/bootstrap.bc0cc510.svg": "/portfolio/static/media/bootstrap.bc0cc510.svg",
     "static/media/c.e1bb0167.svg": "/portfolio/static/media/c.e1bb0167.svg",
@@ -27,13 +29,15 @@
     "static/media/linux.43d1650d.svg": "/portfolio/static/media/linux.43d1650d.svg",
     "static/media/mongo.821f5047.svg": "/portfolio/static/media/mongo.821f5047.svg",
     "static/media/mysql.75f5783d.svg": "/portfolio/static/media/mysql.75f5783d.svg",
+    "static/media/paiwi.2c03af03.png": "/portfolio/static/media/paiwi.2c03af03.png",
     "static/media/react.9e9fdd12.svg": "/portfolio/static/media/react.9e9fdd12.svg",
     "static/media/spring.d97a5e99.svg": "/portfolio/static/media/spring.d97a5e99.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.8fed2963.js",
-    "static/js/2.7532a736.chunk.js",
-    "static/css/main.3d7a76b9.chunk.css",
-    "static/js/main.0d49ae01.chunk.js"
+    "static/css/2.61f915e4.chunk.css",
+    "static/js/2.c1114db1.chunk.js",
+    "static/css/main.365b0e28.chunk.css",
+    "static/js/main.efe7dd65.chunk.js"
   ]
 }
