@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.365b0e28.chunk.css",
+    "main.css": "/portfolio/static/css/main.102a06f2.chunk.css",
     "main.js": "/portfolio/static/js/main.efe7dd65.chunk.js",
     "main.js.map": "/portfolio/static/js/main.efe7dd65.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.8fed2963.js",
@@ -10,7 +10,7 @@
     "static/js/2.c1114db1.chunk.js.map": "/portfolio/static/js/2.c1114db1.chunk.js.map",
     "index.html": "/portfolio/index.html",
     "static/css/2.61f915e4.chunk.css.map": "/portfolio/static/css/2.61f915e4.chunk.css.map",
-    "static/css/main.365b0e28.chunk.css.map": "/portfolio/static/css/main.365b0e28.chunk.css.map",
+    "static/css/main.102a06f2.chunk.css.map": "/portfolio/static/css/main.102a06f2.chunk.css.map",
     "static/js/2.c1114db1.chunk.js.LICENSE.txt": "/portfolio/static/js/2.c1114db1.chunk.js.LICENSE.txt",
     "static/media/android.e711375d.svg": "/portfolio/static/media/android.e711375d.svg",
     "static/media/bootstrap.bc0cc510.svg": "/portfolio/static/media/bootstrap.bc0cc510.svg",
@@ -37,7 +37,7 @@
     "static/js/runtime-main.8fed2963.js",
     "static/css/2.61f915e4.chunk.css",
     "static/js/2.c1114db1.chunk.js",
-    "static/css/main.365b0e28.chunk.css",
+    "static/css/main.102a06f2.chunk.css",
     "static/js/main.efe7dd65.chunk.js"
   ]
 }
