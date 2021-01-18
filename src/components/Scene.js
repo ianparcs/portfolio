@@ -6,15 +6,13 @@ import RainbowLight from "./Rainbow";
 import Pyramid from "./Pyramid";
 import Light from "./Light";
 import Effects from "./Effect";
+import "../assets/css/scene.css"
 
 function Scene() {
     const [onPress, setPress] = useState(false);
 
     return (
-        <div className="canvas" style={{
-            width: "100%",
-            height: "100vh"
-        }}>
+        <div id="canvas">
             <Canvas
                 pixelRatio={window.devicePixelRatio}
                 onPointerUp={() => setPress(false)}
@@ -22,7 +20,7 @@ function Scene() {
                 <color attach="background" args={['black']}/>
                 <HeaderText/>
                 <Light/>
-                <LightStars count={4000}/>
+                <LightStars count={3500}/>
                 <RainbowLight/>
                 <Effects mouseClick={onPress}>
                     <Pyramid/>

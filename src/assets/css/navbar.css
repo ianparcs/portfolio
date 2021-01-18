@@ -6,7 +6,6 @@
     left: 0;
     z-index: 100;
     background: transparent;
-
 }
 
 #navbar ul {
@@ -34,5 +33,6 @@
 .sticky {
     position: fixed !important;
     background-color: #08090a !important;
+    color: black;
 }
 

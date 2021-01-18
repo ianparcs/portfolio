@@ -1,30 +1,18 @@
-#about {
-    background-color: #08090a;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+@media (min-width: 481px) and (max-width: 767px) {
+    #content {
+        font-size: 3vw;
+    }
 }
 
-#about div h1 {
-    padding-top: 1%;
-    padding-bottom: 2%;
-    margin: 0 auto;
-}
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
 
-#about div hr {
-    width: 20%;
-    margin: 0 auto;
-    background-color: red;
-    border: 0.05vw solid red;
-    border-radius: 2px;
-}
+@media (min-width: 320px) and (max-width: 480px) {
 
-#content {
-    text-align: center;
-    margin: 0 auto;
-    width: 80%;
-    padding: 0 5% 0 5%;
+    #content {
+        font-size: 4vw;
+    }
+
 }

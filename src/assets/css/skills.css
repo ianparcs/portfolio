@@ -1,116 +1,81 @@
-#skill {
-    background-color: white;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-#skill-container {
-    width: 100%;
-}
-
-#skill-container div h1 {
-    margin: 0 auto;
-    color: #08090a;
-}
-
-#skill-container div hr {
-    width: 20%;
-    margin: 0 auto;
-    background-color: red;
-    border: 0.05vw solid red;
-    border-radius: 2px;
-
-}
 
 #skill-content {
-    width: 75%;
-    margin: 0 auto;
-    color: #08090a;
+    display: inline-block;
+    width: 100%;
+    height: auto;
 }
 
 #skill-content li {
     display: inline-block;
-    width: 13%;
-    padding-left: 1%;
     padding-right: 1%;
-    margin: 0 auto;
+    padding-left: 1%;
+    width: 12%;
 }
 
-#prog-title {
+#skill-content li p {
     color: black;
-    padding-bottom: 10%;
     white-space: pre-line;
     word-wrap: break-word;
 }
 
-
 /*
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
+Device = Desktops
+Screen = 1281px to higher resolution desktops
 */
 
 @media (min-width: 1281px) {
+
     #skill-content li {
-        width: 9%;
-        padding-left: 1%;
-        padding-right: 1%;
+        width: 11%;
     }
 
 }
 
 /*
-  ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
+Device = Laptops, Desktops
+Screen = B/w 1025px to 1280px
 */
 
 @media (min-width: 1025px) and (max-width: 1280px) {
 
+
     #skill-content li {
         width: 10%;
-        padding-left: 1%;
-        padding-right: 1%;
     }
 
-    #prog-title {
-        font-size: 1.5vw;
+    #skill-content li p {
+        font-size: 1vw;
     }
 }
 
 /*
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
+Device = Tablets, Ipads (portrait)
+Screen = B/w 768px to 1024px
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
     #skill-content li {
-        width: 13%;
-        padding-left: 1%;
-        padding-right: 1%;
+        width: 10%;
     }
 
-    #prog-title {
+    #skill-content li p {
         font-size: 2vw;
     }
 }
 
 /*
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
+Device = Tablets, Ipads (landscape)
+Screen = B/w 768px to 1024px
 */
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
     #skill-content li {
-        width: 10%;
-        padding-left: 1%;
-        padding-right: 1%;
+        width: 12%;
     }
 
-    #prog-title {
+    #skill-content li p {
         font-size: 2vw;
     }
 
@@ -118,53 +83,52 @@
 
 
 /*
-  ##Device = Low Resolution Tablets, Mobiles (portrait)
-  ##Screen = B/w 600px to 800px
+Device = Low Resolution Tablets, Mobiles (portrait)
+Screen = B/w 600px to 800px
 */
 
 @media (min-width: 600px) and (max-width: 800px) and (orientation: portrait) {
 
     #skill-content li {
-        width: 13%;
-        padding-left: 1%;
-        padding-right: 1%;
+        width: 15%;
+    }
+
+    #skill-content li p {
+        font-size: 2vw;
     }
 
 }
 
 /*
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
+Device = Low Resolution Tablets, Mobiles (Landscape)
+Screen = B/w 481px to 767px
 */
 
-@media (min-width: 481px) and (max-width: 767px) and (orientation: landscape){
+@media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
 
     #skill-content li {
-        width: 10%;
-        padding-left: 1%;
-        padding-right: 1%;
+        width: 12%;
     }
 
-    #prog-title {
-        font-size: 2.5vw;
+    #skill-content li p {
+        font-size: 2vw;
     }
 }
 
 /*
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
+ Device = Most of the Smartphones Mobiles (Portrait)
+ Screen = B/w 320px to 479px
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
 
     #skill-content li {
         width: 15%;
-        padding-left: 2%;
-        padding-right: 2%;
     }
 
-    #prog-title {
+    #skill-content li p {
         font-size: 2.5vw;
     }
 }
+
 

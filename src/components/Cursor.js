@@ -16,25 +16,25 @@ const Cursor = () => {
 
 
     useEffect(() => {
+        const addEventListeners = () => {
+            document.addEventListener("mousemove", onMouseMove);
+            document.addEventListener("mousedown", onMouseDown);
+            document.addEventListener("mouseup", onMouseUp);
+        };
+
+        const removeEventListeners = () => {
+            document.removeEventListener("mousemove", onMouseMove);
+            document.removeEventListener("mousedown", onMouseDown);
+            document.removeEventListener("mouseup", onMouseUp);
+        };
         addEventListeners();
         handleLinkHoverEvents();
         return () => removeEventListeners();
     }, []);
 
-    const addEventListeners = () => {
-        document.addEventListener("mousemove", onMouseMove);
-        document.addEventListener("mousedown", onMouseDown);
-        document.addEventListener("mouseup", onMouseUp);
-    };
-
-    const removeEventListeners = () => {
-        document.removeEventListener("mousemove", onMouseMove);
-        document.removeEventListener("mousedown", onMouseDown);
-        document.removeEventListener("mouseup", onMouseUp);
-    };
 
     const handleLinkHoverEvents = () => {
-        document.querySelectorAll("p,a,h1,img,canvas").forEach(el => {
+        document.querySelectorAll("p,a,h3,img,canvas").forEach(el => {
             el.addEventListener("mouseover", () => setLinkHovered(true));
             el.addEventListener("mouseout", () => setLinkHovered(false));
         });

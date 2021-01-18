@@ -1,16 +1,18 @@
 import React, {useEffect} from 'react';
 import {motion, useAnimation} from "framer-motion"
-import "../../src/assets/css/Navbar.css"
 import {NavHashLink} from "react-router-hash-link";
+import "../assets/css/navbar.css"
 
-const Navbar = () => {
+const NavBar = () => {
 
     const controls = useAnimation();
+
     useEffect(() => {
         const navbar = document.getElementById("navbar");
-        const canvas = document.getElementsByClassName("canvas")[0];
+        const canvas = document.getElementById("canvas");
         window.onscroll = function () {
-            if (window.pageYOffset >= canvas.clientHeight) {
+            console.log(canvas);
+            if (canvas != null && window.pageYOffset >= canvas.clientHeight) {
                 navbar.classList.add("sticky")
                 controls.start({
                     y: 0,
@@ -103,4 +105,4 @@ const Navbar = () => {
         </motion.div>
     )
 };
-export default Navbar;
+export default NavBar;

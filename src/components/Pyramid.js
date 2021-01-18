@@ -4,8 +4,8 @@ import Context from "./HoverContext"
 function useHover() {
     const ref = useRef()
     const setHovered = useContext(Context);
-    const onPointerOver = useCallback(() => setHovered(state => [...state, ref.current]), []);
-    const onPointerOut = useCallback(() => setHovered(state => state.filter(mesh => mesh !== ref.current)), []);
+    const onPointerOver = useCallback(() => setHovered(state => [...state, ref.current]), [setHovered]);
+    const onPointerOut = useCallback(() => setHovered(state => state.filter(mesh => mesh !== ref.current)), [setHovered]);
     return {ref, onPointerOver, onPointerOut}
 }
 

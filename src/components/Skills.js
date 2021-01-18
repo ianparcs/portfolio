@@ -1,36 +1,38 @@
 import React, {useEffect} from 'react';
-import "../assets/css/skills.css"
 import {motion, useAnimation} from "framer-motion";
 import {useInView} from "react-intersection-observer";
-import JavaLogo from "../assets/img/java.svg";
-import CPlus from "../assets/img/c.svg";
-import CSS from "../assets/img/css3.svg";
-import HTML from "../assets/img/html.svg";
-import Jquery from "../assets/img/jquery.svg";
-import MySQL from "../assets/img/mysql.svg";
-import ReactLogo from "../assets/img/react.svg";
-import Mongo from "../assets/img/mongo.svg";
-import Javascript from "../assets/img/javascript.svg";
-import Git from "../assets/img/git.svg";
-import Github from "../assets/img/github.svg";
-import Spring from "../assets/img/spring.svg";
-import Bootstrap from "../assets/img/bootstrap.svg";
-import Hibernate from "../assets/img/hibernate.svg";
-import Android from "../assets/img/android.svg";
-import Gradle from "../assets/img/gradle.svg";
-import Libgdx from "../assets/img/libgdx.svg";
-import Linux from "../assets/img/linux.svg";
+import Javascript from "../assets/img/logo/javascript.svg";
+import Bootstrap from "../assets/img/logo/bootstrap.svg";
+import Hibernate from "../assets/img/logo/hibernate.svg";
+import ReactLogo from "../assets/img/logo/react.svg";
+import Android from "../assets/img/logo/android.svg";
+import Jquery from "../assets/img/logo/jquery.svg";
+import JavaLogo from "../assets/img/logo/java.svg";
+import Github from "../assets/img/logo/github.svg";
+import Spring from "../assets/img/logo/spring.svg";
+import Gradle from "../assets/img/logo/gradle.svg";
+import Libgdx from "../assets/img/logo/libgdx.svg";
+import MySQL from "../assets/img/logo/mysql.svg";
+import Mongo from "../assets/img/logo/mongo.svg";
+import Linux from "../assets/img/logo/linux.svg";
+import HTML from "../assets/img/logo/html.svg";
+import CSS from "../assets/img/logo/css3.svg";
+import CPlus from "../assets/img/logo/c.svg";
+import Git from "../assets/img/logo/git.svg";
+import "../assets/css/skills.css"
 
 import Card from "./Card";
+import {Col, Container, Row} from "react-bootstrap";
+import SectionTitle from "./SectionTitle";
 
 const Skill = () => {
     const headerControl = useAnimation();
     const contentControl = useAnimation();
     const [headerRef, headerInView] = useInView();
-    const [contentRef, contentInView] = useInView();
+    const [contentRef] = useInView();
 
     const transition = {
-        duration: 2,
+        duration: 1.5,
         ease: "easeInOut"
     };
 
@@ -53,7 +55,7 @@ const Skill = () => {
                 when: "afterChildren",
             },
         },
-    }
+    };
 
     const item = {
         visible: {
@@ -64,7 +66,19 @@ const Skill = () => {
             opacity: 0,
             x: "-100%"
         },
-    }
+    };
+
+    const variants = {
+        visible: {
+            opacity: 1,
+            x: 0
+        },
+        hidden: {
+            opacity: 0,
+            x: "-100%",
+            transition: {duration: 1}
+        },
+    };
 
     const sequence = async () => {
         await headerControl.start("visible");
@@ -72,71 +86,58 @@ const Skill = () => {
     };
 
     useEffect(() => {
-        if (headerInView) {
-            sequence();
-        } else {
-            headerControl.start("hidden");
-        }
-        if(!contentInView){
-            contentControl.start("hidden");
-        }
-    }, [headerControl, headerInView, contentControl, contentInView]);
+        if (headerInView) sequence().then(() => {
+        });
+    });
 
     return (
-        <div id={"skill"}>
-            <div id={"skill-container"}>
-                <motion.div
-                    id={"header-skill"}
-                    ref={headerRef}
-                    animate={headerControl}
-                    initial="hidden"
-                    transition={transition}
-                    variants={{
-                        visible: {
-                            opacity: 1,
-                            x: 0
-                        },
-                        hidden: {
-                            opacity: 0,
-                            x: "-100%",
-                            transition: {duration: 1}
-                        },
-                    }}
-                >
-                    <h1>
-                        SKILLS
-                        <p style={{paddingBottom: "0.5%", margin: 0}}/>
-                        <hr className={"linebreak"}/>
-                    </h1>
-                </motion.div>
-                <motion.ul
-                    id={"skill-content"}
-                    ref={contentRef}
-                    initial="hidden"
-                    animate={contentControl}
-                    transition={transition}
-                    variants={list}>
-                    <motion.li variants={item}><Card progName="Java" path={JavaLogo}/></motion.li>
-                    <motion.li variants={item}><Card progName="C++" path={CPlus}/></motion.li>
-                    <motion.li variants={item}><Card progName="Android" path={Android}/></motion.li>
-                    <motion.li variants={item}><Card progName="Spring" path={Spring}/></motion.li>
-                    <motion.li variants={item}><Card progName="Javascript" path={Javascript}/></motion.li>
-                    <motion.li variants={item}><Card progName="HTML" path={HTML}/></motion.li>
-                    <motion.li variants={item}><Card progName="CSS3" path={CSS}/></motion.li>
-                    <motion.li variants={item}><Card progName="ReactJS" path={ReactLogo}/></motion.li>
-                    <motion.li variants={item}><Card progName="MongoDB" path={Mongo}/></motion.li>
-                    <motion.li variants={item}><Card progName="Libgdx" path={Libgdx}/></motion.li>
-                    <motion.li variants={item}><Card progName="Bootstrap" path={Bootstrap}/></motion.li>
-                    <motion.li variants={item}><Card progName="MySQL" path={MySQL}/></motion.li>
-                    <motion.li variants={item}><Card progName="Git" path={Git}/></motion.li>
-                    <motion.li variants={item}><Card progName="Github" path={Github}/></motion.li>
-                    <motion.li variants={item}><Card progName="Hibernate" path={Hibernate}/></motion.li>
-                    <motion.li variants={item}><Card progName="Gradle" path={Gradle}/></motion.li>
-                    <motion.li variants={item}><Card progName="Linux" path={Linux}/></motion.li>
-                    <motion.li variants={item}><Card progName="Jquery" path={Jquery}/></motion.li>
-                </motion.ul>
-            </div>
-        </div>
+        <Container className="w-100">
+            <Row>
+                <Col>
+                    <motion.div
+                        ref={headerRef}
+                        animate={headerControl}
+                        initial="hidden"
+                        transition={transition}
+                        variants={variants}
+                    >
+                        <SectionTitle title="Skills" textColor="text-dark"/>
+                    </motion.div>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <motion.ul
+                        id="skill-content"
+                        className="list-group flex-md-row list-inline"
+                        ref={contentRef}
+                        initial="hidden"
+                        animate={contentControl}
+                        transition={transition}
+                        variants={list}>
+                        <motion.li variants={item}><Card progName="Java" path={JavaLogo}/></motion.li>
+                        <motion.li variants={item}><Card progName="C++" path={CPlus}/></motion.li>
+                        <motion.li variants={item}><Card progName="Android" path={Android}/></motion.li>
+                        <motion.li variants={item}><Card progName="Spring" path={Spring}/></motion.li>
+                        <motion.li variants={item}><Card progName="ReactJS" path={ReactLogo}/></motion.li>
+                        <motion.li variants={item}><Card progName="MongoDB" path={Mongo}/></motion.li>
+                        <motion.li variants={item}><Card progName="Libgdx" path={Libgdx}/></motion.li>
+                        <motion.li variants={item}><Card progName="Bootstrap" path={Bootstrap}/></motion.li>
+                        <motion.li variants={item}><Card progName="MySQL" path={MySQL}/></motion.li>
+                        <motion.li variants={item}><Card progName="Git" path={Git}/></motion.li>
+                        <motion.li variants={item}><Card progName="Github" path={Github}/></motion.li>
+                        <motion.li variants={item}><Card progName="Javascript" path={Javascript}/></motion.li>
+                        <motion.li variants={item}><Card progName="HTML" path={HTML}/></motion.li>
+                        <motion.li variants={item}><Card progName="CSS3" path={CSS}/></motion.li>
+                        <motion.li variants={item}><Card progName="Hibernate" path={Hibernate}/></motion.li>
+                        <motion.li variants={item}><Card progName="Gradle" path={Gradle}/></motion.li>
+                        <motion.li variants={item}><Card progName="Linux" path={Linux}/></motion.li>
+                        <motion.li variants={item}><Card progName="Jquery" path={Jquery}/></motion.li>
+
+                    </motion.ul>
+                </Col>
+            </Row>
+        </Container>
     )
 };
 export default Skill;
