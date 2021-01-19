@@ -85,6 +85,7 @@ const Skill = () => {
         return await contentControl.start("visible");
     };
 
+
     useEffect(() => {
         if (headerInView) sequence().then(() => {
         });

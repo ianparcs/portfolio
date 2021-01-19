@@ -1,47 +1,81 @@
 import React from 'react';
 import "../assets/css/portfolio.css"
 import SwiperCore, {A11y, Navigation, Pagination, Scrollbar} from 'swiper';
-
-import {Swiper, SwiperSlide} from 'swiper/react';
 // Import Swiper styles
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
-import Paiwi_1 from "../assets/img/portfolio/paiwi/paiwi-1.png"
-import Paiwi_3 from "../assets/img/portfolio/paiwi/paiwi-3.png"
-import CHITS_1 from "../assets/img/portfolio/chits/chits-1.png"
-import CHITS_2 from "../assets/img/portfolio/chits/chits-2.png"
-import CHITS_3 from "../assets/img/portfolio/chits/chits-3.png"
 
+import Paiwi_1 from "../assets/img/portfolio/paiwi/paiwi-1.png"
+import Paiwi_2 from "../assets/img/portfolio/paiwi/paiwi-2.png"
+import Paiwi_3 from "../assets/img/portfolio/paiwi/paiwi-3.png"
+import Paiwi_4 from "../assets/img/portfolio/paiwi/paiwi-4.png"
+import Paiwi_5 from "../assets/img/portfolio/paiwi/paiwi-5.png"
+
+import CHITS_1 from "../assets/img/portfolio/chits/chits-1.png"
+import CHITS_2 from "../assets/img/portfolio/chits/chits-3.png"
+
+import {Col, Container, Row} from "react-bootstrap";
+import {Swiper, SwiperSlide} from 'swiper/react';
 // install Swiper components
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+
 const Portfolio = () => {
-
     return (
-        <div id={"portfolio"}>
-            <div id={"header-container"}>
-
-            </div>
-            <div id={"gallery-container"}>
-                <div>
+        <Container className="w-100 p-5" fluid>
+            <Row className="row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 align-items-center">
+                <Col>
+                    <p className="lead">
+                        An online android application that tracks real-time of investment assets and status. anytime and
+                        anywhere! Receive
+                        notifications about new Pa-Iwi package
+                        offerings. Now you can also request Pa-Iwi packages by a click of button.
+                    </p>
+                </Col>
+                <Col>
                     <Swiper
+                        autoplay={true}
                         spaceBetween={0}
+                        height={0}
                         slidesPerView={1}
-                        showButton={false}
                         pagination={{clickable: true}}
                         onSwiper={(swiper) => console.log(swiper)}
                         onSlideChange={() => console.log('slide change')}
                     >
-                        <SwiperSlide><img className={"gallery-content"} src={Paiwi_1}/></SwiperSlide>
-                        <SwiperSlide><img className={"gallery-content"} src={Paiwi_3}/></SwiperSlide>
-                        <SwiperSlide><img className={"gallery-content"} src={CHITS_1}/></SwiperSlide>
-                        <SwiperSlide><img className={"gallery-content"} src={CHITS_2}/></SwiperSlide>
-                        <SwiperSlide><img className={"gallery-content"} src={CHITS_3}/></SwiperSlide>
+                        <SwiperSlide><img className="img-fluid image-content" src={Paiwi_1}/></SwiperSlide>
+                        <SwiperSlide><img className="img-fluid image-content" src={Paiwi_2}/></SwiperSlide>
+                        <SwiperSlide><img className="img-fluid image-content" src={Paiwi_3}/></SwiperSlide>
+                        <SwiperSlide><img className="img-fluid image-content" src={Paiwi_4}/></SwiperSlide>
+                        <SwiperSlide><img className="img-fluid image-content" src={Paiwi_5}/></SwiperSlide>
+
                     </Swiper>
-                </div>
-            </div>
-        </div>
+                </Col>
+            </Row>
+            <Row className="row-cols-2 row-cols-md-2 p-2 align-items-center">
+                <Col>
+                    teest
+                </Col>
+                <Col>
+                    <Swiper
+                        autoplay={true}
+                        spaceBetween={0}
+                        height={0}
+                        slidesPerView={1}
+                        pagination={{clickable: true}}
+                        onSwiper={(swiper) => console.log(swiper)}
+                        onSlideChange={() => console.log('slide change')}
+                    >
+                        <SwiperSlide><img className="img-fluid image-content" src={CHITS_1}/></SwiperSlide>
+                        <SwiperSlide><img className="img-fluid image-content" src={CHITS_2}/></SwiperSlide>
+                        <SwiperSlide><img className="img-fluid image-content" src={CHITS_2}/></SwiperSlide>
+                        <SwiperSlide><img className="img-fluid image-content" src={CHITS_2}/></SwiperSlide>
+
+                    </Swiper>
+                </Col>
+            </Row>
+        </Container>
+
     )
 };
 export default Portfolio;

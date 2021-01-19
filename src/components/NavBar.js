@@ -3,8 +3,8 @@ import {motion, useAnimation} from "framer-motion"
 import {NavHashLink} from "react-router-hash-link";
 import "../assets/css/navbar.css"
 
-const NavBar = () => {
-
+const NavBar = (props) => {
+    console.log(props)
     const controls = useAnimation();
 
     useEffect(() => {
@@ -57,7 +57,6 @@ const NavBar = () => {
     return (
         <motion.div id="navbar"
                     initial={{y: 0}}
-                    animate={controls}
                     transition={{
                         type: "spring",
                         stiffness: 30,
@@ -67,7 +66,6 @@ const NavBar = () => {
                     }}
         >
             <ul>
-
                 <motion.li whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
                     <NavHashLink
                         smooth to="#contact"
@@ -76,29 +74,25 @@ const NavBar = () => {
                 </motion.li>
                 <motion.li whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
                     <NavHashLink
+                        onClick={() => props.setCount(2)}
                         smooth to="#portfolio"
                         activeClassName="selected"
                         activeStyle={{color: '#ff293a'}}>Porfolio</NavHashLink>
                 </motion.li>
                 <motion.li whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
                     <NavHashLink
-                        smooth to="#skill"
-                        activeClassName="selected"
-                        activeStyle={{color: '#ff293a'}}>Skills</NavHashLink>
-                </motion.li>
-                <motion.li whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
-                    <NavHashLink
+                        onClick={() => props.setCount(1)}
                         smooth to="#about"
                         activeClassName="selected"
                         activeStyle={{color: '#ff293a'}}>About</NavHashLink>
                 </motion.li>
                 <motion.li whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
                     <NavHashLink
+                        onClick={() => props.setCount(0)}
                         smooth to="#"
                         activeClassName="selected"
                         activeStyle={{
                             color: '#ff293a'
-
                         }}>Home</NavHashLink>
                 </motion.li>
             </ul>
