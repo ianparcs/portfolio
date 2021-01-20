@@ -92,7 +92,7 @@ const Skill = () => {
     });
 
     return (
-        <Container className="w-100">
+        <Container className="w-100" id="skill">
             <Row>
                 <Col>
                     <motion.div

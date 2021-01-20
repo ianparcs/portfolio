@@ -1,17 +1,16 @@
 import React, {useEffect} from 'react';
 import {motion, useAnimation} from "framer-motion"
-import {NavHashLink} from "react-router-hash-link";
 import "../assets/css/navbar.css"
 
 const NavBar = (props) => {
-    console.log(props)
     const controls = useAnimation();
+
 
     useEffect(() => {
         const navbar = document.getElementById("navbar");
-        const canvas = document.getElementById("canvas");
-        window.onscroll = function () {
-            console.log(canvas);
+        const canvas = document.getElementById("skill");
+        window.addEventListener("scroll", function () {
+            console.log("test")
             if (canvas != null && window.pageYOffset >= canvas.clientHeight) {
                 navbar.classList.add("sticky")
                 controls.start({
@@ -51,8 +50,17 @@ const NavBar = (props) => {
                     })
                 });
             }
-        };
+        }, false);
+
     });
+
+
+
+    function transitionFinish(count) {
+        if (props.endAnim) {
+            props.setCount(count)
+        }
+    }
 
     return (
         <motion.div id="navbar"
@@ -66,35 +74,50 @@ const NavBar = (props) => {
                     }}
         >
             <ul>
-                <motion.li whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
-                    <NavHashLink
-                        smooth to="#contact"
-                        activeClassName="selected"
-                        activeStyle={{color: '#ff293a'}}>Contact</NavHashLink>
-                </motion.li>
-                <motion.li whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
-                    <NavHashLink
-                        onClick={() => props.setCount(2)}
-                        smooth to="#portfolio"
-                        activeClassName="selected"
-                        activeStyle={{color: '#ff293a'}}>Porfolio</NavHashLink>
-                </motion.li>
-                <motion.li whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
-                    <NavHashLink
-                        onClick={() => props.setCount(1)}
-                        smooth to="#about"
-                        activeClassName="selected"
-                        activeStyle={{color: '#ff293a'}}>About</NavHashLink>
-                </motion.li>
-                <motion.li whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
-                    <NavHashLink
-                        onClick={() => props.setCount(0)}
-                        smooth to="#"
-                        activeClassName="selected"
-                        activeStyle={{
-                            color: '#ff293a'
-                        }}>Home</NavHashLink>
-                </motion.li>
+                <li>
+                    <motion.a
+                        href="#contact"
+                        className="lead links"
+                        onClick={() => {
+                            transitionFinish(3)
+                        }}
+                        whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
+                        Contact
+                    </motion.a>
+                </li>
+                <li>
+                    <motion.a
+                        href="#project"
+                        className="lead links"
+                        onClick={() => {
+                            transitionFinish(2)
+                        }}
+                        whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
+                        Projects
+                    </motion.a>
+                </li>
+                <li>
+                    <motion.a
+                        href="#about"
+                        className="lead links"
+                        onClick={() => {
+                            transitionFinish(1)
+                        }}
+                        whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
+                        About
+                    </motion.a>
+                </li>
+                <li>
+                    <motion.a
+                        href="#"
+                        className="lead links"
+                        onClick={() => {
+                            transitionFinish(0)
+                        }}
+                        whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
+                        Home
+                    </motion.a>
+                </li>
             </ul>
         </motion.div>
     )

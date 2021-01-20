@@ -11,7 +11,7 @@
 }
 
 html, body {
-    height: 100%;
+    background-color: white !important;
 }
 
 hr {
@@ -21,7 +21,6 @@ hr {
 }
 
 #root {
-    height: 100%;
 }
 
 .bg-black {
@@ -43,7 +42,7 @@ hr {
     --slider-transition-duration: 700ms;
     --organic-arrow-thickness: 4px;
     --organic-arrow-border-radius: 5px;
-    --organic-arrow-height: 40px;
+    --organic-arrow-height: 20%;
     --organic-arrow-color: #ffffff;
     --control-button-width: 10%;
     --control-button-height: 25%;

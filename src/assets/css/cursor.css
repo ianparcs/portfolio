@@ -2,22 +2,29 @@
 .cursor {
     width: 2.7vw;
     height: 2.7vw;
-    border: 0.2vw solid #fefefe;
+    border: 0.2vw solid white;
     border-radius: 100%;
     position: fixed;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
     pointer-events: none;
     z-index: 1000;
     mix-blend-mode: difference;
     transition-property: opacity, background-color, transform, mix-blend-mode;
+
+    -webkit-transition: transform 0.15s ease-in-out;
+    -moz-transition:transform 0.15s ease-in-out;
+
 }
 
 .cursor--clicked {
     transform: translate(-50%, -50%) scale(0.9);
-    background-color: #fefefe;
+    background-color: white;
+
 }
 
 .cursor--link-hovered {
-    transform: translate(-50%, -50%) scale(1.25);
-    background-color: #fefefe;
+    transform: translate(-50%, -50%) scale(1.45);
+    background-color: white;
+    -webkit-transition: transform 0.15s ease-in-out;
+    -moz-transition:transform 0.15s ease-in-out;
 }

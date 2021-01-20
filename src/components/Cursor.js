@@ -30,11 +30,11 @@ const Cursor = () => {
         addEventListeners();
         handleLinkHoverEvents();
         return () => removeEventListeners();
-    }, []);
+    }, [linkHovered, clicked, position]);
 
 
     const handleLinkHoverEvents = () => {
-        document.querySelectorAll("p,a,h3,img,canvas").forEach(el => {
+        document.querySelectorAll("p,a,h3,img,canvas, .awssld__next, .awssld__prev").forEach(el => {
             el.addEventListener("mouseover", () => setLinkHovered(true));
             el.addEventListener("mouseout", () => setLinkHovered(false));
         });

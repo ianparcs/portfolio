@@ -2,7 +2,7 @@ import React from "react";
 import ReactGA from 'react-ga';
 
 import CenterView from "./components/CenterView";
-import Portfolio from "./components/Portfolio";
+import Project from "./components/Project";
 import NavBar from "./components/NavBar";
 import Skills from "./components/Skills";
 import Cursor from "./components/Cursor";
@@ -15,55 +15,81 @@ import 'react-awesome-slider/dist/styles.css';
 import "./assets/css/app.css"
 
 import AwesomeSlider from 'react-awesome-slider';
-import {BrowserRouter} from "react-router-dom";
 import {Container} from "react-bootstrap";
+import Contact from "./components/Contact";
 
 ReactGA.initialize('G-GPBY7PPYCR');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 export default function App() {
-    const [count, setCount] = React.useState(0)
+    const [count, setCount] = React.useState(0);
+    const [transitionEnd, setTransitionEnd] = React.useState(true);
+    const [currentIndex, setCurrentIndex] = React.useState(0);
+
 
     React.useEffect(() => {
-        if (count > 1) {
-            document.title = 'Threshold of over 1 reached.';
-        } else {
-            document.title = 'No threshold reached.';
+        setCount(currentIndex);
+        if (currentIndex === count && transitionEnd) {
+            const hrefName = ["#contact", "#project", "#about", "#"];
+            const a = document.getElementsByClassName('links')[count];
+            a.href = hrefName[count]
         }
-    }, [count]);
-
+    }, [count, currentIndex, transitionEnd]);
 
     return (
         <>
-            <BrowserRouter>
-                <NavBar setCount={setCount}/>
-            </BrowserRouter>
             <Cursor/>
-
+            <div>
+                <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}/>
+            </div>
             <AwesomeSlider
+                onTransitionStart={(e) => {
+                    setCurrentIndex(e.nextSlide);
+                    setCount(e.nextSlide);
+                    setTransitionEnd(false)
+                }}
+                onTransitionRequest={(e) => {
+                    if (currentIndex !== e.currentIndex) {
+                        setTransitionEnd(false)
+                    }
+                }}
+                onTransitionEnd={(e) => {
+                    setCount(e.currentIndex);
+                    setCurrentIndex(e.currentIndex);
+                    setTransitionEnd(true)
+                }}
                 selected={count}
                 bullets={false}
                 fillParent={true}
                 mobileTouch={true}
                 organicArrows={true}
                 animation="cubeAnimation"
+                transitionDelay={100}
             >
-                <Container className="h-100 w-100" fluid>
+                <Container className="h-100 w-100" fluid="false">
                     <CenterView>
                         <Scene/>
                     </CenterView>
                 </Container>
 
-                <Container className="h-100 w-100" fluid>
+                <Container id="about" className="h-100 w-100 bg-white" fluid="false">
                     <CenterView sectionName="about" bg="bg-black">
                         <About/>
+                    </CenterView>
+                    <CenterView sectionName="skill" bg="bg-white">
                         <Skills/>
                     </CenterView>
                 </Container>
 
-                <Container>
-                    <CenterView sectionName="portfolio" bg="bg-black">
-                        <Portfolio/>
+                <Container className="h-100 w-100 bg-white" fluid="false">
+                    <CenterView sectionName="projects" bg="bg-black">
+                        <Project/>
+                    </CenterView>
+                </Container>
+
+                <Container fluid="false">
+                    <CenterView sectionName="contact" bg="bg-black">
+                        <Contact/>
                     </CenterView>
                 </Container>
             </AwesomeSlider>
