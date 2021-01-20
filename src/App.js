@@ -32,16 +32,13 @@ export default function App() {
         if (currentIndex === count && transitionEnd) {
             const hrefName = ["#contact", "#project", "#about", "#"];
             const a = document.getElementsByClassName('links')[count];
-            a.href = hrefName[count]
+
         }
     }, [count, currentIndex, transitionEnd]);
 
     return (
         <>
             <Cursor/>
-            <div>
-                <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}/>
-            </div>
             <AwesomeSlider
                 onTransitionStart={(e) => {
                     setCurrentIndex(e.nextSlide);
@@ -67,12 +64,14 @@ export default function App() {
                 transitionDelay={100}
             >
                 <Container className="h-100 w-100" fluid="false">
+                    <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}/>
                     <CenterView>
                         <Scene/>
                     </CenterView>
                 </Container>
 
                 <Container id="about" className="h-100 w-100 bg-white" fluid="false">
+                    <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}/>
                     <CenterView sectionName="about" bg="bg-black">
                         <About/>
                     </CenterView>
@@ -82,12 +81,14 @@ export default function App() {
                 </Container>
 
                 <Container className="h-100 w-100 bg-white" fluid="false">
+                    <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}/>
                     <CenterView sectionName="projects" bg="bg-black">
                         <Project/>
                     </CenterView>
                 </Container>
 
                 <Container fluid="false">
+                    <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}/>
                     <CenterView sectionName="contact" bg="bg-black">
                         <Contact/>
                     </CenterView>
