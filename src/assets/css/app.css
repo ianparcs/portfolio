@@ -22,7 +22,11 @@ hr {
 
 #root {
 }
-
+.scroll {
+    white-space: nowrap;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
 .bg-black {
     background-color: #0a0a0a !important;
 }

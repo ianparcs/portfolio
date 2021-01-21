@@ -16,7 +16,7 @@ import Paiwi_5 from "../assets/img/portfolio/paiwi/paiwi-5.png"
 import CHITS_1 from "../assets/img/portfolio/chits/chits-1.png"
 import CHITS_2 from "../assets/img/portfolio/chits/chits-3.png"
 
-import {Col, Container, Row} from "react-bootstrap";
+import {Col, Container, Image, Row} from "react-bootstrap";
 import {Swiper, SwiperSlide} from 'swiper/react';
 // install Swiper components
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
@@ -38,11 +38,11 @@ const Project = () => {
                         slidesPerView={1}
                         pagination={{clickable: true}}
                     >
-                        <SwiperSlide><img alt="test" className="img-fluid image-content" src={Paiwi_1}/></SwiperSlide>
-                        <SwiperSlide><img alt="test" className="img-fluid image-content" src={Paiwi_2}/></SwiperSlide>
-                        <SwiperSlide><img alt="test" className="img-fluid image-content" src={Paiwi_3}/></SwiperSlide>
-                        <SwiperSlide><img alt="test" className="img-fluid image-content" src={Paiwi_4}/></SwiperSlide>
-                        <SwiperSlide><img alt="test" className="img-fluid image-content" src={Paiwi_5}/></SwiperSlide>
+                        <SwiperSlide><Image alt="test" className="img-fluid image-content" src={Paiwi_1}/></SwiperSlide>
+                        <SwiperSlide><Image alt="test" className="img-fluid image-content" src={Paiwi_2}/></SwiperSlide>
+                        <SwiperSlide><Image alt="test" className="img-fluid image-content" src={Paiwi_3}/></SwiperSlide>
+                        <SwiperSlide><Image alt="test" className="img-fluid image-content" src={Paiwi_4}/></SwiperSlide>
+                        <SwiperSlide><Image alt="test" className="img-fluid image-content" src={Paiwi_5}/></SwiperSlide>
                     </Swiper>
                 </Col>
             </Row>
@@ -58,11 +58,10 @@ const Project = () => {
                         slidesPerView={1}
                         pagination={{clickable: true}}
                     >
-                        <SwiperSlide><img alt="test" className="img-fluid image-content" src={CHITS_1}/></SwiperSlide>
-                        <SwiperSlide><img alt="test" className="img-fluid image-content" src={CHITS_2}/></SwiperSlide>
-                        <SwiperSlide><img alt="test" className="img-fluid image-content" src={CHITS_2}/></SwiperSlide>
-                        <SwiperSlide><img alt="test" className="img-fluid image-content" src={CHITS_2}/></SwiperSlide>
-
+                        <SwiperSlide><Image alt="test" className="img-fluid image-content" src={CHITS_1}/></SwiperSlide>
+                        <SwiperSlide><Image alt="test" className="img-fluid image-content" src={CHITS_2}/></SwiperSlide>
+                        <SwiperSlide><Image alt="test" className="img-fluid image-content" src={CHITS_2}/></SwiperSlide>
+                        <SwiperSlide><Image alt="test" className="img-fluid image-content" src={CHITS_2}/></SwiperSlide>
                     </Swiper>
                 </Col>
             </Row>

@@ -84,15 +84,14 @@ const Skill = () => {
         await headerControl.start("visible");
         return await contentControl.start("visible");
     };
-
-
     useEffect(() => {
-        if (headerInView) sequence().then(() => {
-        });
-    });
+        if (headerInView) {
+            sequence();
+        }
+    }, [headerInView, sequence]);
 
     return (
-        <Container className="w-100" id="skill">
+        <Container id="skill">
             <Row>
                 <Col>
                     <motion.div

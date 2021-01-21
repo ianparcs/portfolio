@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import "../assets/css/navbar.css"
 import {Nav, Navbar} from "react-bootstrap";
 import {motion} from "framer-motion";
@@ -7,88 +7,74 @@ import CodingTag from "../assets/img/icon/coding.svg"
 import Send from "../assets/img/icon/send.svg"
 import User from "../assets/img/icon/user.svg"
 
+
 const NavBar = (props) => {
 
-    useEffect(() => {
-        const navbar = document.getElementById("navbar");
-        const canvas = document.getElementById("skill");
-        window.addEventListener("scroll", function () {
-            console.log("test")
-            if (canvas != null && window.pageYOffset >= canvas.clientHeight) {
-                navbar.classList.add("sticky")
-            }
-        });
-    });
-
-    function transitionFinish(count) {
+    function transitionFinish(count, url) {
+        const a = document.getElementById("links");
         if (props.endAnim) {
-            props.setCount(count)
+            props.setCount(count);
+            if (a !== null) {
+                a.href = url;
+            }
         }
     }
 
     return (
-        <Navbar id="navbar" className="d-flex align-items-end text-center" fixed="top">
+        <Navbar id="navbar" style={{backgroundColor: props.linkColor}} className="d-flex align-items-end text-center"
+                fixed="top">
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="ml-auto ">
-                    <motion.Container
-                        className="p-2"
+                <Nav className="m-auto mr-md-0">
+                    <motion.div
+                        className=" link-container"
                         onClick={() => {
-                            transitionFinish(0)
+                            transitionFinish(0, "#home")
                         }}
                         whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
-                        <img width={32} height={32} src={HouseIcon}/>
+                        <img src={HouseIcon}/>
                         <Nav.Link
-                            className={"lead links"}
-                            onClick={() => {
-                                transitionFinish(0)
-                            }}
-                            whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}
                             href="#home">
                             Home
                         </Nav.Link>
-                    </motion.Container>
-
-                    <motion.Container
-                        className="p-2"
+                    </motion.div>
+                    <motion.div
+                        className="link-container"
                         onClick={() => {
-                            transitionFinish(1)
+                            transitionFinish(1, "#about")
                         }}
                         whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
-                        <img width={32} height={32} src={User}/>
+                        <img src={User}/>
                         <Nav.Link
-                            className={"lead links"}
                             href="#about">
                             About
                         </Nav.Link>
-                    </motion.Container>
-                    <motion.Container
-                        className="p-2"
+                    </motion.div>
+                    <motion.div
+                        className=" link-container"
                         onClick={() => {
-                            transitionFinish(2)
+                            transitionFinish(2, "#project")
                         }}
                         whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
-                        <img width={32} height={32} src={CodingTag}/>
+                        <img src={CodingTag}/>
+
                         <Nav.Link
-                            className={"lead links"}
                             href="#project">
                             Projects
                         </Nav.Link>
-                    </motion.Container>
-
-                    <motion.Container
-                        className="p-2"
+                    </motion.div>
+                    <motion.div
+                        className=" link-container"
                         onClick={() => {
-                            transitionFinish(3)
+                            transitionFinish(3, "#contact")
                         }}
                         whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
-                        <img width={32} height={32} src={Send}/>
+                        <img src={Send}/>
                         <Nav.Link
-                            className={"lead links"}
                             href="#contact">
                             Contact
                         </Nav.Link>
-                    </motion.Container>
+                    </motion.div>
                 </Nav>
             </Navbar.Collapse>
 
@@ -96,51 +82,3 @@ const NavBar = (props) => {
     )
 };
 export default NavBar;
-/*
-
-
-<ul>
-    <motion.li whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
-        <a
-            href="#contact"
-            className="lead links"
-            onClick={() => {
-                transitionFinish(3)
-            }}>
-            Contact
-        </a>
-    </motion.li>
-    <motion.li whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
-        <img className="p-2" width={48} height={48} src={CodingTag}/>
-        <a
-            href="#project"
-            className="lead links"
-            onClick={() => {
-                transitionFinish(2)
-            }}>
-            Projects
-        </a>
-    </motion.li>
-    <motion.li whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
-        <img className="p-2" width={48} height={48} src={User}/>
-        <motion.a
-            href="#about"
-            className="lead links"
-            onClick={() => {
-                transitionFinish(1)
-            }}>
-            About
-        </motion.a>
-    </motion.li>
-    <motion.li whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
-        <img className="p-2" width={48} height={48} src={HouseIcon}/>
-        <a
-            href="#"
-            className="lead links p-1"
-            onClick={() => {
-                transitionFinish(0)
-            }}>
-            Home
-        </a>
-    </motion.li>
-</ul>*/

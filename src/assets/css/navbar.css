@@ -1,3 +1,10 @@
+#navbar {
+    background-color: rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
 #navbar a {
     color: white;
 }
@@ -7,7 +14,95 @@
 }
 
 .sticky {
-    position: fixed !important;
-    background-color: #08090a !important;
+    background-color: black !important;
 }
 
+.link-container {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.link-container img {
+    width: 32px;
+    height: 32px;
+}
+
+.link-container a {
+    font-size: 2vh;
+}
+
+
+@media (min-width: 1281px) {
+
+
+}
+
+/*!*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*!*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+/*
+!*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*!
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+
+}
+
+
+@media (min-width: 600px) and (max-width: 800px)  and (orientation: landscape) {
+
+
+}
+
+/*!*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*!*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+
+}
+
+/*!*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*!*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+/*
+!*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*!
+*/
+/*
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .link-container img {
+        width: 20px;
+        height: 20px;
+    }
+    .link-container a {
+        font-size: 2vh;
+    }
+
+}
+
+*/

@@ -29,11 +29,6 @@ export default function App() {
 
     React.useEffect(() => {
         setCount(currentIndex);
-        if (currentIndex === count && transitionEnd) {
-            const hrefName = ["#contact", "#project", "#about", "#"];
-            const a = document.getElementsByClassName('links')[count];
-
-        }
     }, [count, currentIndex, transitionEnd]);
 
     return (
@@ -48,6 +43,7 @@ export default function App() {
                 onTransitionRequest={(e) => {
                     if (currentIndex !== e.currentIndex) {
                         setTransitionEnd(false)
+
                     }
                 }}
                 onTransitionEnd={(e) => {
@@ -70,8 +66,8 @@ export default function App() {
                     </CenterView>
                 </Container>
 
-                <Container id="about" className="h-100 w-100 bg-white" fluid="false">
-                    <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}/>
+                <Container className="h-100 w-100 bg-white" fluid="false">
+                    <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex} linkColor={"black"}/>
                     <CenterView sectionName="about" bg="bg-black">
                         <About/>
                     </CenterView>
@@ -87,7 +83,7 @@ export default function App() {
                     </CenterView>
                 </Container>
 
-                <Container fluid="false">
+                <Container className="h-100 w-100 bg-white" fluid="false">
                     <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}/>
                     <CenterView sectionName="contact" bg="bg-black">
                         <Contact/>

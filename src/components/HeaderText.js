@@ -6,7 +6,9 @@ import font from "../assets/font/font.woff"
 function HeaderText() {
     const {viewport} = useThree();
     const ref = useRef();
-    const letterSpacingLimit = 0;
+    const ref1 = useRef();
+
+    const letterSpacingLimit = 0.05;
     const scaleLimit = 5;
 
     const scale = useAspect(
@@ -15,7 +17,7 @@ function HeaderText() {
         512,
         0
     );
-
+    let transitionDone = false;
     useFrame((state) => {
         let time = state.clock.getElapsedTime() / 300;
         if (ref.current.scale.x <= scaleLimit) {
@@ -23,8 +25,20 @@ function HeaderText() {
             ref.current.scale.y += 7 * time;
         } else if (ref.current.letterSpacing <= letterSpacingLimit) {
             ref.current.letterSpacing += 0.1 * time;
+        } else {
+            transitionDone = true
         }
-    });
+
+        if (transitionDone) {
+            if (ref1.current.scale.x <= scaleLimit - 1.5) {
+                ref1.current.scale.x += 7 * time;
+                ref1.current.scale.y += 7 * time;
+            } else if (ref1.current.letterSpacing <= letterSpacingLimit) {
+                ref1.current.letterSpacing += 0.1 * time;
+            }
+        }
+
+    }, transitionDone);
 
     return (
         <>
@@ -34,14 +48,29 @@ function HeaderText() {
                 overflowWrap={"break-word"}
                 letterSpacing={-0.5}
                 textAlign="center"
-                position={[-0.05, (viewport.height) / 3.5, 0]}
+                position={[-0.05, (viewport.height) / 3.4, 0.0]}
                 maxWidth={(viewport.width / 100) * 15}
                 scale={scale}
                 font={font}
                 outlineWidth={0.005}
                 outlineColor={"white"}
             >
-                The Dark Side of the Moon
+                Hello! I'm Ian.
+            </Text>
+            <Text
+                ref={ref1}
+                color={"black"}
+                overflowWrap={"break-word"}
+                letterSpacing={-0.5}
+                textAlign="center"
+                position={[-0.05, (viewport.height) / 4.75, 0.0]}
+                maxWidth={(viewport.width / 100) * 30}
+                scale={scale}
+                font={font}
+                outlineWidth={0.005}
+                outlineColor={"white"}
+            >
+                I'm a software developer & hobbyist game developer.
             </Text>
         </>
     )
