@@ -22,13 +22,15 @@ hr {
 
 #root {
 }
+
 .scroll {
     white-space: nowrap;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
+
 .bg-black {
-    background-color: #0a0a0a !important;
+    background-color: #1f1f1f !important;
 }
 
 .bg-white {

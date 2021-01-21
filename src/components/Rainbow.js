@@ -12,21 +12,21 @@ function RainbowLight() {
     let ref7 = useRef();
 
     useFrame((state) => {
-        ref1.current.position.z = -0.5;
-        ref2.current.position.z = -0.5;
-        ref3.current.position.z = -0.5;
-        ref4.current.position.z = -0.5;
-        ref5.current.position.z = -0.5;
-        ref6.current.position.z = -0.5;
-        ref7.current.position.z = -0.5;
+        ref1.current.position.z = -5;
+        ref2.current.position.z = -5;
+        ref3.current.position.z = -5;
+        ref4.current.position.z = -5;
+        ref5.current.position.z = -5;
+        ref6.current.position.z = -5;
+        ref7.current.position.z = -5;
         let time = state.clock.getElapsedTime() / 5;
-        ref1.current.rotation.x = time * 0.4;
-        ref2.current.rotation.x = time * 0.4;
-        ref3.current.rotation.x = time * 0.4;
-        ref4.current.rotation.x = time * 0.4;
-        ref5.current.rotation.x = time * 0.4;
-        ref6.current.rotation.x = time * 0.4;
-        ref7.current.rotation.x = time * 0.4;
+        ref1.current.rotation.x = time * 0.5;
+        ref2.current.rotation.x = time * 0.5;
+        ref3.current.rotation.x = time * 0.5;
+        ref4.current.rotation.x = time * 0.5;
+        ref5.current.rotation.x = time * 0.5;
+        ref6.current.rotation.x = time * 0.5;
+        ref7.current.rotation.x = time * 0.5;
     });
     return (
         <>
