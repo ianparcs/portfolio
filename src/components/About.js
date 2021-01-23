@@ -4,7 +4,8 @@ import {useInView} from "react-intersection-observer";
 import {Col, Container, Row} from "react-bootstrap";
 import SectionTitle from "./SectionTitle";
 import "../assets/css/about.css"
-const About = () => {
+
+const About = React.forwardRef((props, ref) => {
     const headerControl = useAnimation();
     const contentControl = useAnimation();
     const [headerRef, headerInView] = useInView();
@@ -25,6 +26,10 @@ const About = () => {
         },
     };
 
+    function handleClick() {
+        console.log(ref)
+        ref.current.scrollIntoView({behavior: 'smooth'});
+    }
 
 
     useEffect(() => {
@@ -39,7 +44,7 @@ const About = () => {
     }, [headerControl, headerInView, contentControl, contentInView]);
 
     return (
-        <Container className="w-75">
+        <Container className="w-100" fluid={true} ref={ref}>
             <Row>
                 <Col>
                     <motion.div id={"header"}
@@ -53,8 +58,8 @@ const About = () => {
                 </Col>
             </Row>
             <Row>
-                <Col>
-                    <motion.p className="lead"
+                <Col className="">
+                    <motion.p className="lead w-75 h-100 m-auto"
                               ref={contentRef}
                               id="content"
                               initial="hidden"
@@ -73,6 +78,6 @@ const About = () => {
                 </Col>
             </Row>
         </Container>
-    )
-};
+    );
+});
 export default About;

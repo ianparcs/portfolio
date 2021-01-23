@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import ReactGA from 'react-ga';
 
 import CenterView from "./components/CenterView";
@@ -17,6 +17,7 @@ import "./assets/css/app.css"
 import AwesomeSlider from 'react-awesome-slider';
 import {Container} from "react-bootstrap";
 import Contact from "./components/Contact";
+import AboutNav from "./components/AboutNav";
 
 ReactGA.initialize('G-GPBY7PPYCR');
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -26,10 +27,12 @@ export default function App() {
     const [transitionEnd, setTransitionEnd] = React.useState(true);
     const [currentIndex, setCurrentIndex] = React.useState(0);
 
-
     React.useEffect(() => {
         setCount(currentIndex);
     }, [count, currentIndex, transitionEnd]);
+
+    const aboutRef = useRef();
+    const skillRef = useRef();
 
     return (
         <>
@@ -53,9 +56,10 @@ export default function App() {
                 }}
                 selected={count}
                 bullets={false}
+                disabled={true}
+                buttons={false}
                 fillParent={true}
                 mobileTouch={true}
-                organicArrows={true}
                 animation="cubeAnimation"
                 transitionDelay={100}
             >
@@ -67,12 +71,14 @@ export default function App() {
                 </Container>
 
                 <Container className="h-100 w-100 bg-white" fluid="false">
-                    <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex} linkColor={"black"}/>
+                    <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}
+                            linkColor={"black"}/>
+                    <AboutNav skillRef={skillRef} aboutRef={aboutRef}/>
                     <CenterView sectionName="about" bg="bg-black">
-                        <About/>
+                        <About ref={aboutRef}/>
                     </CenterView>
                     <CenterView sectionName="skill" bg="bg-white">
-                        <Skills/>
+                        <Skills ref={skillRef}/>
                     </CenterView>
                 </Container>
 

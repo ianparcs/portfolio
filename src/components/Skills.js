@@ -25,12 +25,11 @@ import Card from "./Card";
 import {Col, Container, Row} from "react-bootstrap";
 import SectionTitle from "./SectionTitle";
 
-const Skill = () => {
+const Skill = React.forwardRef((props, ref) => {
     const headerControl = useAnimation();
     const contentControl = useAnimation();
     const [headerRef, headerInView] = useInView();
     const [contentRef] = useInView();
-
     const transition = {
         duration: 1.5,
         ease: "easeInOut"
@@ -56,7 +55,6 @@ const Skill = () => {
             },
         },
     };
-
     const item = {
         visible: {
             opacity: 1,
@@ -84,14 +82,27 @@ const Skill = () => {
         await headerControl.start("visible");
         return await contentControl.start("visible");
     };
+    const icons = document.getElementsByClassName("about-icon");
     useEffect(() => {
+
         if (headerInView) {
+            if (icons !== null) {
+                for (let i = 0; i < icons.length; i++) {
+                    icons.item(i).style.fill = "black";
+                }
+            }
             sequence();
+        } else {
+            if (icons !== null) {
+                for (let i = 0; i < icons.length; i++) {
+                    icons.item(i).style.fill = "white";
+                }
+            }
         }
     }, [headerInView, sequence]);
 
     return (
-        <Container id="skill">
+        <Container ref={ref} id="skill">
             <Row>
                 <Col>
                     <motion.div
@@ -105,7 +116,7 @@ const Skill = () => {
                     </motion.div>
                 </Col>
             </Row>
-            <Row>
+            <Row className="w-75 m-auto">
                 <Col>
                     <motion.ul
                         id="skill-content"
@@ -137,7 +148,8 @@ const Skill = () => {
                     </motion.ul>
                 </Col>
             </Row>
+
         </Container>
     )
-};
+});
 export default Skill;

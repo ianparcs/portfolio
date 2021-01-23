@@ -24,7 +24,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 const Project = () => {
     return (
         <Container id="project" className="w-100 p-5">
-            <Row className="row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 align-items-center">
+     {/*       <Row className="row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 align-items-center">
                 <Col>
                     <p className="lead">
                         An online android application which tracks real-time investment assets and status.
@@ -64,7 +64,7 @@ const Project = () => {
                         <SwiperSlide><Image alt="test" className="img-fluid image-content" src={CHITS_2}/></SwiperSlide>
                     </Swiper>
                 </Col>
-            </Row>
+            </Row>*/}
         </Container>
 
     )
