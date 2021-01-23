@@ -19,7 +19,7 @@ import HTML from "../../assets/img/logo/html.svg";
 import CSS from "../../assets/img/logo/css3.svg";
 import CPlus from "../../assets/img/logo/c.svg";
 import Git from "../../assets/img/logo/git.svg";
-import "../../assets/css/skills.css"
+import "./skills.css"
 
 import Card from "../gui/Card";
 import {Col, Container, Row} from "react-bootstrap";

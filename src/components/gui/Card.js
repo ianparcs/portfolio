@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import "../../assets/css/skills.css"
+import "../about/skills.css"
 import {motion, useAnimation} from "framer-motion";
 import {useInView} from "react-intersection-observer";
 

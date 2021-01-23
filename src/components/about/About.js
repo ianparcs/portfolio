@@ -3,7 +3,7 @@ import {motion, useAnimation} from "framer-motion";
 import {useInView} from "react-intersection-observer";
 import {Col, Container, Row} from "react-bootstrap";
 import SectionTitle from "../gui/SectionTitle";
-import "../../assets/css/about.css"
+import "./about.css"
 
 const About = React.forwardRef((props, ref) => {
     const headerControl = useAnimation();

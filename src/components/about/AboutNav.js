@@ -1,6 +1,6 @@
 import React from 'react';
 import {motion} from "framer-motion";
-import "../../assets/css/about.css"
+import "./about.css"
 
 import {Container, Row} from "react-bootstrap";
 
@@ -14,7 +14,7 @@ const AboutNav = (props) => {
         <Container className="sidenav m-auto">
             <Row className="h-25 m-auto">
                 <motion.div
-                    onClick={() => executeScroll(props.aboutRef, "end")}
+                    onClick={() => executeScroll(props.aboutRef, "center")}
                     whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
                     <svg xmlns="http://www.w3.org/2000/svg"
                          fill={props.color} className="bi about-icon"
@@ -26,7 +26,7 @@ const AboutNav = (props) => {
             </Row>
             <Row className="h-25 m-auto">
                 <motion.div
-                    onClick={() => executeScroll(props.skillRef, "start")}
+                    onClick={() => executeScroll(props.skillRef, "center")}
                     whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
                     <svg className="about-icon" enableBackground="new 0 0 64 64" height="32px" width="32px"
                          viewBox="0 0 64 64" fill="white"
@@ -59,6 +59,7 @@ const AboutNav = (props) => {
             </Row>
             <Row className="h-25 m-auto">
                 <motion.div
+                    onClick={() => executeScroll(props.educationRef, "center")}
                     whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
                     <svg className="about-icon" enableBackground="new 0 0 511.962 511.962"
                          viewBox="0 0 511.962 511.962"

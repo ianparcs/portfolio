@@ -18,6 +18,7 @@ import AwesomeSlider from 'react-awesome-slider';
 import {Container} from "react-bootstrap";
 import Contact from "../contact/Contact";
 import AboutNav from "../about/AboutNav";
+import Education from "../about/Education";
 
 ReactGA.initialize('G-GPBY7PPYCR');
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -31,6 +32,7 @@ export default function App() {
         setCount(currentIndex);
     }, [count, currentIndex, transitionEnd]);
 
+    const educationRef = useRef();
     const aboutRef = useRef();
     const skillRef = useRef();
 
@@ -73,12 +75,15 @@ export default function App() {
                 <Container className="h-100 w-100 bg-white" fluid="false">
                     <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}
                             linkColor={"black"}/>
-                    <AboutNav skillRef={skillRef} aboutRef={aboutRef}/>
+                    <AboutNav skillRef={skillRef} aboutRef={aboutRef} educationRef={educationRef}/>
                     <CenterView sectionName="about" bg="bg-black">
                         <About ref={aboutRef}/>
                     </CenterView>
                     <CenterView sectionName="skill" bg="bg-white">
                         <Skills ref={skillRef}/>
+                    </CenterView>
+                    <CenterView sectionName="education" bg="bg-black">
+                        <Education ref={educationRef}/>
                     </CenterView>
                 </Container>
 
