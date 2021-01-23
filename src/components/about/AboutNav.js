@@ -1,6 +1,6 @@
 import React from 'react';
 import {motion} from "framer-motion";
-import "../assets/css/about.css"
+import "../../assets/css/about.css"
 
 import {Container, Row} from "react-bootstrap";
 

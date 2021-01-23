@@ -1,7 +1,7 @@
 import {Text, useAspect} from "drei";
 import React, {useRef} from "react"
 import {useFrame, useThree} from "react-three-fiber";
-import font from "../assets/font/font.woff"
+import font from "../../assets/font/font.woff"
 
 function HeaderText() {
     const {viewport} = useThree();
@@ -26,7 +26,7 @@ function HeaderText() {
             ref.current.scale.y += 7 * time;
         } else if (ref.current.letterSpacing <= 0.1) {
             ref.current.letterSpacing += 0.1 * time;
-        } else if(!transitionDone){
+        } else if (!transitionDone) {
             transitionDone = true;
             timeSpeed = 400;
             time = 0;

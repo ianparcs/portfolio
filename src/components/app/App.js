@@ -1,23 +1,23 @@
 import React, {useRef} from "react";
 import ReactGA from 'react-ga';
 
-import CenterView from "./components/CenterView";
-import Project from "./components/Project";
-import NavBar from "./components/NavBar";
-import Skills from "./components/Skills";
-import Cursor from "./components/Cursor";
-import About from "./components/About";
-import Scene from "./components/Scene";
+import CenterView from "../gui/CenterView";
+import Project from "../project/Project";
+import NavBar from "./NavBar";
+import Skills from "../about/Skills";
+import Cursor from "../gui/Cursor";
+import About from "../about/About";
+import Scene from "../scene/Scene";
 
 import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-awesome-slider/dist/styles.css';
-import "./assets/css/app.css"
+import "../../assets/css/app.css"
 
 import AwesomeSlider from 'react-awesome-slider';
 import {Container} from "react-bootstrap";
-import Contact from "./components/Contact";
-import AboutNav from "./components/AboutNav";
+import Contact from "../contact/Contact";
+import AboutNav from "../about/AboutNav";
 
 ReactGA.initialize('G-GPBY7PPYCR');
 ReactGA.pageview(window.location.pathname + window.location.search);

@@ -10,7 +10,7 @@ import {GlitchPass} from "three/examples/jsm/postprocessing/GlitchPass";
 import {Vector2} from "three";
 import Context from "./HoverContext"
 
-extend({EffectComposer, RenderPass, OutlinePass, ShaderPass, UnrealBloomPass, SMAAPass, GlitchPass})
+extend({EffectComposer, RenderPass, OutlinePass, ShaderPass, UnrealBloomPass, SMAAPass, GlitchPass});
 
 function Effects({children, mouseClick}) {
     const composer = useRef();

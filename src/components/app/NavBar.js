@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {Nav, Navbar} from "react-bootstrap";
 import {motion} from "framer-motion";
-import HouseIcon from "../assets/img/icon/house.svg"
-import CodingTag from "../assets/img/icon/coding.svg"
-import Send from "../assets/img/icon/send.svg"
-import User from "../assets/img/icon/user.svg"
-import "../assets/css/navbar.css"
+import HouseIcon from "../../assets/img/icon/house.svg"
+import CodingTag from "../../assets/img/icon/coding.svg"
+import Send from "../../assets/img/icon/send.svg"
+import User from "../../assets/img/icon/user.svg"
+import "../../assets/css/navbar.css"
 
 
 const NavBar = (props) => {
@@ -22,7 +22,8 @@ const NavBar = (props) => {
     }
 
     return (
-        <Navbar id="navbar" style={{backgroundColor: props.linkColor}} className="d-flex align-items-end text-center fixed-top"
+        <Navbar id="navbar" style={{backgroundColor: props.linkColor}}
+                className="d-flex align-items-end text-center fixed-top"
                 fixed="top">
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">

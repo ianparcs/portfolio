@@ -5,7 +5,7 @@ import HeaderText from "./HeaderText";
 import RainbowLight from "./Rainbow";
 import Pyramid from "./Pyramid";
 import Effects from "./Effect";
-import "../assets/css/scene.css"
+import "../../assets/css/scene.css"
 
 function Scene() {
     const [onPress, setPress] = useState(false);

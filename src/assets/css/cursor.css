@@ -12,7 +12,7 @@
     transition-property: opacity, background-color, transform, mix-blend-mode;
 
     -webkit-transition: transform 0.15s ease-in-out;
-    -moz-transition:transform 0.15s ease-in-out;
+    -moz-transition: transform 0.15s ease-in-out;
 
 }
 
@@ -26,5 +26,5 @@
     transform: translate(-50%, -50%) scale(1.45);
     background-color: white;
     -webkit-transition: transform 0.15s ease-in-out;
-    -moz-transition:transform 0.15s ease-in-out;
+    -moz-transition: transform 0.15s ease-in-out;
 }

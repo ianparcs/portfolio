@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import React, {useEffect, useState} from "react"
-import '../assets/css/cursor.css'
+import '../../assets/css/cursor.css'
 
 const isMobile = () => {
     const ua = navigator.userAgent;

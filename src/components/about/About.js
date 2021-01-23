@@ -2,8 +2,8 @@ import React, {useEffect} from 'react';
 import {motion, useAnimation} from "framer-motion";
 import {useInView} from "react-intersection-observer";
 import {Col, Container, Row} from "react-bootstrap";
-import SectionTitle from "./SectionTitle";
-import "../assets/css/about.css"
+import SectionTitle from "../gui/SectionTitle";
+import "../../assets/css/about.css"
 
 const About = React.forwardRef((props, ref) => {
     const headerControl = useAnimation();
@@ -27,7 +27,7 @@ const About = React.forwardRef((props, ref) => {
     };
 
     function handleClick() {
-        console.log(ref)
+        console.log(ref);
         ref.current.scrollIntoView({behavior: 'smooth'});
     }
 

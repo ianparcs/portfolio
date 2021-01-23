@@ -1,29 +1,29 @@
 import React, {useEffect} from 'react';
 import {motion, useAnimation} from "framer-motion";
 import {useInView} from "react-intersection-observer";
-import Javascript from "../assets/img/logo/javascript.svg";
-import Bootstrap from "../assets/img/logo/bootstrap.svg";
-import Hibernate from "../assets/img/logo/hibernate.svg";
-import ReactLogo from "../assets/img/logo/react.svg";
-import Android from "../assets/img/logo/android.svg";
-import Jquery from "../assets/img/logo/jquery.svg";
-import JavaLogo from "../assets/img/logo/java.svg";
-import Github from "../assets/img/logo/github.svg";
-import Spring from "../assets/img/logo/spring.svg";
-import Gradle from "../assets/img/logo/gradle.svg";
-import Libgdx from "../assets/img/logo/libgdx.svg";
-import MySQL from "../assets/img/logo/mysql.svg";
-import Mongo from "../assets/img/logo/mongo.svg";
-import Linux from "../assets/img/logo/linux.svg";
-import HTML from "../assets/img/logo/html.svg";
-import CSS from "../assets/img/logo/css3.svg";
-import CPlus from "../assets/img/logo/c.svg";
-import Git from "../assets/img/logo/git.svg";
-import "../assets/css/skills.css"
+import Javascript from "../../assets/img/logo/javascript.svg";
+import Bootstrap from "../../assets/img/logo/bootstrap.svg";
+import Hibernate from "../../assets/img/logo/hibernate.svg";
+import ReactLogo from "../../assets/img/logo/react.svg";
+import Android from "../../assets/img/logo/android.svg";
+import Jquery from "../../assets/img/logo/jquery.svg";
+import JavaLogo from "../../assets/img/logo/java.svg";
+import Github from "../../assets/img/logo/github.svg";
+import Spring from "../../assets/img/logo/spring.svg";
+import Gradle from "../../assets/img/logo/gradle.svg";
+import Libgdx from "../../assets/img/logo/libgdx.svg";
+import MySQL from "../../assets/img/logo/mysql.svg";
+import Mongo from "../../assets/img/logo/mongo.svg";
+import Linux from "../../assets/img/logo/linux.svg";
+import HTML from "../../assets/img/logo/html.svg";
+import CSS from "../../assets/img/logo/css3.svg";
+import CPlus from "../../assets/img/logo/c.svg";
+import Git from "../../assets/img/logo/git.svg";
+import "../../assets/css/skills.css"
 
-import Card from "./Card";
+import Card from "../gui/Card";
 import {Col, Container, Row} from "react-bootstrap";
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "../gui/SectionTitle";
 
 const Skill = React.forwardRef((props, ref) => {
     const headerControl = useAnimation();
