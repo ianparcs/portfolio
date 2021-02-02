@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.9af7b3ac.chunk.css",
-    "main.js": "/portfolio/static/js/main.1fd80dc7.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.1fd80dc7.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.7c79001d.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.7c79001d.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.8fed2963.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.8fed2963.js.map",
     "static/css/2.c5dcfd97.chunk.css": "/portfolio/static/css/2.c5dcfd97.chunk.css",
@@ -26,6 +26,9 @@
     "static/media/hibernate.a6c5e6f8.svg": "/portfolio/static/media/hibernate.a6c5e6f8.svg",
     "static/media/house.0b41f9d9.svg": "/portfolio/static/media/house.0b41f9d9.svg",
     "static/media/html.4118c3af.svg": "/portfolio/static/media/html.4118c3af.svg",
+    "static/media/inventory_1.85e5e13a.png": "/portfolio/static/media/inventory_1.85e5e13a.png",
+    "static/media/inventory_2.b0a244c1.png": "/portfolio/static/media/inventory_2.b0a244c1.png",
+    "static/media/inventory_3.a16c8614.png": "/portfolio/static/media/inventory_3.a16c8614.png",
     "static/media/java.4255130f.svg": "/portfolio/static/media/java.4255130f.svg",
     "static/media/javascript.81b0e17a.svg": "/portfolio/static/media/javascript.81b0e17a.svg",
     "static/media/jquery.c227712b.svg": "/portfolio/static/media/jquery.c227712b.svg",
@@ -45,6 +48,6 @@
     "static/css/2.c5dcfd97.chunk.css",
     "static/js/2.4b575787.chunk.js",
     "static/css/main.9af7b3ac.chunk.css",
-    "static/js/main.1fd80dc7.chunk.js"
+    "static/js/main.7c79001d.chunk.js"
   ]
 }
