@@ -1,0 +1,12 @@
+.white-border {
+    border-color: white;
+    border-width: 3px;
+    border-style: double;
+}
+
+.image-content {
+    width:80% !important;
+    height: 100% !important;
+    object-fit:contain;
+}
+

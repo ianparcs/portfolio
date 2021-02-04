@@ -19,10 +19,10 @@ function Scene() {
                     onPointerDown={() => setPress(true)}>
                     <color attach="background" args={['black']}/>
                     <HeaderText/>
-                    <LightStars count={2500}/>
-                    <RainbowLight/>
                     <Effects mouseClick={onPress}>
                         <Pyramid/>
+                        <LightStars count={2500}/>
+                        <RainbowLight/>
                     </Effects>
                 </Canvas>
 

@@ -2,7 +2,7 @@ import React from 'react';
 import {Col, Container, Row} from "react-bootstrap";
 
 const SectionTitle = (props) => {
-    const style = props.textColor + " display-6 mx-auto w-100";
+    const style = props.textColor + " text-center";
     return (
         <Container>
             <Row>
@@ -10,11 +10,7 @@ const SectionTitle = (props) => {
                     <h3 className={style}>
                         {props.title}
                     </h3>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <hr className="mx-auto bg-danger w-25 mt-1"/>
+                    <hr className="mx-auto bg-danger w-50 mt-1"/>
                 </Col>
             </Row>
         </Container>

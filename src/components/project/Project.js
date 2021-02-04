@@ -1,62 +1,74 @@
 import React from 'react';
-import "../../assets/css/portfolio.css"
-import SwiperCore, {A11y, Navigation, Pagination, Scrollbar} from 'swiper';
-// Import Swiper styles
-import 'swiper/swiper.scss';
-import 'swiper/components/navigation/navigation.scss';
-import 'swiper/components/pagination/pagination.scss';
-import 'swiper/components/scrollbar/scrollbar.scss';
+import Work from "../gui/Work";
+import Container from "react-bootstrap/Container";
 
-import {Container} from "react-bootstrap";
-// install Swiper components
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+import Inventory_1 from "../../assets/img/works/inventory/inventory_1.png"
+import Inventory_2 from "../../assets/img/works/inventory/inventory_2.png"
+import Inventory_3 from "../../assets/img/works/inventory/inventory_3.png"
+import Portfolio_1 from "../../assets/img/works/portfolio/portfolio_1.png"
+import Portfolio_2 from "../../assets/img/works/portfolio/portfolio_2.png"
+import Paiwi_1 from "../../assets/img/works/paiwi/paiwi-1.png"
+import Paiwi_2 from "../../assets/img/works/paiwi/paiwi-2.png"
+import CHITS_1 from "../../assets/img/works/chits/chits-1.png"
+import CHITS_2 from "../../assets/img/works/chits/chits-3.png"
+import Three from "../../assets/img/works/three.svg"
+import Four from "../../assets/img/works/four.svg"
+import Two from "../../assets/img/works/two.svg"
+import One from "../../assets/img/works/one.svg"
+import "../../assets/css/projects.css"
 
 const Project = () => {
-    return (
-        <Container id="project" className="w-100 p-5">
-            {/*       <Row className="row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 align-items-center">
-                <Col>
-                    <p className="lead">
-                        An online android application which tracks real-time investment assets and status.
-                    </p>
-                </Col>
-                <Col>
-                    <Swiper
-                        autoplay={true}
-                        spaceBetween={0}
-                        height={0}
-                        slidesPerView={1}
-                        pagination={{clickable: true}}
-                    >
-                        <SwiperSlide><Image alt="test" className="img-fluid image-content" src={Paiwi_1}/></SwiperSlide>
-                        <SwiperSlide><Image alt="test" className="img-fluid image-content" src={Paiwi_2}/></SwiperSlide>
-                        <SwiperSlide><Image alt="test" className="img-fluid image-content" src={Paiwi_3}/></SwiperSlide>
-                        <SwiperSlide><Image alt="test" className="img-fluid image-content" src={Paiwi_4}/></SwiperSlide>
-                        <SwiperSlide><Image alt="test" className="img-fluid image-content" src={Paiwi_5}/></SwiperSlide>
-                    </Swiper>
-                </Col>
-            </Row>
-            <Row className="row-cols-2 row-cols-md-2 p-2 align-items-center">
-                <Col>
-                    teest
-                </Col>
-                <Col>
-                    <Swiper
-                        autoplay={true}
-                        spaceBetween={0}
-                        height={0}
-                        slidesPerView={1}
-                        pagination={{clickable: true}}
-                    >
-                        <SwiperSlide><Image alt="test" className="img-fluid image-content" src={CHITS_1}/></SwiperSlide>
-                        <SwiperSlide><Image alt="test" className="img-fluid image-content" src={CHITS_2}/></SwiperSlide>
-                        <SwiperSlide><Image alt="test" className="img-fluid image-content" src={CHITS_2}/></SwiperSlide>
-                        <SwiperSlide><Image alt="test" className="img-fluid image-content" src={CHITS_2}/></SwiperSlide>
-                    </Swiper>
-                </Col>
-            </Row>*/}
-        </Container>
 
+    const paiwiDescription = <p className="pt-4"><a
+        href="https://play.google.com/store/apps/details?id=ph.codegum.paiwi_mobile">Pa-Iwi
+        Mobile </a> is an online android application used by investors of agri-business
+        enthusiast to invest their money
+        to livestock farming. Tracks real-time investment assets, status and profit of returns.
+        (No longer supported or maintained)</p>;
+
+    const chitsDescription = <p className="pt-4">
+        CHITS is an electronic medical record system that reduces patient waiting time and improves
+        monitoring of patient care through efficient data encoding and records retrieval</p>;
+
+    const posDescription = <p className="pt-4">
+        <a href="https://github.com/ianparcs/inventory-sales-system">Inventory Sales System</a>
+        &nbsp; is used by retailers to process customer sales, track product
+        or stock levels. It has tools to ring sales, count inventory,
+        and provide basic reports for sales and product stocks.</p>;
+
+    const portfolioDescription = <p className="pt-4">Personal site showcasing my projects and online resume.</p>;
+
+    return (
+        <Container className="w-100 d-flex flex-column justify-content-center">
+            <Work title="Community Health Information Tracking System (CHITS)"
+                  skills={<p>Skills: Java, Spring MVC, Hibernate,MySQL and Ant.</p>}
+                  content={chitsDescription}
+                  images={[{path: CHITS_1, alt: "Paiwi mobile"}, {path: CHITS_2, alt: "Paiwi mobile"}]}
+                  workNumber={One}
+                  direction="-100%"/>
+            <Work title="Pa-Iwi Mobile"
+                  skills={<p> Skills: Java, Android, Amazon S3, Firebase and Rest API.</p>}
+                  content={paiwiDescription}
+                  images={[{path: Paiwi_1, alt: "Paiwi mobile"}, {path: Paiwi_2, alt: "Paiwi mobile"}]}
+                  workNumber={Two}
+                  direction="-100%"/>
+            <Work title="RM Home Tiles"
+                  skills={<p>Skills: Java, JavaFX, Spring MVC, Hibernate, MySQL and Maven.</p>}
+                  content={posDescription}
+                  images={[{path: Inventory_3, alt: "Paiwi mobile"}, {
+                      path: Inventory_1,
+                      alt: "Inventory_1"
+                  }, {path: Inventory_2, alt: "Inventory_2"},]}
+                  workNumber={Three}
+                  direction="-100%"/>
+            <Work title="Personal Website"
+                  skills={<p>Skills: HTML5, CSS3, ReactJS and NodeJS.</p>}
+                  content={portfolioDescription}
+                  images={[{path: Portfolio_2, alt: "Portfolio_2"}, {path: Portfolio_1, alt: "Portfolio_1"}]}
+                  workNumber={Four}
+                  direction="-100%"/>
+        </Container>
     )
 };
+
 export default Project;

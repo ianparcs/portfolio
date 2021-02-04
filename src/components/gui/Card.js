@@ -2,6 +2,8 @@ import React, {useEffect} from 'react';
 import "../about/skills.css"
 import {motion, useAnimation} from "framer-motion";
 import {useInView} from "react-intersection-observer";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import {Popover} from "react-bootstrap";
 
 const Card = ({path, progName}) => {
 
@@ -33,17 +35,6 @@ const Card = ({path, progName}) => {
             transition: {duration: 1}
         },
     };
-    const titleVariants = {
-        visible: {
-            opacity: 1,
-            y: 0
-        },
-        hidden: {
-            opacity: 0,
-            y: "100%",
-            transition: {duration: 1}
-        },
-    };
 
     progTitleControl.start("hidden");
 
@@ -55,23 +46,30 @@ const Card = ({path, progName}) => {
         progTitleControl.start("hidden");
     }
 
+    const popover = (
+        <Popover id="popover-basic" className="text-dark" delay={{show: 100, hide: 100}}>
+            <Popover.Title as="h3" className="text-dark">{progName}</Popover.Title>
+            <Popover.Content>
+
+            </Popover.Content>
+        </Popover>
+    );
     return (
         <>
-            <motion.p
-                id="prog-title"
-                animate={progTitleControl}
-                variants={titleVariants}>
-                {progName}
-            </motion.p>
-            <motion.img
-                src={path}
-                onMouseEnter={() => showName()}
-                onMouseLeave={() => hideName()}
-                whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}
-                ref={contentRef}
-                transition={transition}
-                variants={variants}
-            />
+            <OverlayTrigger rootClose={true} trigger="click" placement="top" overlay={popover}
+                            delay={{show: 100, hide: 100}}>
+                <motion.img
+                    src={path}
+                    onMouseEnter={() => showName()}
+                    onMouseLeave={() => hideName()}
+                    whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}
+                    ref={contentRef}
+                    transition={transition}
+                    variants={variants}
+                    data-bs-toggle="tooltip"
+                />
+            </OverlayTrigger>
+
         </>
     )
 };

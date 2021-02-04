@@ -14,7 +14,7 @@ function Pyramid() {
 
     return (
         <mesh
-            visible
+
             rotation={[0.5, -0.5, -0.25]}
             position={[0, -1, 0]}
             scale={[2.5, 2.5, 2.5]}
@@ -23,10 +23,11 @@ function Pyramid() {
             {...useHover()}
         >
             <tetrahedronBufferGeometry attach="geometry"/>
-            <meshStandardMaterial
-                opacity={0.1}
+            <meshBasicMaterial
+                transparent={true}
+                opacity={1}
                 attach="material"
-                color="gray"
+                color="#2D2D2D"
                 roughness={0.2}
                 metalness={1}/>
         </mesh>

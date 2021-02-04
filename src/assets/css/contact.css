@@ -1,0 +1,18 @@
+.contact-container {
+    overflow: scroll !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+}
+
+.custom-input {
+    color: white;
+    background-color: transparent;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    padding: 1%;
+}
+
+.custom-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+}

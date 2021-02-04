@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {motion, useAnimation} from "framer-motion";
 import {useInView} from "react-intersection-observer";
 import Javascript from "../../assets/img/logo/javascript.svg";
@@ -30,39 +30,49 @@ const Skill = React.forwardRef((props, ref) => {
     const contentControl = useAnimation();
     const [headerRef, headerInView] = useInView();
     const [contentRef] = useInView();
+    const [visible, setVisible] = useState(false);
+
     const transition = {
-        duration: 1.5,
-        ease: "easeInOut"
+        duration: 1,
+        ease: "easeInOut",
     };
 
+    const transitionInfinite = {
+        duration: 5,
+        ease: "easeInOut",
+        repeat:Infinity
+    };
     const list = {
         visible: {
             opacity: 1,
-            x: 0,
+            y: 0,
             transition: {
-                staggerChildren: 0.3,
-                x: 0,
-
+                delayChildren: 0.3,
+                staggerChildren: 0.2,
             },
         },
         hidden: {
             opacity: 0,
-            x: "-100%",
-            transition: {
-                x: "-100%",
-
-                when: "afterChildren",
-            },
         },
     };
+
+    const reactAnimation = {
+        visible: {
+            opacity: 1,
+            rotate:360,
+        },
+    };
+
     const item = {
         visible: {
             opacity: 1,
-            x: 0
+            scale: 1,
+            y: 0
         },
         hidden: {
             opacity: 0,
-            x: "-100%"
+            scale: 0,
+            y: "100%"
         },
     };
 
@@ -78,49 +88,43 @@ const Skill = React.forwardRef((props, ref) => {
         },
     };
 
-    const sequence = async () => {
-        await headerControl.start("visible");
-        return await contentControl.start("visible");
-    };
-    const icons = document.getElementsByClassName("about-icon");
-    useEffect(() => {
 
-        if (headerInView) {
-            if (icons !== null) {
-                for (let i = 0; i < icons.length; i++) {
-                    icons.item(i).style.fill = "black";
-                }
-            }
-            sequence();
-        } else {
-            if (icons !== null) {
-                for (let i = 0; i < icons.length; i++) {
-                    icons.item(i).style.fill = "white";
-                }
-            }
+    const icons = document.getElementsByClassName("about-icon");
+    if (icons !== null) {
+        for (let i = 0; i < icons.length; i++) {
+            icons.item(i).style.fill = "black";
         }
-    }, [headerInView, sequence]);
+    }
+
+    useEffect(() => {
+        if (headerInView) {
+            const sequence = async () => {
+                await headerControl.start("visible");
+                return await contentControl.start("visible");
+            };
+            sequence()
+        }
+
+    }, [headerInView, icons, contentControl, headerControl, visible, setVisible]);
 
     return (
-        <Container ref={ref} id="skill">
-            <Row>
+        <Container id="skill"
+                   className="about-container pb-5 pl-5 pr-5 d-flex flex-column justify-content-start justify-content-sm-start  justify-content-md-center justify-content-lg-center">
+
+            <Row className="w-100 m-auto p-2">
                 <Col>
                     <motion.div
                         ref={headerRef}
                         animate={headerControl}
                         initial="hidden"
                         transition={transition}
-                        variants={variants}
-                    >
+                        variants={variants}>
                         <SectionTitle title="Skills" textColor="text-dark"/>
                     </motion.div>
-                </Col>
-            </Row>
-            <Row className="w-75 m-auto">
-                <Col>
                     <motion.ul
                         id="skill-content"
-                        className="list-group flex-md-row list-inline"
+                        className="list-group flex-md-row list-inline p-1
+                        "
                         ref={contentRef}
                         initial="hidden"
                         animate={contentControl}
@@ -130,7 +134,7 @@ const Skill = React.forwardRef((props, ref) => {
                         <motion.li variants={item}><Card progName="C++" path={CPlus}/></motion.li>
                         <motion.li variants={item}><Card progName="Android" path={Android}/></motion.li>
                         <motion.li variants={item}><Card progName="Spring" path={Spring}/></motion.li>
-                        <motion.li variants={item}><Card progName="ReactJS" path={ReactLogo}/></motion.li>
+                        <motion.li variants={reactAnimation} transition={transitionInfinite}><Card progName="ReactJS" path={ReactLogo}/></motion.li>
                         <motion.li variants={item}><Card progName="MongoDB" path={Mongo}/></motion.li>
                         <motion.li variants={item}><Card progName="Libgdx" path={Libgdx}/></motion.li>
                         <motion.li variants={item}><Card progName="Bootstrap" path={Bootstrap}/></motion.li>
@@ -144,11 +148,9 @@ const Skill = React.forwardRef((props, ref) => {
                         <motion.li variants={item}><Card progName="Gradle" path={Gradle}/></motion.li>
                         <motion.li variants={item}><Card progName="Linux" path={Linux}/></motion.li>
                         <motion.li variants={item}><Card progName="Jquery" path={Jquery}/></motion.li>
-
                     </motion.ul>
                 </Col>
             </Row>
-
         </Container>
     )
 });

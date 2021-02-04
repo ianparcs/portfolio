@@ -1,37 +1,25 @@
 #navbar {
     background-color: rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    width: 100%;
-    height: auto;
 }
 
 #navbar a {
     color: white;
 }
 
-#navbar a:hover {
+a:hover {
+    text-decoration: underline;
+}
+.text-decoration-underline{
     text-decoration: underline;
 }
 
-.sticky {
-    background-color: black !important;
-}
-
 .link-container {
-    padding-top: 2%;
-    padding-bottom: 2%;
-    display: inline-block;
-    width: 100%;
-    height: auto;
+    display: inline-block !important;
 }
 
 .link-container img {
-    width: 32px;
-    height: 32px;
-}
-
-.link-container a {
-    font-size: 2vh;
+    width: 28px;
+    height: 28px;
 }
 
 
@@ -83,26 +71,22 @@
 *!*/
 
 @media (min-width: 481px) and (max-width: 767px) {
-
+    .link-container img {
+        width: 25px;
+        height: 25px;
+    }
 }
 
 /*
-!*
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
-*!
 */
-/*
 
 @media (min-width: 320px) and (max-width: 480px) {
     .link-container img {
         width: 20px;
         height: 20px;
     }
-    .link-container a {
-        font-size: 2vh;
-    }
 
 }
 
-*/

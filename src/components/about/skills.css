@@ -1,3 +1,6 @@
+#skill {
+}
+
 #skill-content {
     display: inline-block;
     width: 100%;
@@ -12,8 +15,9 @@
 
 #skill-content li p {
     color: black;
-    white-space: pre-line;
     word-wrap: break-word;
+    padding: 0;
+    margin: 0 auto;
 }
 
 /*
@@ -24,9 +28,8 @@ Screen = 1281px to higher resolution desktops
 @media (min-width: 1281px) {
 
     #skill-content li {
-        width: 11%;
+        width: 10% !important;
     }
-
 }
 
 /*
@@ -38,13 +41,11 @@ Screen = B/w 1025px to 1280px
 
 
     #skill-content li {
-        width: 10%;
+        width: 10% !important;
     }
 
-    #skill-content li p {
-        font-size: 1vw;
-    }
 }
+
 
 /*
 Device = Tablets, Ipads (portrait)
@@ -54,12 +55,14 @@ Screen = B/w 768px to 1024px
 @media (min-width: 768px) and (max-width: 1024px) {
 
     #skill-content li {
-        width: 10%;
+        width: 15% !important;
     }
 
-    #skill-content li p {
-        font-size: 2vw;
+    #skill-content li {
+        padding-right: 2%;
+        padding-left: 2%;
     }
+
 }
 
 /*
@@ -73,10 +76,6 @@ Screen = B/w 768px to 1024px
         width: 12%;
     }
 
-    #skill-content li p {
-        font-size: 2vw;
-    }
-
 }
 
 
@@ -88,13 +87,8 @@ Screen = B/w 600px to 800px
 @media (min-width: 600px) and (max-width: 800px) and (orientation: portrait) {
 
     #skill-content li {
-        width: 15%;
+        width: 17%;
     }
-
-    #skill-content li p {
-        font-size: 2vw;
-    }
-
 }
 
 /*
@@ -108,9 +102,6 @@ Screen = B/w 481px to 767px
         width: 12%;
     }
 
-    #skill-content li p {
-        font-size: 2vw;
-    }
 }
 
 /*
@@ -121,12 +112,13 @@ Screen = B/w 481px to 767px
 @media (min-width: 320px) and (max-width: 480px) {
 
     #skill-content li {
-        width: 15%;
+        padding-right:5%;
+        padding-left:5%;
+    }
+    #skill-content li {
+        width: 33%;
     }
 
-    #skill-content li p {
-        font-size: 2.5vw;
-    }
 }
 
 

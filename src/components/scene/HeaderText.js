@@ -21,7 +21,7 @@ function HeaderText() {
     let timeSpeed = 300;
     useFrame((state) => {
         let time = state.clock.getElapsedTime() / timeSpeed;
-        if (ref.current.scale.x <= scaleLimit - 0.5) {
+        if (ref.current.scale.x <= scaleLimit - 1) {
             ref.current.scale.x += 7 * time;
             ref.current.scale.y += 7 * time;
         } else if (ref.current.letterSpacing <= 0.1) {
@@ -33,14 +33,13 @@ function HeaderText() {
         }
 
         if (transitionDone) {
-            if (ref1.current.scale.x <= scaleLimit - 1.5) {
+            if (ref1.current.scale.x <= scaleLimit - 2) {
                 ref1.current.scale.x += 7 * time;
                 ref1.current.scale.y += 7 * time;
             } else if (ref1.current.letterSpacing <= letterSpacingLimit) {
                 ref1.current.letterSpacing += 0.1 * time;
             }
         }
-
 
     }, transitionDone);
 
@@ -52,7 +51,7 @@ function HeaderText() {
                 overflowWrap={"break-word"}
                 letterSpacing={-0.5}
                 textAlign="center"
-                position={[-0.05, (viewport.height) / 3, 0.0]}
+                position={[-0.05, (viewport.height) / 2.9, 0.0]}
                 maxWidth={(viewport.width / 100) * 25}
                 scale={scale}
                 font={font}
@@ -67,8 +66,8 @@ function HeaderText() {
                 overflowWrap={"break-word"}
                 letterSpacing={-0.5}
                 textAlign="center"
-                position={[-0.05, (viewport.height) / 4.6, 0.0]}
-                maxWidth={(viewport.width / 100) * 24}
+                position={[-0.05, (viewport.height) / 3.7, 0.0]}
+                maxWidth={(viewport.width / 100) * 31}
                 scale={scale}
                 font={font}
                 outlineWidth={0.005}

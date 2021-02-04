@@ -23,7 +23,6 @@ function Effects({children, mouseClick}) {
         composer.current.setSize(size.width, size.height);
     });
 
-
     useFrame(() => composer.current.render(), 10);
     return (
         <Context.Provider value={set}>
@@ -42,9 +41,10 @@ function Effects({children, mouseClick}) {
                     edgeGlow={1}
                     edgeThickness={1}
                 />
-                <glitchPass attachArray="passes" factor={1}
-                            curF={mouseClick ? 1.70 : 0}
-                            randX={mouseClick ? 0.74 : 0}/>
+                <glitchPass attachArray="passes" factor={0.5}
+                            curF={mouseClick ? 0.1 : 0}
+                            randX={mouseClick ? 0.74 : 0}
+                    />
             </effectComposer>
         </Context.Provider>
     )

@@ -15,10 +15,13 @@ import 'react-awesome-slider/dist/styles.css';
 import "../../assets/css/app.css"
 
 import AwesomeSlider from 'react-awesome-slider';
-import {Container} from "react-bootstrap";
+import {Col, Container, Row} from "react-bootstrap";
 import Contact from "../contact/Contact";
 import AboutNav from "../about/AboutNav";
 import Education from "../about/Education";
+import WorkExperience from "../about/WorkExperience";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Footer from "./Footer";
 
 ReactGA.initialize('G-GPBY7PPYCR');
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -33,74 +36,117 @@ export default function App() {
     }, [count, currentIndex, transitionEnd]);
 
     const educationRef = useRef();
+    const workRef = useRef();
     const aboutRef = useRef();
     const skillRef = useRef();
 
     return (
         <>
             <Cursor/>
-            <AwesomeSlider
-                onTransitionStart={(e) => {
-                    setCurrentIndex(e.nextSlide);
-                    setCount(e.nextSlide);
-                    setTransitionEnd(false)
-                }}
-                onTransitionRequest={(e) => {
-                    if (currentIndex !== e.currentIndex) {
+            <Router>
+                <AwesomeSlider
+                    onTransitionStart={(e) => {
+                        setCurrentIndex(e.nextSlide);
+                        setCount(e.nextSlide);
                         setTransitionEnd(false)
+                    }}
+                    onTransitionRequest={(e) => {
+                        if (currentIndex !== e.currentIndex) {
+                            setTransitionEnd(false)
 
-                    }
-                }}
-                onTransitionEnd={(e) => {
-                    setCount(e.currentIndex);
-                    setCurrentIndex(e.currentIndex);
-                    setTransitionEnd(true)
-                }}
-                selected={count}
-                bullets={false}
-                disabled={true}
-                buttons={false}
-                fillParent={true}
-                mobileTouch={true}
-                animation="cubeAnimation"
-                transitionDelay={100}
-            >
-                <Container className="h-100 w-100" fluid="false">
-                    <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}/>
-                    <CenterView>
-                        <Scene/>
-                    </CenterView>
-                </Container>
+                        }
+                    }}
+                    onTransitionEnd={(e) => {
+                        setCount(e.currentIndex);
+                        setCurrentIndex(e.currentIndex);
+                        setTransitionEnd(true)
+                    }}
+                    selected={count}
+                    bullets={false}
+                    disabled={true}
+                    buttons={false}
+                    fillParent={true}
+                    mobileTouch={false}
+                    animation="cubeAnimation"
+                    transitionDelay={100}
+                >
+                    <Container className="h-100 w-100" fluid="false">
+                        <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}
+                                navPosition="fixed-top" textStyleHome="text-decoration-underline"/>
+                        <CenterView>
+                            <Scene/>
+                            <Footer fixedPos={"fixed-bottom"}/>
+                        </CenterView>
+                    </Container>
+                    <Container id={"about"} className="h-100 w-100 bg-white" fluid="false">
+                        <Row>
+                            <Col>
+                                <AboutNav skillRef={skillRef} aboutRef={aboutRef} educationRef={educationRef}
+                                          workExpRef={workRef}/>
+                            </Col>
+                        </Row>
+                        <Row className="m-0 h-0 w-100">
+                            <Col className="m-0 h-100 p-0">
+                                <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}
+                                        linkColor={"black"} navPosition="sticky-top"
+                                        textStyleAbout="text-decoration-underline"/>
+                            </Col>
+                        </Row>
+                        <Row className="m-0 h-100 w-100 ">
+                            <Col>
+                                <Switch>
+                                    <Route path="/portfolio/about">
+                                        <CenterView sectionName="About" bg="bg-black">
+                                            <About/>
+                                        </CenterView>
+                                        <Row>
+                                            <Col>
+                                                Testsdfasdf
+                                            </Col>
+                                        </Row>
+                                    </Route>
 
-                <Container className="h-100 w-100 bg-white" fluid="false">
-                    <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}
-                            linkColor={"black"}/>
-                    <AboutNav skillRef={skillRef} aboutRef={aboutRef} educationRef={educationRef}/>
-                    <CenterView sectionName="about" bg="bg-black">
-                        <About ref={aboutRef}/>
-                    </CenterView>
-                    <CenterView sectionName="skill" bg="bg-white">
-                        <Skills ref={skillRef}/>
-                    </CenterView>
-                    <CenterView sectionName="education" bg="bg-black">
-                        <Education ref={educationRef}/>
-                    </CenterView>
-                </Container>
+                                    <Route path="/portfolio/skills">
+                                        <CenterView sectionName="skill" bg="bg-white">
+                                            <Skills/>
+                                        </CenterView>
+                                    </Route>
 
-                <Container className="h-100 w-100 bg-white" fluid="false">
-                    <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}/>
-                    <CenterView sectionName="projects" bg="bg-black">
-                        <Project/>
-                    </CenterView>
-                </Container>
+                                    <Route path="/portfolio/workexperience">
+                                        <CenterView sectionName="Work Experience" bg="bg-black">
+                                            <WorkExperience/>
+                                        </CenterView>
+                                    </Route>
 
-                <Container className="h-100 w-100 bg-white" fluid="false">
-                    <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}/>
-                    <CenterView sectionName="contact" bg="bg-black">
-                        <Contact/>
-                    </CenterView>
-                </Container>
-            </AwesomeSlider>
+                                    <Route path="/portfolio/education">
+                                        <CenterView sectionName="education" bg="bg-white">
+                                            <Education/>
+                                        </CenterView>
+                                    </Route>
+
+                                </Switch>
+                            </Col>
+                        </Row>
+                    </Container>
+                    <Container className="section-container" fluid="false">
+                        <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}
+                                navPosition="sticky-top" linkColor={"black"} textStyleWork="text-decoration-underline"/>
+                        <CenterView sectionName="projects" bg="bg-black">
+                            <Project/>
+                            <Footer/>
+                        </CenterView>
+                    </Container>
+                    <Container className="h-100 w-100 section-container" fluid="false">
+                        <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}
+                                navPosition="sticky-top" linkColor={"black"}
+                                textStyleContact="text-decoration-underline"/>
+                        <CenterView sectionName="contact" bg="bg-black">
+                            <Contact/>
+                            <Footer/>
+                        </CenterView>
+                    </Container>
+                </AwesomeSlider>
+            </Router>
         </>
     )
 }

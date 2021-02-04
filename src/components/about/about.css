@@ -1,12 +1,12 @@
-#about {
+.about-container {
+    height: 100vh !important;
     overflow: scroll !important;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 }
 
 .sidenav {
     position: fixed;
     width: 7% !important;
-    height: 25%;
+    height: 100%;
     margin: 0 auto;
     z-index: 1;
     right: 0;
@@ -16,9 +16,8 @@
 }
 
 .sidenav svg {
-    width: 48px;
-    height: 48px;
-    padding: 15%;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -29,8 +28,15 @@
 
 @media (min-width: 1281px) {
 
-    /* CSS */
+    .sidenav {
+        width: 6% !important;
+        height: 37%;
+    }
 
+    .sidenav svg {
+        width: 38px !important;
+        height: 38px !important;;
+    }
 }
 
 /*
@@ -40,8 +46,15 @@
 
 @media (min-width: 1025px) and (max-width: 1280px) {
 
-    /* CSS */
+    .sidenav {
+        width: 7% !important;
+        height: 32% !important;
+    }
 
+    .sidenav svg {
+        width: 32px !important;
+        height: 32px !important;;
+    }
 }
 
 /*
@@ -51,8 +64,28 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
-    /* CSS */
+    .sidenav {
+        width: 11% !important;
+        height: 35% !important;
+    }
 
+    .sidenav svg {
+        width: 32px !important;
+        height: 32px !important;;
+    }
+
+}
+
+@media (min-width: 600px) and (max-width: 800px) and (orientation: portrait) {
+    .sidenav {
+        width: 12% !important;
+        height: 30% !important;
+    }
+
+    .sidenav svg {
+        width: 32px !important;
+        height: 32px !important;;
+    }
 }
 
 /*
@@ -62,7 +95,17 @@
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
-    /* CSS */
+
+    .sidenav {
+        width: 9% !important;
+        height: 20%;
+    }
+
+
+    .sidenav svg {
+        width: 32px;
+        height: 32px;
+    }
 
 }
 
@@ -75,17 +118,12 @@
 
     .sidenav {
         width: 12% !important;
-        height: 30%;
+        height: 40%;
     }
 
     .sidenav svg {
-        width: 32px;
-        height: 32px;
-        padding: 15%;
-    }
-
-    #content {
-        font-size: 2.5vw;
+        width: 25px;
+        height: 25px;
     }
 }
 
@@ -97,18 +135,13 @@
 @media (min-width: 320px) and (max-width: 480px) {
 
     .sidenav {
-        width: 16% !important;
-        height: 25%;
+        width: 22% !important;
+        height: 33%;
     }
 
     .sidenav svg {
-        width: 25px;
-        height: 25px;
-        padding: 15%;
-    }
-
-    #content {
-        font-size: 4vw;
+        width: 26px;
+        height: 26px;
     }
 
 }

@@ -12,7 +12,7 @@ const About = React.forwardRef((props, ref) => {
     const [contentRef, contentInView] = useInView();
 
     const transition = {
-        duration: 2,
+        duration: 1,
         ease: "easeInOut"
     };
 
@@ -26,54 +26,56 @@ const About = React.forwardRef((props, ref) => {
         },
     };
 
-    function handleClick() {
-        console.log(ref);
-        ref.current.scrollIntoView({behavior: 'smooth'});
-    }
-
-
     useEffect(() => {
-        const sequence = async () => {
-            await headerControl.start("visible");
-            return await contentControl.start("visible");
-        };
-
         if (headerInView) {
+            const sequence = async () => {
+                await headerControl.start("visible");
+                return await contentControl.start("visible");
+            };
             sequence();
         }
     }, [headerControl, headerInView, contentControl, contentInView]);
 
+    const icons = document.getElementsByClassName("about-icon");
+    if (icons !== null) {
+        for (let i = 0; i < icons.length; i++) {
+            icons.item(i).style.fill = "white";
+        }
+    }
+
     return (
-        <Container className="w-100" fluid={true} ref={ref}>
+        <Container className="about-container p-5  d-flex flex-column justify-content-center">
             <Row>
                 <Col>
-                    <motion.div id={"header"}
-                                ref={headerRef}
-                                animate={headerControl}
-                                initial="hidden"
-                                transition={transition}
-                                variants={variants}>
+                    <motion.div
+                        ref={headerRef}
+                        animate={headerControl}
+                        initial="hidden"
+                        transition={transition}
+                        variants={variants}>
                         <SectionTitle title="About" textColor="text-white"/>
                     </motion.div>
                 </Col>
             </Row>
             <Row>
-                <Col className="">
-                    <motion.p className="lead w-75 h-100 m-auto"
-                              ref={contentRef}
-                              id="content"
-                              initial="hidden"
-                              animate={contentControl}
-                              transition={transition}
-                              variants={variants}>
+                <Col>
+                    <motion.p
+                        className="pb-5 pr-1 pl-1"
+                        ref={contentRef}
+                        id="content"
+                        initial="hidden"
+                        animate={contentControl}
+                        transition={transition}
+                        variants={variants}>
                         A passionate Software Developer having an experience of building Web and
                         Mobile applications with
                         Java
                         / Spring Boot / Android and some other cool libraries and frameworks.
                         A hobbyist game developer who loves making a game come to life, reading books, articles and
                         surfing
-                        the web. Codes should be short and concise and Design
-                        Patterns are not to be force but only use to fix commonly occurring problem in software designs.
+                        the web. I enjoy implementing software design principles like SOLID and design patterns
+                        to fix commonly occurring problem in software designs. Interested in applying wealth of
+                        experience and knowledge to deliver quality and value.
                     </motion.p>
                 </Col>
             </Row>
