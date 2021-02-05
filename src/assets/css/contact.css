@@ -1,11 +1,18 @@
 .contact-container {
     overflow: scroll !important;
     height: 100vh !important;
-    min-height: 100vh !important;
+}
+
+.custom-alert {
+    background-color: black;
+    border-width: 3px;
+    border-color: white;
+    color: green;
 }
 
 .custom-input {
     color: white;
+    overflow: hidden !important;
     background-color: transparent;
     border-color: white;
     border-style: solid;

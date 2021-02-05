@@ -68,7 +68,7 @@ export default function App() {
                     fillParent={true}
                     mobileTouch={false}
                     animation="cubeAnimation"
-                    transitionDelay={100}
+                    transitionDelay={200}
                 >
                     <Container className="h-100 w-100" fluid="false">
                         <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}
@@ -92,20 +92,14 @@ export default function App() {
                                         textStyleAbout="text-decoration-underline"/>
                             </Col>
                         </Row>
-                        <Row className="m-0 h-100 w-100 ">
+                        <Row className="m-0 h-100 w-100 test bg-black">
                             <Col>
                                 <Switch>
                                     <Route path="/portfolio/about">
                                         <CenterView sectionName="About" bg="bg-black">
                                             <About/>
                                         </CenterView>
-                                        <Row>
-                                            <Col>
-                                                Testsdfasdf
-                                            </Col>
-                                        </Row>
                                     </Route>
-
                                     <Route path="/portfolio/skills">
                                         <CenterView sectionName="skill" bg="bg-white">
                                             <Skills/>
@@ -128,7 +122,7 @@ export default function App() {
                             </Col>
                         </Row>
                     </Container>
-                    <Container className="section-container" fluid="false">
+                    <Container className="w-100 section-container" fluid="false">
                         <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}
                                 navPosition="sticky-top" linkColor={"black"} textStyleWork="text-decoration-underline"/>
                         <CenterView sectionName="projects" bg="bg-black">
@@ -136,7 +130,7 @@ export default function App() {
                             <Footer/>
                         </CenterView>
                     </Container>
-                    <Container className="h-100 w-100 section-container" fluid="false">
+                    <Container className="w-100 section-container" fluid="false">
                         <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}
                                 navPosition="sticky-top" linkColor={"black"}
                                 textStyleContact="text-decoration-underline"/>

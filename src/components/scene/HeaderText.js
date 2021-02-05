@@ -66,8 +66,8 @@ function HeaderText() {
                 overflowWrap={"break-word"}
                 letterSpacing={-0.5}
                 textAlign="center"
-                position={[-0.05, (viewport.height) / 3.7, 0.0]}
-                maxWidth={(viewport.width / 100) * 31}
+                position={[-0.05, (viewport.height) / 3.9, 0.0]}
+                maxWidth={(viewport.width / 100) * 30}
                 scale={scale}
                 font={font}
                 outlineWidth={0.005}

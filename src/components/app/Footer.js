@@ -5,6 +5,7 @@ import LinkedIn from "../../assets/img/logo/linkedin.svg"
 import Github from "../../assets/img/icon/github.svg"
 import Youtube from "../../assets/img/logo/youtube.svg"
 import StackOverFlow from "../../assets/img/logo/stackoverflow.svg"
+import Instagram from "../../assets/img/logo/instagram.svg"
 
 import {motion} from 'framer-motion'
 
@@ -16,9 +17,12 @@ export default function Footer(props) {
     }
 
     return (
-        <Container className={"w-100 border-top " + props.fixedPos} fluid="true">
+        <Container className={"p-2 w-100 border-top " + props.fixedPos} fluid="true">
             <Row>
                 <Col>
+                    <motion.img src={Instagram} className="contact-logo"
+                                whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}
+                                onClick={() => openLink("https://www.instagram.com/ianparcs/")}/>
                     <motion.img src={Youtube} className="contact-logo"
                                 whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}
                                 onClick={() => openLink("https://www.youtube.com/channel/UCkBnZZHNqeVQBvS9_NLVtFQ")}/>

@@ -39,11 +39,11 @@ const Project = () => {
     const portfolioDescription = <p className="pt-4">Personal site showcasing my projects and online resume.</p>;
 
     return (
-        <Container className="w-100 d-flex flex-column justify-content-center">
+        <Container>
             <Work title="Community Health Information Tracking System (CHITS)"
                   skills={<p>Skills: Java, Spring MVC, Hibernate,MySQL and Ant.</p>}
                   content={chitsDescription}
-                  images={[{path: CHITS_1, alt: "Paiwi mobile"}, {path: CHITS_2, alt: "Paiwi mobile"}]}
+                  images={[{path: CHITS_1, alt: "Chits_1"}, {path: CHITS_2, alt: "CHITS_2"}]}
                   workNumber={One}
                   direction="-100%"/>
             <Work title="Pa-Iwi Mobile"
@@ -51,11 +51,11 @@ const Project = () => {
                   content={paiwiDescription}
                   images={[{path: Paiwi_1, alt: "Paiwi mobile"}, {path: Paiwi_2, alt: "Paiwi mobile"}]}
                   workNumber={Two}
-                  direction="-100%"/>
+                  direction="100%"/>
             <Work title="RM Home Tiles"
                   skills={<p>Skills: Java, JavaFX, Spring MVC, Hibernate, MySQL and Maven.</p>}
                   content={posDescription}
-                  images={[{path: Inventory_3, alt: "Paiwi mobile"}, {
+                  images={[{path: Inventory_3, alt: "Inventory_3"}, {
                       path: Inventory_1,
                       alt: "Inventory_1"
                   }, {path: Inventory_2, alt: "Inventory_2"},]}
@@ -66,7 +66,7 @@ const Project = () => {
                   content={portfolioDescription}
                   images={[{path: Portfolio_2, alt: "Portfolio_2"}, {path: Portfolio_1, alt: "Portfolio_1"}]}
                   workNumber={Four}
-                  direction="-100%"/>
+                  direction="100%"/>
         </Container>
     )
 };
