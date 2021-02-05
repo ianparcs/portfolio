@@ -18,7 +18,7 @@ function HeaderText() {
         0
     );
     let transitionDone = false;
-    let timeSpeed = 300;
+    let timeSpeed = 100;
     useFrame((state) => {
         let time = state.clock.getElapsedTime() / timeSpeed;
         if (ref.current.scale.x <= scaleLimit - 1) {
