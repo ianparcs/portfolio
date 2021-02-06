@@ -4,9 +4,12 @@
     border-style: double;
 }
 
+.w-90{
+    width: 90% !important;
+}
 .image-content {
-    width:80% !important;
-    height: 100% !important;
-    object-fit:contain;
+    width:100% !important;
+    height: auto  !important;
+    object-fit:cover !important;
 }
 

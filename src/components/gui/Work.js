@@ -56,9 +56,10 @@ const Work = (props) => {
 
     return (
         <Row className="pt-3">
-            <Col className="col-10 p-3">
-                <div className=" w-75 m-auto">
+            <Col className="col-9 col-md-10 col-lg-11 p-3">
+                <div className="w-75 m-auto">
                     <motion.p className="w-75 p-2 m-auto white-border"
+                              ref={headerRef}
                               animate={headerControl}
                               initial="headerHidden"
                               transition={transition}
@@ -73,27 +74,26 @@ const Work = (props) => {
                         {props.content}
                         {props.skills}
                     </motion.div>
+                    <motion.div
+                        initial="contentHidden"
+                        animate={contentControl}
+                        transition={transition}
+                        variants={variants}>
+                        <Swiper effect="cube"
+                                spaceBetween={0}
+                                pagination={{clickable: true}}>
+                            {imagesList}
+                        </Swiper>
+                    </motion.div>
                 </div>
-                <motion.div
-                    ref={headerRef}
-                    initial="contentHidden"
-                    animate={contentControl}
-                    transition={transition}
-                    variants={variants}>
-                    <Swiper effect="cube"
-                            spaceBetween={0}
-                            pagination={{clickable: true}}>
-                        {imagesList}
-                    </Swiper>
-                </motion.div>
             </Col>
-            <Col className="col-2 w-100 p-0 d-flex align-content-start">
+            <Col className="col-3 col-md-2 col-lg-1 w-100 p-0">
                 <Container className="w-100 h-100 p-0 m-0">
-                    <Row className="w-100 h-100 p-0 m-0">
-                        <Col className="w-100 h-100 p-0 m-0">
+                    <Row className="w-100 h-100">
+                        <Col className="w-100 h-100 p-1 m-0">
                             <Line animate={lineControl} transition={transition} variants={variants}/>
                         </Col>
-                        <Col className="w-100 h-100 p-0 m-0">
+                        <Col className="w-100 h-100 pl-1 pr-1 m-0">
                             <motion.img alt={props.workNumber}
                                         src={props.workNumber}
                                         style={{width: 48, height: 48}}

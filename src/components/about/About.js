@@ -19,7 +19,7 @@ const About = React.forwardRef((props, ref) => {
     const variants = {
         visible: {
             opacity: 1,
-            transition: {duration:1, delay: 1},
+            transition: {duration:1, delay: 0.2},
         },
         hidden: {
             opacity: 0,

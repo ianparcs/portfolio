@@ -52,9 +52,6 @@ export default function Contact() {
             if (headerInView) {
                 await headerControl.start("headerVisible");
                 return await contentControl.start("visible");
-            } else {
-                headerControl.start("hidden");
-                contentControl.start("hidden");
             }
         };
         sequence()

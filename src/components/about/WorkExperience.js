@@ -79,20 +79,25 @@ const WorkExperience = React.forwardRef((props, ref) => {
             y: 0
         }
     };
-
+    const sequence = async () => {
+        await headerControl.start("visible");
+        await jobControl.start("visible");
+        await contentControl.start("visible");
+        await jobControl2.start("visible");
+        return await contentControl2.start("visible");
+    };
     useEffect(() => {
         if (headerInView) {
-            const sequence = async () => {
-                await headerControl.start("visible");
-                await jobControl.start("visible");
-                await contentControl.start("visible");
-                await jobControl2.start("visible");
-                return await contentControl2.start("visible");
-            };
             sequence();
+        } else {
+            headerControl.start("hidden");
+            jobControl.start("hidden");
+            contentControl.start("hidden");
+            jobControl2.start("hidden");
+            contentControl2.start("hidden");
         }
 
-    }, [jobControl, jobControl2, headerInView, contentControl, headerControl, contentControl2]);
+    }, [sequence, jobControl, jobControl2, headerInView, contentControl, headerControl, contentControl2]);
     return (
         <Container className="about-container p-5 d-flex flex-column justify-content-start">
             <Row className="pt-3" ref={headerRef}>
