@@ -27,12 +27,12 @@ const Work = (props) => {
     const transition = {duration: 1, ease: "easeInOut"};
     const variants = {
         visible: {opacity: 1, y: 0},
-        hidden: {opacity: 0, y: props.direction, transition: {duration: 1}},
-        headerHidden: {opacity: 0, x: "-100%", transition: {duration: 1}},
-        headerVisible: {opacity: 1, x: 0, transition: {delay: 0.5, duration: 1}},
-        contentHidden: {opacity: 0, transition: {duration: 1}},
-        contentVisible: {opacity: 1, x: 0},
-        numHidden: {opacity: 0, x: "100%", transition: {duration: 1}},
+        hidden: {opacity: 0, y: props.direction, transition: {duration: 0.5}},
+        headerHidden: {opacity: 0, x: "-100%", transition: {duration: 0.5}},
+        headerVisible: {opacity: 1, x: 0, transition: {delay: 0.5, duration:0.5}},
+        contentHidden: {opacity: 0, transition: {duration: 0.5}},
+        contentVisible: {opacity: 1, x: 0, transition: {duration: 0.5}},
+        numHidden: {opacity: 0, x: "100%", transition: {duration: 0.5}},
         numVisible: {opacity: 1, x: 0}
     };
     const imagesList = props.images.map((image, index) =>
@@ -55,8 +55,8 @@ const Work = (props) => {
     }
 
     return (
-        <Row className="pt-3">
-            <Col className="col-9 col-md-10 col-lg-11 p-3">
+        <Row className="pt-3 min-vh-100">
+            <Col className="col-9 col-md-10 col-lg-11 p-3 h-100 d-flex flex-column justify-content-center">
                 <div className="w-75 m-auto">
                     <motion.p className="w-75 p-2 m-auto white-border"
                               ref={headerRef}

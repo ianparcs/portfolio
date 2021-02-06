@@ -23,10 +23,12 @@ import WorkExperience from "../about/WorkExperience";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Footer from "./Footer";
 
-ReactGA.initialize('G-GPBY7PPYCR');
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 export default function App() {
+
+    ReactGA.initialize('UA-187469000-1');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+
     const [count, setCount] = React.useState(0);
     const [transitionEnd, setTransitionEnd] = React.useState(true);
     const [currentIndex, setCurrentIndex] = React.useState(0);
@@ -136,7 +138,9 @@ export default function App() {
                                 textStyleContact="text-decoration-underline"/>
                         <CenterView sectionName="contact" bg="bg-black">
                             <Contact/>
-                            <Footer/>
+                        </CenterView>
+                        <CenterView sectionName="contact" bg="bg-black">
+                            <Footer fixedPos="sticky-bottom"/>
                         </CenterView>
                     </Container>
                 </AwesomeSlider>

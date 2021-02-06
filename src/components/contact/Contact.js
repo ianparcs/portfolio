@@ -104,9 +104,9 @@ export default function Contact() {
     }
 
     return (
-        <Container className="pb-5">
+        <Container className="vh-100 p-5 w-100 d-flex flex-column justify-content-center">
             <AlertDismissibleExample/>
-            <Row className="pt-5" ref={headerRef}>
+            <Row className="pt-5 w-100" ref={headerRef}>
                 <Col>
                     <motion.div
                         ref={headerRef}
@@ -117,9 +117,9 @@ export default function Contact() {
                     </motion.div>
                 </Col>
             </Row>
-            <Row>
+            <Row className="w-100">
                 <motion.div
-                    className="w-75 m-auto"
+                    className="w-100 m-auto"
                     initial="hidden"
                     animate={contentControl}
                     variants={list}>
