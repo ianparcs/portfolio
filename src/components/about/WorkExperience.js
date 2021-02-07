@@ -79,15 +79,16 @@ const WorkExperience = React.forwardRef((props, ref) => {
             y: 0
         }
     };
-    const sequence = async () => {
-        await headerControl.start("visible");
-        await jobControl.start("visible");
-        await contentControl.start("visible");
-        await jobControl2.start("visible");
-        return await contentControl2.start("visible");
-    };
+
     useEffect(() => {
         if (headerInView) {
+            const sequence = async () => {
+                await headerControl.start("visible");
+                await jobControl.start("visible");
+                await contentControl.start("visible");
+                await jobControl2.start("visible");
+                return await contentControl2.start("visible");
+            };
             sequence();
         } else {
             headerControl.start("hidden");
