@@ -9,7 +9,12 @@
 a:hover {
     text-decoration: underline;
 }
-.text-decoration-underline{
+
+.nav-name-link:hover {
+    text-decoration: underline;
+}
+
+.text-decoration-underline {
     text-decoration: underline;
 }
 

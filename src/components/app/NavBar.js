@@ -27,7 +27,7 @@ const NavBar = (props) => {
         <Navbar id="navbar" className={classStyle} style={{backgroundColor: props.linkColor}}>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav"
-                             className="link-container d-flex flex-row justify-content-end align-items-center">
+                             className="link-container d-flex flex-row  justify-content-center justify-content-md-end align-items-center">
                 <Nav className="text-center p-1 p-md-2">
                     <motion.div
                         className={"link-container mr-2 ml-2 align-items-center " + props.textStyleHome}
@@ -36,7 +36,7 @@ const NavBar = (props) => {
                         }}
                         whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
                         <img src={HouseIcon} className="mr-1" alt="home"/>
-                        Home
+                        <p className="nav-name-link">Home</p>
                         <Nav.Link className="disable-link p-0"/>
                     </motion.div>
                     <motion.div
@@ -48,7 +48,7 @@ const NavBar = (props) => {
                         whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
                         <img src={User} className="mr-1" alt="about"/>
                         <Link to="portfolio/about">
-                            About
+                            <p className="nav-name-link"> About</p>
                         </Link>
                         <Nav.Link className="disable-link p-0">
                         </Nav.Link>
@@ -60,7 +60,7 @@ const NavBar = (props) => {
                         }}
                         whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
                         <img src={CodingTag} className="mr-1" alt="projects"/>
-                        Projects
+                        <p className="nav-name-link">Projects</p>
                         <Nav.Link className="disable-link p-0"/>
                     </motion.div>
                     <motion.div
@@ -70,7 +70,7 @@ const NavBar = (props) => {
                         }}
                         whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
                         <img src={Send} className="mr-1" alt="contact"/>
-                        Contact
+                        <p className="nav-name-link">Contact</p>
                         <Nav.Link className="disable-link p-0"/>
                     </motion.div>
                 </Nav>
