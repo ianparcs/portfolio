@@ -135,7 +135,7 @@ const Education = React.forwardRef((props, ref) => {
                         <motion.li variants={item} className="text-dark"><p className="text-dark">Managed team members
                             of thesis and allocated resources to fit needs of software development, documents and
                             research</p></motion.li>
-                        <motion.li variants={item} className="text-dark"><p className="text-dark">Develop a <a
+                        <motion.li variants={item} className="text-dark"><p className="text-dark">Created a <a
                             href="https://github.com/ianparcs/location-finder">Navigation System</a> which navigate user
                             from current location to target location for local school universities.</p></motion.li>
                     </motion.ul>
