@@ -98,7 +98,7 @@ const WorkExperience = React.forwardRef((props, ref) => {
             contentControl2.start("hidden");
         }
 
-    }, [sequence, jobControl, jobControl2, headerInView, contentControl, headerControl, contentControl2]);
+    }, [jobControl, jobControl2, headerInView, contentControl, headerControl, contentControl2]);
     return (
         <Container className="about-container p-5 d-flex flex-column justify-content-start">
             <Row className="pt-3" ref={headerRef}>
