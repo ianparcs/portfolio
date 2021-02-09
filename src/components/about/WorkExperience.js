@@ -90,12 +90,6 @@ const WorkExperience = React.forwardRef((props, ref) => {
                 return await contentControl2.start("visible");
             };
             sequence();
-        } else {
-            headerControl.start("hidden");
-            jobControl.start("hidden");
-            contentControl.start("hidden");
-            jobControl2.start("hidden");
-            contentControl2.start("hidden");
         }
 
     }, [jobControl, jobControl2, headerInView, contentControl, headerControl, contentControl2]);
