@@ -22,25 +22,25 @@ const NavBar = (props) => {
     }
 
 
-    const classStyle = "link-container w-100 " + props.navPosition;
+    const classStyle = "link-container w-100 p-2 " + props.navPosition;
     return (
         <Navbar id="navbar" className={classStyle} style={{backgroundColor: props.linkColor}}>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav"
                              className="link-container d-flex flex-row  justify-content-center justify-content-md-end align-items-center">
-                <Nav className="text-center p-1 p-md-2">
+                <Nav className="text-center">
                     <motion.div
-                        className={"link-container mr-2 ml-2 align-items-center " + props.textStyleHome}
+                        className={"d-flex flex-column justify-content-center align-items-center  link-container mr-2 ml-2 align-items-center " + props.textStyleHome}
                         onClick={() => {
                             transitionFinish(0, "/")
                         }}
                         whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
                         <img src={HouseIcon} className="mr-1" alt="home"/>
-                        <p className="nav-name-link">Home</p>
+                        <p className="nav-name-link p-0 m-0">Home</p>
                         <Nav.Link className="disable-link p-0"/>
                     </motion.div>
                     <motion.div
-                        className={"link-container mr-2 ml-2 align-items-center " + props.textStyleAbout}
+                        className={"d-flex flex-column justify-content-center align-items-center  link-container mr-2 ml-2 align-items-center " + props.textStyleHome}
                         onClick={() => {
                             transitionFinish(1, "/about");
                             handleClick("/about");
@@ -48,29 +48,30 @@ const NavBar = (props) => {
                         whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
                         <img src={User} className="mr-1" alt="about"/>
                         <Link to="portfolio/about">
-                            <p className="nav-name-link"> About</p>
+                            <p className="nav-name-link p-0 m-0"> About</p>
                         </Link>
                         <Nav.Link className="disable-link p-0">
                         </Nav.Link>
                     </motion.div>
                     <motion.div
-                        className={"link-container mr-2 ml-2 align-items-center " + props.textStyleWork}
+                        className={"d-flex flex-column justify-content-center align-items-center  link-container mr-2 ml-2 align-items-center " + props.textStyleHome}
+
                         onClick={() => {
                             transitionFinish(2, "/projects")
                         }}
                         whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
                         <img src={CodingTag} className="mr-1" alt="projects"/>
-                        <p className="nav-name-link">Projects</p>
+                        <p className="nav-name-link p-0 m-0">Projects</p>
                         <Nav.Link className="disable-link p-0"/>
                     </motion.div>
                     <motion.div
-                        className={"link-container mr-2 ml-2 align-items-center " + props.textStyleContact}
+                        className={"d-flex flex-column justify-content-center align-items-center  link-container mr-2 ml-2 align-items-center " + props.textStyleHome}
                         onClick={() => {
                             transitionFinish(3, "/contact")
                         }}
                         whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
                         <img src={Send} className="mr-1" alt="contact"/>
-                        <p className="nav-name-link">Contact</p>
+                        <p className="nav-name-link p-0 m-0">Contact</p>
                         <Nav.Link className="disable-link p-0"/>
                     </motion.div>
                 </Nav>
