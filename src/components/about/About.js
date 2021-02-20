@@ -72,9 +72,9 @@ const About = React.forwardRef((props, ref) => {
                         Mobile applications with
                         Java
                         / Spring Boot / Android and some other cool libraries and frameworks.
-                        A hobbyist game developer who loves making a game come to life, reading books, articles and
+                        Hobbyist game developer who loves making games come to life, reading books, articles and
                         surfing
-                        the web. I enjoy implementing software design principles like SOLID and design patterns
+                        the web. Enjoys implementing software design principles such as SOLID and design patterns
                         to fix commonly occurring problem in software designs. Interested in applying wealth of
                         experience and knowledge to deliver quality and value.
                     </motion.p>
