@@ -116,7 +116,36 @@ const WorkExperience = React.forwardRef((props, ref) => {
                         transition={transition}
                         variants={list}
                     >
-                        <h4 className="text-red">Jr. Software Developer</h4>
+                        <h4 className="text-red">Software Developer</h4>
+                        <h5>Collabera (GCash)</h5>
+                        <h6>FEBRUARY 2021 – PRESENT</h6>
+                    </motion.div>
+                </Col>
+                <Col className="col-12 col-lg-8">
+                    <motion.ul className="text-left pt-3"
+                               ref={contentRef}
+                               initial="hidden"
+                               animate={contentControl}
+                               transition={transition}
+                               variants={list}
+                    >
+                        <motion.li variants={item}><p>Working on real-time transaction history.</p></motion.li>
+                        <motion.li variants={item}><p>Identifies root cause of unstable bugs and fix the underlying issues.</p></motion.li>
+                        <motion.li variants={item}><p>Collaborates with team about development of the
+                            projects and deployments for new version releases.</p></motion.li>
+                    </motion.ul>
+                </Col>
+            </Row>
+            <Row>
+                <Col className="pt-4 col-12 col-lg-4 d-flex flex-column justify-content-center">
+                    <motion.div
+                        ref={jobRef}
+                        initial="hidden"
+                        animate={jobControl}
+                        transition={transition}
+                        variants={list}
+                    >
+                        <h4 className="text-red">Software Developer</h4>
                         <h5>Philippine General Hospital</h5>
                         <h6>MARCH 2019 – MARCH 2020</h6>
                     </motion.div>
@@ -148,7 +177,7 @@ const WorkExperience = React.forwardRef((props, ref) => {
                         transition={transition}
                         variants={list}
                     >
-                        <h4 className="text-red">Jr. Software Developer</h4>
+                        <h4 className="text-red">Software Developer</h4>
                         <h5>Codegum Incorporated</h5>
                         <h6>OCTOBER 2017 – NOVEMBER 2018</h6>
                     </motion.div>

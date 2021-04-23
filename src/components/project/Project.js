@@ -9,12 +9,10 @@ import Portfolio_1 from "../../assets/img/works/portfolio/portfolio_1.png"
 import Portfolio_2 from "../../assets/img/works/portfolio/portfolio_2.png"
 import Paiwi_1 from "../../assets/img/works/paiwi/paiwi-1.png"
 import Paiwi_2 from "../../assets/img/works/paiwi/paiwi-2.png"
+import Gcash_1 from "../../assets/img/works/gcash/gcash-1.png"
+import Gcash_2 from "../../assets/img/works/gcash/gcash-2.png"
 import CHITS_1 from "../../assets/img/works/chits/chits-1.png"
 import CHITS_2 from "../../assets/img/works/chits/chits-3.png"
-import Three from "../../assets/img/works/three.svg"
-import Four from "../../assets/img/works/four.svg"
-import Two from "../../assets/img/works/two.svg"
-import One from "../../assets/img/works/one.svg"
 import "../../assets/css/projects.css"
 
 const Project = () => {
@@ -25,6 +23,10 @@ const Project = () => {
         enthusiast to invest their money
         to livestock farming. Tracks real-time investment assets, status and profit of returns.
         (No longer supported or maintained)</p>;
+
+    const gcashDescription = <p className="pt-4">
+        GCash is mobile money or “e-money” that allows you to pay bills, send or receive money, buy load, shop online,
+        book movie tickets, and more with the use of your smartphone.</p>;
 
     const chitsDescription = <p className="pt-4">
         CHITS is an electronic medical record system that reduces patient waiting time and improves
@@ -40,17 +42,23 @@ const Project = () => {
 
     return (
         <Container>
+            <Work title="GCash App"
+                  skills={<p>Skills: Java, Spring Boot, Rest API, Kafka, and Kubernetes.</p>}
+                  content={gcashDescription}
+                  images={[{path: Gcash_2, alt: "Gcash_1"}, {path: Gcash_1, alt: "Gcash_2"}]}
+                  workNumber={1}
+                  direction="100%"/>
             <Work title="Community Health Information Tracking System (CHITS)"
                   skills={<p>Skills: Java, Spring MVC, Hibernate,MySQL and Ant.</p>}
                   content={chitsDescription}
                   images={[{path: CHITS_1, alt: "Chits_1"}, {path: CHITS_2, alt: "CHITS_2"}]}
-                  workNumber={One}
+                  workNumber={2}
                   direction="-100%"/>
             <Work title="Pa-Iwi Mobile"
                   skills={<p> Skills: Java, Android, Amazon S3, Firebase and Rest API.</p>}
                   content={paiwiDescription}
                   images={[{path: Paiwi_1, alt: "Paiwi mobile"}, {path: Paiwi_2, alt: "Paiwi mobile"}]}
-                  workNumber={Two}
+                  workNumber={3}
                   direction="100%"/>
             <Work title="RM Home Tiles"
                   skills={<p>Skills: Java, JavaFX, Spring MVC, Hibernate, MySQL and Maven.</p>}
@@ -59,13 +67,13 @@ const Project = () => {
                       path: Inventory_1,
                       alt: "Inventory_1"
                   }, {path: Inventory_2, alt: "Inventory_2"},]}
-                  workNumber={Three}
+                  workNumber={4}
                   direction="-100%"/>
             <Work title="Personal Website"
                   skills={<p>Skills: HTML5, CSS3, ReactJS and NodeJS.</p>}
                   content={portfolioDescription}
                   images={[{path: Portfolio_2, alt: "Portfolio_2"}, {path: Portfolio_1, alt: "Portfolio_1"}]}
-                  workNumber={Four}
+                  workNumber={5}
                   direction="100%"/>
         </Container>
     )

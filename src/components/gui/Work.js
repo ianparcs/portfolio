@@ -29,7 +29,7 @@ const Work = (props) => {
         visible: {opacity: 1, y: 0},
         hidden: {opacity: 0, y: props.direction, transition: {duration: 0.5}},
         headerHidden: {opacity: 0, x: "-100%", transition: {duration: 0.5}},
-        headerVisible: {opacity: 1, x: 0, transition: {delay: 0.5, duration:0.5}},
+        headerVisible: {opacity: 1, x: 0, transition: { duration:0.5}},
         contentHidden: {opacity: 0, transition: {duration: 0.5}},
         contentVisible: {opacity: 1, x: 0, transition: {duration: 0.5}},
         numHidden: {opacity: 0, x: "100%", transition: {duration: 0.5}},
@@ -94,13 +94,15 @@ const Work = (props) => {
                             <Line animate={lineControl} transition={transition} variants={variants}/>
                         </Col>
                         <Col className="w-100 h-100 pl-1 pr-1 m-0">
-                            <motion.img alt={props.workNumber}
-                                        src={props.workNumber}
-                                        style={{width: 48, height: 48}}
-                                        initial="numHidden"
-                                        animate={numControl}
-                                        transition={transition}
-                                        variants={variants}/>
+                            <motion.h1
+                                className="display-4"
+                                initial="numHidden"
+                                animate={numControl}
+                                transition={transition}
+                                variants={variants}>
+                                {props.workNumber}
+                            </motion.h1>
+
                         </Col>
                     </Row>
                 </Container>
