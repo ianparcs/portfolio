@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.54021298.chunk.css",
-    "main.js": "/portfolio/static/js/main.6fdaa500.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.6fdaa500.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.be8ed188.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.be8ed188.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.8fed2963.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.8fed2963.js.map",
     "static/css/2.703928e6.chunk.css": "/portfolio/static/css/2.703928e6.chunk.css",
@@ -22,6 +22,7 @@
     "static/media/font.68976a23.woff": "/portfolio/static/media/font.68976a23.woff",
     "static/media/gcash-1.6e8f2364.png": "/portfolio/static/media/gcash-1.6e8f2364.png",
     "static/media/gcash-2.01437e9d.png": "/portfolio/static/media/gcash-2.01437e9d.png",
+    "static/media/gcash-3.1df4b48c.png": "/portfolio/static/media/gcash-3.1df4b48c.png",
     "static/media/git.a2c9c610.svg": "/portfolio/static/media/git.a2c9c610.svg",
     "static/media/github.3c9ffca5.svg": "/portfolio/static/media/github.3c9ffca5.svg",
     "static/media/github.558ad8dc.svg": "/portfolio/static/media/github.558ad8dc.svg",
@@ -57,6 +58,6 @@
     "static/css/2.703928e6.chunk.css",
     "static/js/2.b2a0efe3.chunk.js",
     "static/css/main.54021298.chunk.css",
-    "static/js/main.6fdaa500.chunk.js"
+    "static/js/main.be8ed188.chunk.js"
   ]
 }
