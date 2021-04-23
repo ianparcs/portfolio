@@ -11,6 +11,7 @@ import Paiwi_1 from "../../assets/img/works/paiwi/paiwi-1.png"
 import Paiwi_2 from "../../assets/img/works/paiwi/paiwi-2.png"
 import Gcash_1 from "../../assets/img/works/gcash/gcash-1.png"
 import Gcash_2 from "../../assets/img/works/gcash/gcash-2.png"
+import Gcash_3 from "../../assets/img/works/gcash/gcash-3.png"
 import CHITS_1 from "../../assets/img/works/chits/chits-1.png"
 import CHITS_2 from "../../assets/img/works/chits/chits-3.png"
 import "../../assets/css/projects.css"
@@ -45,7 +46,7 @@ const Project = () => {
             <Work title="GCash App"
                   skills={<p>Skills: Java, Spring Boot, Rest API, Kafka, and Kubernetes.</p>}
                   content={gcashDescription}
-                  images={[{path: Gcash_2, alt: "Gcash_1"}, {path: Gcash_1, alt: "Gcash_2"}]}
+                  images={[{path: Gcash_2, alt: "Gcash_1"}, {path: Gcash_3, alt: "Gcash_3"}, {path: Gcash_1, alt: "Gcash_2"}]}
                   workNumber={1}
                   direction="100%"/>
             <Work title="Community Health Information Tracking System (CHITS)"
