@@ -7,17 +7,21 @@ import "./workexp.css"
 
 const WorkExperience = React.forwardRef((props, ref) => {
     const headerControl = useAnimation();
-    const contentControl = useAnimation();
+    const contentControl1 = useAnimation();
     const contentControl2 = useAnimation();
+    const contentControl3 = useAnimation();
 
-    const jobControl = useAnimation();
+    const jobControl1 = useAnimation();
     const jobControl2 = useAnimation();
+    const jobControl3 = useAnimation();
 
-    const [contentRef] = useInView()
+    const [contentRef1] = useInView();
     const [contentRef2] = useInView();
+    const [contentRef3] = useInView();
 
-    const [jobRef] = useInView()
-    const [jobRef2] = useInView();
+    const [jobRef1] = useInView()
+    const [jobRef2] = useInView()
+    const [jobRef3] = useInView();
 
     const [headerRef, headerInView] = useInView();
 
@@ -84,15 +88,17 @@ const WorkExperience = React.forwardRef((props, ref) => {
         if (headerInView) {
             const sequence = async () => {
                 await headerControl.start("visible");
-                await jobControl.start("visible");
-                await contentControl.start("visible");
+                await jobControl1.start("visible");
+                await contentControl1.start("visible");
                 await jobControl2.start("visible");
-                return await contentControl2.start("visible");
+                await contentControl2.start("visible");
+                await jobControl3.start("visible");
+                return await contentControl3.start("visible");
             };
             sequence();
         }
 
-    }, [jobControl, jobControl2, headerInView, contentControl, headerControl, contentControl2]);
+    }, [jobControl1, jobControl2,  jobControl3, contentControl1, contentControl2,  contentControl3, headerInView, headerControl]);
     return (
         <Container className="about-container p-5 d-flex flex-column justify-content-start">
             <Row className="pt-3" ref={headerRef}>
@@ -110,9 +116,9 @@ const WorkExperience = React.forwardRef((props, ref) => {
             <Row>
                 <Col className="pt-4 col-12 col-lg-4 d-flex flex-column justify-content-center">
                     <motion.div
-                        ref={jobRef}
+                        ref={jobRef1}
                         initial="hidden"
-                        animate={jobControl}
+                        animate={jobControl1}
                         transition={transition}
                         variants={list}
                     >
@@ -123,9 +129,9 @@ const WorkExperience = React.forwardRef((props, ref) => {
                 </Col>
                 <Col className="col-12 col-lg-8">
                     <motion.ul className="text-left pt-3"
-                               ref={contentRef}
+                               ref={contentRef1}
                                initial="hidden"
-                               animate={contentControl}
+                               animate={contentControl1}
                                transition={transition}
                                variants={list}
                     >
@@ -139,9 +145,9 @@ const WorkExperience = React.forwardRef((props, ref) => {
             <Row>
                 <Col className="pt-4 col-12 col-lg-4 d-flex flex-column justify-content-center">
                     <motion.div
-                        ref={jobRef}
+                        ref={jobRef2}
                         initial="hidden"
-                        animate={jobControl}
+                        animate={jobControl2}
                         transition={transition}
                         variants={list}
                     >
@@ -152,9 +158,9 @@ const WorkExperience = React.forwardRef((props, ref) => {
                 </Col>
                 <Col className="col-12 col-lg-8">
                     <motion.ul className="text-left pt-3"
-                               ref={contentRef}
+                               ref={contentRef2}
                                initial="hidden"
-                               animate={contentControl}
+                               animate={contentControl2}
                                transition={transition}
                                variants={list}
                     >
@@ -164,16 +170,16 @@ const WorkExperience = React.forwardRef((props, ref) => {
                             projects and timelines
                             for new version releases.</p></motion.li>
                         <motion.li variants={item}><p>Identified the root cause of unstable bugs from the feedback of
-                            users, fix the underlying issues that resulted a satisfied users.</p></motion.li>
+                            users, fixed the underlying issues that resulted a satisfied users.</p></motion.li>
                     </motion.ul>
                 </Col>
             </Row>
             <Row>
                 <Col className="pt-4 col-12 col-lg-4 d-flex flex-column justify-content-center">
                     <motion.div
-                        ref={jobRef2}
+                        ref={jobRef3}
                         initial="hidden"
-                        animate={jobControl2}
+                        animate={jobControl3}
                         transition={transition}
                         variants={list}
                     >
@@ -184,9 +190,9 @@ const WorkExperience = React.forwardRef((props, ref) => {
                 </Col>
                 <Col className="col-12 col-lg-8 pb-5">
                     <motion.ul className="text-left pt-3"
-                               ref={contentRef2}
+                               ref={contentRef3}
                                initial="hidden"
-                               animate={contentControl2}
+                               animate={contentControl3}
                                transition={transition}
                                variants={list}
                     >
