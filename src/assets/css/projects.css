@@ -13,3 +13,14 @@
     object-fit:cover !important;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+    .image-content {
+        width: 225px !important;
+        height: 256px  !important;
+        object-fit:fill !important;
+    }
+
+}
+
+
+
