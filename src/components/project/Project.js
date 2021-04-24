@@ -26,7 +26,7 @@ const Project = () => {
         (No longer supported or maintained)</p>;
 
     const gcashDescription = <p className="pt-4">
-        GCash is mobile money or “e-money” that allows you to pay bills, send or receive money, buy load, shop online,
+        GCash is a mobile money or “e-money” that allows you to pay bills, send or receive money, buy load, shop online,
         book movie tickets, and more with the use of your smartphone.</p>;
 
     const chitsDescription = <p className="pt-4">
