@@ -9,7 +9,11 @@ const Education = React.forwardRef((props, ref) => {
     const icons = document.getElementsByClassName("about-icon");
     if (icons !== null) {
         for (let i = 0; i < icons.length; i++) {
-            icons.item(i).style.fill = "black";
+            if (3 === i) {
+                icons.item(3).style.fill = "#dc3545";
+            } else {
+                icons.item(i).style.fill = "black";
+            }
         }
     }
 

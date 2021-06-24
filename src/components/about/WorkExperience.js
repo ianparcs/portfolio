@@ -19,8 +19,8 @@ const WorkExperience = React.forwardRef((props, ref) => {
     const [contentRef2] = useInView();
     const [contentRef3] = useInView();
 
-    const [jobRef1] = useInView()
-    const [jobRef2] = useInView()
+    const [jobRef1] = useInView();
+    const [jobRef2] = useInView();
     const [jobRef3] = useInView();
 
     const [headerRef, headerInView] = useInView();
@@ -28,7 +28,11 @@ const WorkExperience = React.forwardRef((props, ref) => {
     const icons = document.getElementsByClassName("about-icon");
     if (icons !== null) {
         for (let i = 0; i < icons.length; i++) {
-            icons.item(i).style.fill = "white";
+            if (2 === i) {
+                icons.item(2).style.fill = "#dc3545";
+            } else {
+                icons.item(i).style.fill = "white";
+            }
         }
     }
     const transition = {
@@ -98,7 +102,7 @@ const WorkExperience = React.forwardRef((props, ref) => {
             sequence();
         }
 
-    }, [jobControl1, jobControl2,  jobControl3, contentControl1, contentControl2,  contentControl3, headerInView, headerControl]);
+    }, [jobControl1, jobControl2, jobControl3, contentControl1, contentControl2, contentControl3, headerInView, headerControl]);
     return (
         <Container className="about-container p-5 d-flex flex-column justify-content-start">
             <Row className="pt-3" ref={headerRef}>
@@ -136,7 +140,8 @@ const WorkExperience = React.forwardRef((props, ref) => {
                                variants={list}
                     >
                         <motion.li variants={item}><p>Working on real-time transaction history.</p></motion.li>
-                        <motion.li variants={item}><p>Identifies root cause of unstable bugs and fix the underlying issues.</p></motion.li>
+                        <motion.li variants={item}><p>Identifies root cause of unstable bugs and fix the underlying
+                            issues.</p></motion.li>
                         <motion.li variants={item}><p>Collaborates with team about development of the
                             projects and deployments for new version releases.</p></motion.li>
                     </motion.ul>

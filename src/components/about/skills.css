@@ -112,9 +112,10 @@ Screen = B/w 481px to 767px
 @media (min-width: 320px) and (max-width: 480px) {
 
     #skill-content li {
-        padding-right:5%;
-        padding-left:5%;
+        padding-right: 5%;
+        padding-left: 5%;
     }
+
     #skill-content li {
         width: 33%;
     }

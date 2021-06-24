@@ -46,7 +46,10 @@ const Project = () => {
             <Work title="GCash App"
                   skills={<p>Skills: Java, Spring Boot, Rest API, Kafka, and Kubernetes.</p>}
                   content={gcashDescription}
-                  images={[{path: Gcash_2, alt: "Gcash_1"}, {path: Gcash_3, alt: "Gcash_3"}, {path: Gcash_1, alt: "Gcash_2"}]}
+                  images={[{path: Gcash_2, alt: "Gcash_1"}, {path: Gcash_3, alt: "Gcash_3"}, {
+                      path: Gcash_1,
+                      alt: "Gcash_2"
+                  }]}
                   workNumber={1}
                   direction="100%"/>
             <Work title="Community Health Information Tracking System (CHITS)"

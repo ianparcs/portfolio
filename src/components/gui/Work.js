@@ -29,7 +29,7 @@ const Work = (props) => {
         visible: {opacity: 1, y: 0},
         hidden: {opacity: 0, y: props.direction, transition: {duration: 0.5}},
         headerHidden: {opacity: 0, x: "-100%", transition: {duration: 0.5}},
-        headerVisible: {opacity: 1, x: 0, transition: { duration:0.5}},
+        headerVisible: {opacity: 1, x: 0, transition: {duration: 0.5}},
         contentHidden: {opacity: 0, transition: {duration: 0.5}},
         contentVisible: {opacity: 1, x: 0, transition: {duration: 0.5}},
         numHidden: {opacity: 0, x: "100%", transition: {duration: 0.5}},

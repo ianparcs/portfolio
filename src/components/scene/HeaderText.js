@@ -73,7 +73,7 @@ function HeaderText() {
                 outlineWidth={0.005}
                 outlineColor={"white"}
             >
-                I'm a software developer & hobbyist game developer.
+                Software developer & Game developer.
             </Text>
         </>
     )

@@ -1,8 +1,9 @@
-#experience-container{
-    height:auto !important;
+#experience-container {
+    height: auto !important;
     overflow: visible !important;
 }
-ul{
+
+ul {
     list-style-type: disc;
     list-style-position: inside;
 }

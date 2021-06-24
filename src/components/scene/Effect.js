@@ -44,7 +44,7 @@ function Effects({children, mouseClick}) {
                 <glitchPass attachArray="passes" factor={0.5}
                             curF={mouseClick ? 0.1 : 0}
                             randX={mouseClick ? 0.74 : 0}
-                    />
+                />
             </effectComposer>
         </Context.Provider>
     )

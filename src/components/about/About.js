@@ -19,7 +19,7 @@ const About = React.forwardRef((props, ref) => {
     const variants = {
         visible: {
             opacity: 1,
-            transition: {duration:1, delay: 0.2},
+            transition: {duration: 1, delay: 0.2},
         },
         hidden: {
             opacity: 0,
@@ -40,7 +40,11 @@ const About = React.forwardRef((props, ref) => {
     const icons = document.getElementsByClassName("about-icon");
     if (icons !== null) {
         for (let i = 0; i < icons.length; i++) {
-            icons.item(i).style.fill = "white";
+            if (0 === i) {
+                icons.item(0).style.fill = "#dc3545";
+            } else {
+                icons.item(i).style.fill = "white";
+            }
         }
     }
 

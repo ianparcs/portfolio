@@ -33,7 +33,7 @@ const AboutNav = (props) => {
                             </Row>
                             <Row className="pt-1 pb-1">
 
-                            <Col>
+                                <Col>
                                     <Link to="/portfolio/skills">
                                         <motion.div
                                             whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
@@ -69,7 +69,7 @@ const AboutNav = (props) => {
                                 </Col>
                             </Row>
                             <Row className="pt-1 pb-1">
-                            <Col>
+                                <Col>
                                     <Link to="/portfolio/workexperience">
                                         <motion.div
                                             whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
@@ -85,7 +85,7 @@ const AboutNav = (props) => {
                             </Row>
                             <Row className="pt-1 pb-1">
 
-                            <Col>
+                                <Col>
                                     <Link to="/portfolio/education">
                                         <motion.div
                                             whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>

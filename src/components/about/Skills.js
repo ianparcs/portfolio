@@ -40,7 +40,7 @@ const Skill = React.forwardRef((props, ref) => {
     const transitionInfinite = {
         duration: 5,
         ease: "easeInOut",
-        repeat:Infinity
+        repeat: Infinity
     };
     const list = {
         visible: {
@@ -59,7 +59,7 @@ const Skill = React.forwardRef((props, ref) => {
     const reactAnimation = {
         visible: {
             opacity: 1,
-            rotate:360,
+            rotate: 360,
         },
     };
 
@@ -88,11 +88,14 @@ const Skill = React.forwardRef((props, ref) => {
         },
     };
 
-
     const icons = document.getElementsByClassName("about-icon");
     if (icons !== null) {
         for (let i = 0; i < icons.length; i++) {
-            icons.item(i).style.fill = "black";
+            if (1 === i) {
+                icons.item(1).style.fill = "#dc3545";
+            } else {
+                icons.item(i).style.fill = "black";
+            }
         }
     }
 
@@ -134,7 +137,9 @@ const Skill = React.forwardRef((props, ref) => {
                         <motion.li variants={item}><Card progName="C++" path={CPlus}/></motion.li>
                         <motion.li variants={item}><Card progName="Android" path={Android}/></motion.li>
                         <motion.li variants={item}><Card progName="Spring" path={Spring}/></motion.li>
-                        <motion.li variants={reactAnimation} transition={transitionInfinite}><Card progName="ReactJS" path={ReactLogo}/></motion.li>
+                        <motion.li variants={reactAnimation} transition={transitionInfinite}><Card progName="ReactJS"
+                                                                                                   path={ReactLogo}/>
+                        </motion.li>
                         <motion.li variants={item}><Card progName="MongoDB" path={Mongo}/></motion.li>
                         <motion.li variants={item}><Card progName="Libgdx" path={Libgdx}/></motion.li>
                         <motion.li variants={item}><Card progName="Bootstrap" path={Bootstrap}/></motion.li>
