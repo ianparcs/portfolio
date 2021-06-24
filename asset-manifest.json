@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.f67d2bc4.chunk.css",
-    "main.js": "/portfolio/static/js/main.35b2f7ba.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.35b2f7ba.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.b8adb5c0.chunk.css",
+    "main.js": "/portfolio/static/js/main.2f942a2b.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.2f942a2b.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.8fed2963.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.8fed2963.js.map",
     "static/css/2.703928e6.chunk.css": "/portfolio/static/css/2.703928e6.chunk.css",
@@ -10,14 +10,14 @@
     "static/js/2.b2a0efe3.chunk.js.map": "/portfolio/static/js/2.b2a0efe3.chunk.js.map",
     "index.html": "/portfolio/index.html",
     "static/css/2.703928e6.chunk.css.map": "/portfolio/static/css/2.703928e6.chunk.css.map",
-    "static/css/main.f67d2bc4.chunk.css.map": "/portfolio/static/css/main.f67d2bc4.chunk.css.map",
+    "static/css/main.b8adb5c0.chunk.css.map": "/portfolio/static/css/main.b8adb5c0.chunk.css.map",
     "static/js/2.b2a0efe3.chunk.js.LICENSE.txt": "/portfolio/static/js/2.b2a0efe3.chunk.js.LICENSE.txt",
     "static/media/android.a401782f.svg": "/portfolio/static/media/android.a401782f.svg",
     "static/media/bootstrap.bc0cc510.svg": "/portfolio/static/media/bootstrap.bc0cc510.svg",
     "static/media/c.c8c5f0fa.svg": "/portfolio/static/media/c.c8c5f0fa.svg",
     "static/media/chits-1.75cba529.png": "/portfolio/static/media/chits-1.75cba529.png",
     "static/media/chits-3.88ce59db.png": "/portfolio/static/media/chits-3.88ce59db.png",
-    "static/media/coding.acabc6f7.svg": "/portfolio/static/media/coding.acabc6f7.svg",
+    "static/media/coding.2a4f998a.svg": "/portfolio/static/media/coding.2a4f998a.svg",
     "static/media/css3.de380515.svg": "/portfolio/static/media/css3.de380515.svg",
     "static/media/font.68976a23.woff": "/portfolio/static/media/font.68976a23.woff",
     "static/media/gcash-1.6e8f2364.png": "/portfolio/static/media/gcash-1.6e8f2364.png",
@@ -47,7 +47,7 @@
     "static/media/portfolio_1.530d5f88.png": "/portfolio/static/media/portfolio_1.530d5f88.png",
     "static/media/portfolio_2.7eba3328.png": "/portfolio/static/media/portfolio_2.7eba3328.png",
     "static/media/react.9e9fdd12.svg": "/portfolio/static/media/react.9e9fdd12.svg",
-    "static/media/send.5de08f80.svg": "/portfolio/static/media/send.5de08f80.svg",
+    "static/media/send.a95e39fe.svg": "/portfolio/static/media/send.a95e39fe.svg",
     "static/media/spring.d97a5e99.svg": "/portfolio/static/media/spring.d97a5e99.svg",
     "static/media/stackoverflow.6ab453a7.svg": "/portfolio/static/media/stackoverflow.6ab453a7.svg",
     "static/media/user.13caabe6.svg": "/portfolio/static/media/user.13caabe6.svg",
@@ -57,7 +57,7 @@
     "static/js/runtime-main.8fed2963.js",
     "static/css/2.703928e6.chunk.css",
     "static/js/2.b2a0efe3.chunk.js",
-    "static/css/main.f67d2bc4.chunk.css",
-    "static/js/main.35b2f7ba.chunk.js"
+    "static/css/main.b8adb5c0.chunk.css",
+    "static/js/main.2f942a2b.chunk.js"
   ]
 }
