@@ -139,11 +139,16 @@ const WorkExperience = React.forwardRef((props, ref) => {
                                transition={transition}
                                variants={list}
                     >
-                        <motion.li variants={item}><p>Working on real-time transaction history.</p></motion.li>
-                        <motion.li variants={item}><p>Identifies root cause of unstable bugs and fix the underlying
-                            issues.</p></motion.li>
-                        <motion.li variants={item}><p>Collaborates with team about development of the
-                            projects and deployments for new version releases.</p></motion.li>
+                        <motion.li variants={item}><p>Worked with an Agile team to meet sprint goals with the expected
+                            code quality</p></motion.li>
+                        <motion.li variants={item}><p>Developed software solutions by studying information needs;
+                            studying systems flow, data usage, and work processes; investigating problem areas;
+                            following the software development lifecycle</p></motion.li>
+                        <motion.li variants={item}><p>Tests, debugs, analyzes and fixes application problems/issues.
+                            Works closely with stakeholders to fix issues in a timely fashion.</p></motion.li>
+                        <motion.li variants={item}><p>Develop unit test to weed out defects at an early stage and
+                            promote safe refactoring in the test-driven development (TDD) approach</p></motion.li>
+
                     </motion.ul>
                 </Col>
             </Row>
@@ -207,10 +212,8 @@ const WorkExperience = React.forwardRef((props, ref) => {
                             Messaging.</p></motion.li>
                         <motion.li variants={item}><p>Implemented Amazon S3 for the project to save and retrieve data
                             from cloud.</p></motion.li>
-                        <motion.li variants={item}><p>Integrated Facebook login function using Facebook API for android.
-                            User can login via Facebook account.</p></motion.li>
-                        <motion.li variants={item}><p>Integrated Google Sign-In function using Google API for android.
-                            User can login via Google account.</p></motion.li>
+                        <motion.li variants={item}><p>Integrated Facebook login and Google Sign-In function for use of
+                            social media login.</p></motion.li>
                         <motion.li variants={item}><p>Provide technical leadership, training, guidance, feedback, and
                             coaching to internships and new developers.</p></motion.li>
                         <motion.li variants={item}><p>Suggest and implement process improvement plans, tracks progress,
