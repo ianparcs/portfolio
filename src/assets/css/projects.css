@@ -4,14 +4,10 @@
     border-style: double;
 }
 
-.w-90 {
-    width: 90% !important;
-}
-
 .image-content {
-    width: 80% !important;
+    width: 100% !important;
     height: auto !important;
-    object-fit: cover !important;
+    object-fit: fill !important;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {

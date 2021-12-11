@@ -69,6 +69,7 @@ const Work = (props) => {
                     transition={transition}
                     variants={variants}>
                     <Swiper effect="cube"
+                            loop={true}
                             spaceBetween={0}
                             pagination={{clickable: true}}>
                         {imagesList}

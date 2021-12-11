@@ -11,36 +11,54 @@ import {Container, Row} from "react-bootstrap";
 
 import 'swiper/components/effect-cube/effect-cube.scss';
 import ColoredLine from "../gui/Line";
-import Gcash_2 from "../../assets/img/works/gcash/gcash-2.png";
-import Gcash_3 from "../../assets/img/works/gcash/gcash-3.png";
-import Gcash_1 from "../../assets/img/works/gcash/gcash-1.png";
-import CHITS_1 from "../../assets/img/works/chits/chits-1.png";
-import CHITS_2 from "../../assets/img/works/chits/chits-3.png";
-import Paiwi_1 from "../../assets/img/works/paiwi/paiwi-1.png";
-import Paiwi_2 from "../../assets/img/works/paiwi/paiwi-2.png";
-import Inventory_3 from "../../assets/img/works/inventory/inventory_3.png";
-import Inventory_1 from "../../assets/img/works/inventory/inventory_1.png";
-import Inventory_2 from "../../assets/img/works/inventory/inventory_2.png";
-import Portfolio_2 from "../../assets/img/works/portfolio/portfolio_2.png";
-import Portfolio_1 from "../../assets/img/works/portfolio/portfolio_1.png";
-import AutoCell_2 from "../../assets/img/works/auto/auto_2.png";
-import AutoCell_1 from "../../assets/img/works/auto/auto_1.png";
-import AutoCell_3 from "../../assets/img/works/auto/auto_3.png";
-import Gol_1 from "../../assets/img/works/gol/gol_1.PNG";
-import Gol_2 from "../../assets/img/works/gol/gol_2.PNG";
-import Gol_3 from "../../assets/img/works/gol/gol_3.PNG";
-import Sort_1 from "../../assets/img/works/sort/sort_1.PNG";
-import Sort_2 from "../../assets/img/works/sort/sort_2.PNG";
-import Sort_3 from "../../assets/img/works/sort/sort_3.PNG";
-import Asteroid_1 from "../../assets/img/works/assroid/assroid_1.PNG";
-import Asteroid_2 from "../../assets/img/works/assroid/assroid_2.PNG";
-import Asteroid_3 from "../../assets/img/works/assroid/assroid_3.PNG";
-import Knight_1 from "../../assets/img/works/knight/knight_1.png";
-import Knight_2 from "../../assets/img/works/knight/knight_2.png";
-import Knight_3 from "../../assets/img/works/knight/knight_3.png";
+import Gcash_2 from "../../assets/img/works/gcash-2.png";
+import Gcash_3 from "../../assets/img/works/gcash-3.png";
+import Gcash_1 from "../../assets/img/works/gcash-1.png";
+import CHITS_1 from "../../assets/img/works/chits-1.png";
+import CHITS_2 from "../../assets/img/works/chits-3.png";
+import Paiwi_1 from "../../assets/img/works/paiwi-1.png";
+import Paiwi_2 from "../../assets/img/works/paiwi-2.png";
+import Inventory_3 from "../../assets/img/works/inventory_3.png";
+import Inventory_1 from "../../assets/img/works/inventory_1.png";
+import Inventory_2 from "../../assets/img/works/inventory_2.png";
+import Portfolio_2 from "../../assets/img/works/portfolio_2.png";
+import Portfolio_1 from "../../assets/img/works/portfolio_1.png";
+import AutoCell_2 from "../../assets/img/works/auto_2.png";
+import AutoCell_1 from "../../assets/img/works/auto_1.png";
+import AutoCell_3 from "../../assets/img/works/auto_3.png";
+import Gol_1 from "../../assets/img/works/gol_1.png";
+import Gol_2 from "../../assets/img/works/gol_2.png";
+import Gol_3 from "../../assets/img/works/gol_3.png";
+import Sort_1 from "../../assets/img/works/sort_1.png";
+import Sort_2 from "../../assets/img/works/sort_2.png";
+import Sort_3 from "../../assets/img/works/sort_3.png";
+import Asteroid_1 from "../../assets/img/works/assroid_3.png";
+import Asteroid_2 from "../../assets/img/works/assroid_3.png";
+import Asteroid_3 from "../../assets/img/works/assroid_3.png";
+import Knight_1 from "../../assets/img/works/knight_1.png";
+import Knight_2 from "../../assets/img/works/knight_2.png";
+import Knight_3 from "../../assets/img/works/knight_3.png";
+import Breakout_1 from "../../assets/img/works/breakout_1.png";
+import Breakout_2 from "../../assets/img/works/breakout_2.png";
+import Breakout_3 from "../../assets/img/works/breakout_3.png";
 import Mandel_1 from "../../assets/img/works/mandel.jpg";
-import BSP_1 from "../../assets/img/works/bsp/bsp_1.png";
-import BSP_2 from "../../assets/img/works/bsp/bsp_2.png";
+import BSP_1 from "../../assets/img/works/bsp_1.png";
+import BSP_2 from "../../assets/img/works/bsp_2.png";
+
+import Snake_1 from "../../assets/img/works/snake_2.png";
+import Snake_2 from "../../assets/img/works/snake_2.png";
+import Thesis_1 from "../../assets/img/works/thesis_2.png";
+import Thesis_2 from "../../assets/img/works/thesis_2.png";
+
+import Space_1 from "../../assets/img/works/space_1.png";
+import Space_2 from "../../assets/img/works/space_2.png";
+import Space_3 from "../../assets/img/works/space_3.png";
+import Robot_1 from "../../assets/img/works/robot_1.png";
+import Robot_2 from "../../assets/img/works/robot_2.png";
+import Robot_3 from "../../assets/img/works/robot_3.png";
+
+import Triangle_1 from "../../assets/img/works/triangle_1.png";
+
 import CenterView from "../gui/CenterView";
 import Footer from "../app/Footer";
 import Work from "./Work";
@@ -94,6 +112,20 @@ const Projects = () => {
 
     const knightDesc = <p className="pt-4">A 2D Platformer game with graphics of pixels. Playable in Android, Windows
         and Linux</p>;
+
+    const snakeDesc = <p className="pt-4">Snake clone based on classic snake game</p>;
+
+    const thesisDesc = <p className="pt-4">Path Finder which tracks and find path from Point A to Point B. It uses
+        A*(Star) Pathfinding algorithm to find the shortest route</p>;
+
+    const breakoutDesc = <p className="pt-4"> Using a single ball, the player must knock down as many bricks as possible
+        by using the walls and/or the paddle</p>;
+
+    const robotArenaDesc = <p className="pt-4">A game which you control robots and shoots other robots</p>;
+
+    const spaceMatrixDesc = <p className="pt-4">My first ever game develop in Java</p>;
+
+    const triangleDesc = <p className="pt-4">The Sierpinski triangle a self-similar fractal</p>;
 
     return (
         <Container className="w-100 pl-3 pr-3" fluid="true">
@@ -197,7 +229,7 @@ const Projects = () => {
                 </Row>
                 <Row>
                     <Work title="Mandelbrot Set"
-                          skills={<p>Skills: Java</p>}
+                          skills={<p>Skills: C++ and SFML</p>}
                           content={mandelbrotDesc}
                           images={[
                               {path: Mandel_1, alt: "Mandelbrot Set"}
@@ -210,7 +242,6 @@ const Projects = () => {
                               {path: BSP_1, alt: "Dungeon Room Generator"},
                               {path: BSP_2, alt: "Dungeon Room Generator"},
                           ]}
-                          workNumber={5}
                           direction="100%"/>
                     <Work title="Tales of the Fallen Knight"
                           skills={<p>Skills: Java and Libgdx.</p>}
@@ -220,7 +251,61 @@ const Projects = () => {
                               {path: Knight_2, alt: "2D Platformer Game"},
                               {path: Knight_3, alt: "2D Platformer Game"},
                           ]}
-                          workNumber={5}
+                          direction="100%"/>
+                </Row>
+                <Row>
+                    <Work title="Snake Clone"
+                          skills={<p>Skills: Java and Libgdx</p>}
+                          content={snakeDesc}
+                          images={[
+                              {path: Snake_2, alt: "Snake Clone"},
+                              {path: Snake_1, alt: "Snake Clone"}
+
+                          ]}
+                          direction="-100%"/>
+                    <Work title="Thesis: Path Finder"
+                          skills={<p>Skills: Java, Libgdx and File Parse</p>}
+                          content={thesisDesc}
+                          images={[
+                              {path: Thesis_1, alt: "Thesis: Path Finder"},
+                              {path: Thesis_2, alt: "Thesis: Path Finder"},
+                          ]}
+                          direction="100%"/>
+                    <Work title="Breakout Escape Clone"
+                          skills={<p>Skills: Java and Libgdx.</p>}
+                          content={breakoutDesc}
+                          images={[
+                              {path: Breakout_1, alt: "Breakout Escape Clone"},
+                              {path: Breakout_2, alt: "Breakout Escape Clone"},
+                              {path: Breakout_3, alt: "Breakout Escape Clone"},
+                          ]}
+                          direction="100%"/>
+                </Row>
+                <Row>
+                    <Work title="Robot Arena"
+                          skills={<p>Skills: C++ and SFML</p>}
+                          content={robotArenaDesc}
+                          images={[
+                              {path: Robot_1, alt: "Robot Arena"},
+                              {path: Robot_2, alt: "Robot Arena"},
+                              {path: Robot_3, alt: "Robot Arena"},
+                          ]}
+                          direction="-100%"/>
+                    <Work title="Space Matrix (My First Game)"
+                          skills={<p>Skills: Java</p>}
+                          content={spaceMatrixDesc}
+                          images={[
+                              {path: Space_1, alt: "Space Matrix"},
+                              {path: Space_2, alt: "Space Matrix"},
+                              {path: Space_3, alt: "Space Matrix"},
+                          ]}
+                          direction="100%"/>
+                    <Work title="Sierpiński triangle"
+                          skills={<p>Skills: C++ and SFML.</p>}
+                          content={triangleDesc}
+                          images={[
+                              {path: Triangle_1, alt: "Sierpiński triangle"},
+                          ]}
                           direction="100%"/>
                 </Row>
             </Container>
