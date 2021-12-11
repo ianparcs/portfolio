@@ -1,5 +1,6 @@
 import React from 'react';
 import SwiperCore, {A11y, Autoplay, EffectCube, Navigation, Pagination, Scrollbar} from 'swiper';
+import Card from 'react-bootstrap/Card'
 
 import "../../assets/css/projects.css"
 import 'swiper/swiper.scss';
@@ -13,7 +14,6 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/components/effect-cube/effect-cube.scss';
 import {motion, useAnimation} from "framer-motion";
 import {useInView} from "react-intersection-observer";
-import Line from "./Line";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCube]);
 
@@ -55,25 +55,18 @@ const Work = (props) => {
     }
 
     return (
-        <Row className="pt-3 min-vh-100">
-            <Col className="col-9 col-md-10 col-lg-11 p-3 h-100 d-flex flex-column justify-content-center">
-                <div className="w-75 m-auto">
-                    <motion.p className="w-75 p-2 m-auto white-border"
-                              ref={headerRef}
-                              animate={headerControl}
-                              initial="headerHidden"
-                              transition={transition}
-                              variants={variants}>
-                        {props.title}
-                    </motion.p>
-                    <motion.div
-                        initial="contentHidden"
-                        animate={contentControl}
-                        transition={transition}
-                        variants={variants}>
-                        {props.content}
-                        {props.skills}
-                    </motion.div>
+            <Col className="col-lg-4 col-sm-2 col-md-2 w-100 d-flex text-center">
+                <Card className="bg-transparent text-white">
+                        <Card.Title>
+                            <motion.p className="w-100 p-2 white-border"
+                                      ref={headerRef}
+                                      animate={headerControl}
+                                      initial="headerHidden"
+                                      transition={transition}
+                                      variants={variants}>
+                                {props.title}
+                            </motion.p>
+                        </Card.Title>
                     <motion.div
                         initial="contentHidden"
                         animate={contentControl}
@@ -85,29 +78,18 @@ const Work = (props) => {
                             {imagesList}
                         </Swiper>
                     </motion.div>
-                </div>
-            </Col>
-            <Col className="col-3 col-md-2 col-lg-1 w-100 p-0">
-                <Container className="w-100 h-100 p-0 m-0">
-                    <Row className="w-100 h-100">
-                        <Col className="w-100 h-100 p-1 m-0">
-                            <Line animate={lineControl} transition={transition} variants={variants}/>
-                        </Col>
-                        <Col className="w-100 h-100 pl-1 pr-1 m-0">
-                            <motion.h1
-                                className="display-4"
-                                initial="numHidden"
-                                animate={numControl}
+                        <Card.Text>
+                            <motion.div
+                                initial="contentHidden"
+                                animate={contentControl}
                                 transition={transition}
                                 variants={variants}>
-                                {props.workNumber}
-                            </motion.h1>
-
-                        </Col>
-                    </Row>
-                </Container>
+                                {props.content}
+                                {props.skills}
+                            </motion.div>
+                        </Card.Text>
+                </Card>
             </Col>
-        </Row>
     )
 };
 export default Work;
