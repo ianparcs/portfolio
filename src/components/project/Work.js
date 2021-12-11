@@ -8,7 +8,7 @@ import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
 
-import {Col, Container, Image, Row} from "react-bootstrap";
+import {Col, Image} from "react-bootstrap";
 import {Swiper, SwiperSlide} from 'swiper/react';
 
 import 'swiper/components/effect-cube/effect-cube.scss';
@@ -20,8 +20,6 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCube]);
 const Work = (props) => {
     const headerControl = useAnimation();
     const contentControl = useAnimation();
-    const lineControl = useAnimation();
-    const numControl = useAnimation();
     const [headerRef, headerInView] = useInView();
 
     const transition = {duration: 1, ease: "easeInOut"};
@@ -47,49 +45,47 @@ const Work = (props) => {
     if (headerInView) {
         const sequence = async () => {
             await headerControl.start("headerVisible");
-            contentControl.start("contentVisible");
-            lineControl.start("visible");
-            return await numControl.start("numVisible");
+            return contentControl.start("contentVisible");
         };
         sequence();
     }
 
     return (
-            <Col className="col-lg-4 col-sm-2 col-md-2 w-100 d-flex text-center">
-                <Card className="bg-transparent text-white">
-                        <Card.Title>
-                            <motion.p className="w-100 p-2 white-border"
-                                      ref={headerRef}
-                                      animate={headerControl}
-                                      initial="headerHidden"
-                                      transition={transition}
-                                      variants={variants}>
-                                {props.title}
-                            </motion.p>
-                        </Card.Title>
-                    <motion.div
+        <Col className="col-lg-4 col-sm-2 col-md-2 w-100 d-flex text-center">
+            <Card className="bg-transparent text-white">
+                <Card.Title>
+                    <motion.p className="w-100 p-2 white-border"
+                              ref={headerRef}
+                              animate={headerControl}
+                              initial="headerHidden"
+                              transition={transition}
+                              variants={variants}>
+                        {props.title}
+                    </motion.p>
+                </Card.Title>
+                <motion.div
+                    initial="contentHidden"
+                    animate={contentControl}
+                    transition={transition}
+                    variants={variants}>
+                    <Swiper effect="cube"
+                            spaceBetween={0}
+                            pagination={{clickable: true}}>
+                        {imagesList}
+                    </Swiper>
+                </motion.div>
+                <Card.Text>
+                    <motion.p
                         initial="contentHidden"
                         animate={contentControl}
                         transition={transition}
                         variants={variants}>
-                        <Swiper effect="cube"
-                                spaceBetween={0}
-                                pagination={{clickable: true}}>
-                            {imagesList}
-                        </Swiper>
-                    </motion.div>
-                        <Card.Text>
-                            <motion.div
-                                initial="contentHidden"
-                                animate={contentControl}
-                                transition={transition}
-                                variants={variants}>
-                                {props.content}
-                                {props.skills}
-                            </motion.div>
-                        </Card.Text>
-                </Card>
-            </Col>
+                        {props.content}
+                        {props.skills}
+                    </motion.p>
+                </Card.Text>
+            </Card>
+        </Col>
     )
 };
 export default Work;
