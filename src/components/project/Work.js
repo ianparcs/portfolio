@@ -75,8 +75,9 @@ const Work = (props) => {
                         {imagesList}
                     </Swiper>
                 </motion.div>
-                <Card.Text>
+                <Card.Text as="div">
                     <motion.p
+                        className="pt-4"
                         initial="contentHidden"
                         animate={contentControl}
                         transition={transition}

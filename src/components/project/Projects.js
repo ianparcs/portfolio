@@ -26,15 +26,15 @@ import Portfolio_1 from "../../assets/img/works/portfolio_1.png";
 import AutoCell_2 from "../../assets/img/works/auto_2.png";
 import AutoCell_1 from "../../assets/img/works/auto_1.png";
 import AutoCell_3 from "../../assets/img/works/auto_3.png";
-import Gol_1 from "../../assets/img/works/gol_1.png";
-import Gol_2 from "../../assets/img/works/gol_2.png";
-import Gol_3 from "../../assets/img/works/gol_3.png";
-import Sort_1 from "../../assets/img/works/sort_1.png";
-import Sort_2 from "../../assets/img/works/sort_2.png";
-import Sort_3 from "../../assets/img/works/sort_3.png";
-import Asteroid_1 from "../../assets/img/works/assroid_3.png";
-import Asteroid_2 from "../../assets/img/works/assroid_3.png";
-import Asteroid_3 from "../../assets/img/works/assroid_3.png";
+import Gol_1 from "../../assets/img/works/gol_1.PNG";
+import Gol_2 from "../../assets/img/works/gol_2.PNG";
+import Gol_3 from "../../assets/img/works/gol_3.PNG";
+import Sort_1 from "../../assets/img/works/sort_1.PNG";
+import Sort_2 from "../../assets/img/works/sort_2.PNG";
+import Sort_3 from "../../assets/img/works/sort_3.PNG";
+import Asteroid_1 from "../../assets/img/works/assroid_3.PNG";
+import Asteroid_2 from "../../assets/img/works/assroid_3.PNG";
+import Asteroid_3 from "../../assets/img/works/assroid_3.PNG";
 import Knight_1 from "../../assets/img/works/knight_1.png";
 import Knight_2 from "../../assets/img/works/knight_2.png";
 import Knight_3 from "../../assets/img/works/knight_3.png";
@@ -67,65 +67,41 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCube]);
 
 const Projects = () => {
 
-    const paiwiDescription = <p className="pt-4">
-        Pa-Iwi Mobile is an online android application used by investors of agri-business
-        enthusiast to invest their money to livestock farming. Tracks real-time investment assets, status and profit of
-        returns.
-        (</p>;
+    const paiwiDescription = "Pa-Iwi Mobile is an online android application used by investors of agri-business enthusiast to invest their money to livestock farming. Tracks real-time investment assets, status and profit of returns."
 
-    const gcashDescription = <p className="pt-4">
-        GCash is a mobile money or “e-money” that allows you to pay bills, send or receive money, buy load, shop online,
-        book movie tickets, and more with the use of your smartphone.</p>;
+    const gcashDescription = "GCash is a mobile money or “e-money” that allows you to pay bills, send or receive money, buy load, shop online,book movie tickets, and more with the use of your smartphone"
 
-    const chitsDescription = <p className="pt-4">
-        CHITS is an electronic medical record system that reduces patient waiting time and improves
-        monitoring of patient care through efficient data encoding and records retrieval</p>;
+    const chitsDescription = "CHITS is an electronic medical record system that reduces patient waiting time and improves monitoring of patient care through efficient data encoding and records retrieval"
 
-    const posDescription = <p className="pt-4">
-        <a href="https://github.com/ianparcs/inventory-sales-system">Inventory Sales System</a>
-        &nbsp; is used by retailers to process customer sales, track product
-        or stock levels. Features tools to ring sales, count inventory,
-        and provide basic reports for sales and product stocks.</p>;
+    const posDescription = "Inventory Sales System &nbsp; is used by retailers to process customer sales, track productor stock levels. Features tools to ring sales, count inventory,and provide basic reports for sales and product stocks"
 
-    const portfolioDescription = <p className="pt-4">Personal site showcasing my projects and online resume.</p>;
+    const portfolioDescription = "Personal site showcasing my projects and online resume."
 
-    const autoCellDescription = <p className="pt-4">Visual representation of Wolfram Elementary Cellular Automata from
-        rule 0 up to rule 256 decimal</p>;
+    const autoCellDescription = "Visual representation of Wolfram Elementary Cellular Automata from rule 0 up to rule 256 decimal"
 
-    const gameOfLifeDesc = <p className="pt-4">The Game of Life, also known simply as Life, is a cellular automaton.
-        It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further
-        input.</p>;
+    const gameOfLifeDesc = "The Game of Life, also known simply as Life, is a cellular automaton. It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input"
 
-    const sortAlgoDesc = <p className="pt-4">Visual representation of various sorting algorithm like Binary, Insertion,
-        Selection
-        and Merge Sort</p>;
+    const sortAlgoDesc = "Visual representation of various sorting algorithm like Binary, Insertion, Selection and Merge Sort."
 
-    const mandelbrotDesc = <p className="pt-4">The Mandelbrot set is generated by iteration, which means to repeat a
-        process over and over again</p>;
+    const mandelbrotDesc = "The Mandelbrot set is generated by iteration, which means to repeat a process over and over again"
 
-    const assroidDesc = <p className="pt-4">A Shoot 'em up type of game and the goal is to destroy asteroids as much as
-        possible within
-        limited time. Weapons are upgraded by looting power up</p>;
+    const assroidDesc = "A Shoot 'em up type of game and the goal is to destroy asteroids as much aspossible within limited time. Weapons are upgraded by looting power up"
 
-    const bspDesc = <p className="pt-4">A dungeon room generator which utilises Binary Space Algorithm to generate
-        pathways and rooms</p>;
+    const bspDesc = "A dungeon room generator which utilises Binary Space Algorithm to generate pathways and rooms."
 
-    const knightDesc = <p className="pt-4">A 2D Platformer game with graphics of pixels. Playable in Android, Windows
-        and Linux</p>;
+    const knightDesc = "A 2D Platformer game with graphics of pixels. Playable in Android, Windows and Linux"
 
-    const snakeDesc = <p className="pt-4">Snake clone based on classic snake game</p>;
+    const snakeDesc = "Snake clone based on classic snake game"
 
-    const thesisDesc = <p className="pt-4">Path Finder which tracks and find path from Point A to Point B. It uses
-        A*(Star) Pathfinding algorithm to find the shortest route</p>;
+    const thesisDesc = "Path Finder which tracks and find path from Point A to Point B. It uses A*(Star) Pathfinding algorithm to find the shortest route"
 
-    const breakoutDesc = <p className="pt-4"> Using a single ball, the player must knock down as many bricks as possible
-        by using the walls and/or the paddle</p>;
+    const breakoutDesc = "Using a single ball, the player must knock down as many bricks as possible by using the walls and/or the paddle"
 
-    const robotArenaDesc = <p className="pt-4">A game which you control robots and shoots other robots</p>;
+    const robotArenaDesc = "A game which you control robots and shoots other robots"
 
-    const spaceMatrixDesc = <p className="pt-4">My first ever game develop in Java</p>;
+    const spaceMatrixDesc = "My first ever game develop in Java."
 
-    const triangleDesc = <p className="pt-4">The Sierpinski triangle a self-similar fractal</p>;
+    const triangleDesc = "The Sierpinski triangle a self-similar fractal."
 
     return (
         <Container className="w-100 pl-3 pr-3" fluid="true">
@@ -136,7 +112,7 @@ const Projects = () => {
                 </Row>
                 <Row>
                     <Work title="GCash Mobile"
-                          skills={<p>Skills: Java, Spring Boot, Rest API, Kafka, and Kubernetes.</p>}
+                          skills="Skills: Java, Spring Boot, Rest API, Kafka, and Kubernetes."
                           content={gcashDescription}
                           images={[{path: Gcash_2, alt: "Gcash_1"}, {path: Gcash_3, alt: "Gcash_3"}, {
                               path: Gcash_1,
@@ -145,13 +121,13 @@ const Projects = () => {
                           workNumber={1}
                           direction="100%"/>
                     <Work title="Health Information Tracking System"
-                          skills={<p>Skills: Java, Spring MVC, Hibernate,MySQL and Ant.</p>}
+                          skills="Skills: Java, Spring MVC, Hibernate,MySQL and Ant."
                           content={chitsDescription}
                           images={[{path: CHITS_1, alt: "Chits_1"}, {path: CHITS_2, alt: "CHITS_2"}]}
                           workNumber={2}
                           direction="-100%"/>
                     <Work title="Pa-Iwi Mobile"
-                          skills={<p> Skills: Java, Android, Amazon S3, Firebase and Rest API.</p>}
+                          skills="Skills: Java, Android, Amazon S3, Firebase and Rest API."
                           content={paiwiDescription}
                           images={[{path: Paiwi_1, alt: "Paiwi mobile"}, {
                               path: Paiwi_2,
@@ -168,7 +144,7 @@ const Projects = () => {
                 </Row>
                 <Row>
                     <Work title="RM Home Tiles"
-                          skills={<p>Skills: Java, JavaFX, Spring MVC, Hibernate, MySQL and Maven.</p>}
+                          skills="Skills: Java, JavaFX, Spring MVC, Hibernate, MySQL and Maven."
                           content={posDescription}
                           images={[{path: Inventory_3, alt: "Inventory_3"}, {
                               path: Inventory_1,
@@ -177,7 +153,7 @@ const Projects = () => {
                           workNumber={4}
                           direction="-100%"/>
                     <Work title="Portfolio"
-                          skills={<p>Skills: HTML5, CSS3, ReactJS and NodeJS.</p>}
+                          skills="Skills: HTML5, CSS3, ReactJS and NodeJS"
                           content={portfolioDescription}
                           images={[{path: Portfolio_2, alt: "Portfolio_2"}, {
                               path: Portfolio_1,
@@ -186,7 +162,7 @@ const Projects = () => {
                           workNumber={5}
                           direction="100%"/>
                     <Work title="Elementary Cellular Auomaton"
-                          skills={<p>Skills: Java and Libgdx.</p>}
+                          skills="Skills: Java and Libgdx"
                           content={autoCellDescription}
                           images={[
                               {path: AutoCell_2, alt: "Elementary Automata Cellular"},
@@ -198,7 +174,7 @@ const Projects = () => {
                 </Row>
                 <Row>
                     <Work title="Conway's Game of Life"
-                          skills={<p>Skills: Java</p>}
+                          skills="Skills: Java and Libgdx"
                           content={gameOfLifeDesc}
                           images={[
                               {path: Gol_1, alt: "Conway's Game of Life"},
@@ -207,7 +183,7 @@ const Projects = () => {
                           ]}
                           direction="-100%"/>
                     <Work title="Sorting Algorithm"
-                          skills={<p>Skills: C++ and SFML.</p>}
+                          skills="Skills: C++ and SFML"
                           content={sortAlgoDesc}
                           images={[
                               {path: Sort_1, alt: "Sorting Algorithm"},
@@ -217,7 +193,7 @@ const Projects = () => {
                           workNumber={5}
                           direction="100%"/>
                     <Work title="Asteroid Shoot 'Em Up"
-                          skills={<p>Skills: Java and Libgdx.</p>}
+                          skills="Skills: Java and Libgdx"
                           content={assroidDesc}
                           images={[
                               {path: Asteroid_1, alt: "Asteroid Shoot 'Em Up"},
@@ -229,14 +205,14 @@ const Projects = () => {
                 </Row>
                 <Row>
                     <Work title="Mandelbrot Set"
-                          skills={<p>Skills: C++ and SFML</p>}
+                          skills="Skills: C++ and SFML"
                           content={mandelbrotDesc}
                           images={[
                               {path: Mandel_1, alt: "Mandelbrot Set"}
                           ]}
                           direction="-100%"/>
                     <Work title="Dungeon Room Generator"
-                          skills={<p>Skills: Java and Libgdx.</p>}
+                          skills="Skills: Java and Libgdx"
                           content={bspDesc}
                           images={[
                               {path: BSP_1, alt: "Dungeon Room Generator"},
@@ -244,7 +220,7 @@ const Projects = () => {
                           ]}
                           direction="100%"/>
                     <Work title="Tales of the Fallen Knight"
-                          skills={<p>Skills: Java and Libgdx.</p>}
+                          skills="Skills: Java and Libgdx"
                           content={knightDesc}
                           images={[
                               {path: Knight_1, alt: "2D Platformer Game"},
@@ -255,7 +231,7 @@ const Projects = () => {
                 </Row>
                 <Row>
                     <Work title="Snake Clone"
-                          skills={<p>Skills: Java and Libgdx</p>}
+                          skills="Skills: Java and Libgdx"
                           content={snakeDesc}
                           images={[
                               {path: Snake_2, alt: "Snake Clone"},
@@ -264,7 +240,7 @@ const Projects = () => {
                           ]}
                           direction="-100%"/>
                     <Work title="Thesis: Path Finder"
-                          skills={<p>Skills: Java, Libgdx and File Parse</p>}
+                          skills="Skills: Java, Libgdx and File Parse"
                           content={thesisDesc}
                           images={[
                               {path: Thesis_1, alt: "Thesis: Path Finder"},
@@ -272,7 +248,7 @@ const Projects = () => {
                           ]}
                           direction="100%"/>
                     <Work title="Breakout Escape Clone"
-                          skills={<p>Skills: Java and Libgdx.</p>}
+                          skills="Skills: Java and Libgdx."
                           content={breakoutDesc}
                           images={[
                               {path: Breakout_1, alt: "Breakout Escape Clone"},
@@ -283,7 +259,7 @@ const Projects = () => {
                 </Row>
                 <Row>
                     <Work title="Robot Arena"
-                          skills={<p>Skills: C++ and SFML</p>}
+                          skills="Skills: C++ and SFML"
                           content={robotArenaDesc}
                           images={[
                               {path: Robot_1, alt: "Robot Arena"},
@@ -292,7 +268,7 @@ const Projects = () => {
                           ]}
                           direction="-100%"/>
                     <Work title="Space Matrix (My First Game)"
-                          skills={<p>Skills: Java</p>}
+                          skills="Skills: Java"
                           content={spaceMatrixDesc}
                           images={[
                               {path: Space_1, alt: "Space Matrix"},
@@ -301,7 +277,7 @@ const Projects = () => {
                           ]}
                           direction="100%"/>
                     <Work title="Sierpiński triangle"
-                          skills={<p>Skills: C++ and SFML.</p>}
+                          skills="Skills: C++ and SFML."
                           content={triangleDesc}
                           images={[
                               {path: Triangle_1, alt: "Sierpiński triangle"},
