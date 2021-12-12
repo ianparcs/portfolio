@@ -19,10 +19,11 @@ import Contact from "../contact/Contact";
 import AboutNav from "../about/AboutNav";
 import Education from "../about/Education";
 import WorkExperience from "../about/WorkExperience";
-import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Footer from "./Footer";
 
 import Projects from "../project/Projects";
+import PageNotFound from "../PageNotFound";
 
 
 export default function App() {
@@ -73,7 +74,7 @@ export default function App() {
                     animation="cubeAnimation"
                     transitionDelay={200}
                 >
-                    <Container className="h-100 w-100" fluid="false">
+                    <Container className="h-100 w-100" fluid="true">
                         <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}
                                 navPosition="fixed-top" textStyleHome="text-decoration-underline"/>
                         <CenterView>
@@ -81,6 +82,7 @@ export default function App() {
                             <Footer fixedPos={"fixed-bottom"}/>
                         </CenterView>
                     </Container>
+
                     <Container id={"about"} className="h-100 w-100 bg-white" fluid="false">
                         <Row>
                             <Col>
@@ -144,7 +146,10 @@ export default function App() {
                         </CenterView>
                     </Container>
                 </AwesomeSlider>
-                <Redirect exact from="/" to="/portfolio" />
+
+                <Switch>
+                    <Route component={PageNotFound}/>
+                </Switch>
             </Router>
         </>
     )
