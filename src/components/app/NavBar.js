@@ -10,17 +10,16 @@ import {Link, useHistory} from "react-router-dom";
 
 const NavBar = (props) => {
 
+    const history = useHistory();
+
     function transitionFinish(count, url) {
-        window.history.pushState('about', 'Find Ian', "/portfolio" + url);
         props.setCount(count);
     }
 
-    const history = useHistory();
-
-    function handleClick(url) {
+   /* function handleClick(url) {
         history.push("/portfolio" + url);
     }
-
+*/
 
     const classStyle = "link-container w-100 p-2 " + props.navPosition;
     return (
@@ -35,19 +34,20 @@ const NavBar = (props) => {
                             transitionFinish(0, "/")
                         }}
                         whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
+                        <Link to="/portfolio">
                         <img src={HouseIcon} className="mr-1" alt="home"/>
-                        <p className="nav-name-link p-0 m-0">Home</p>
+                            <p className="nav-name-link p-0 m-0"> About</p>
+                        </Link>
                         <Nav.Link className="disable-link p-0"/>
                     </motion.div>
                     <motion.div
                         className={"d-flex flex-column justify-content-center align-items-center  link-container mr-2 ml-2 align-items-center " + props.textStyleHome}
                         onClick={() => {
                             transitionFinish(1, "/about");
-                            handleClick("/about");
                         }}
                         whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
+                        <Link to="/portfolio/about">
                         <img src={User} className="mr-1" alt="about"/>
-                        <Link to="portfolio/about">
                             <p className="nav-name-link p-0 m-0"> About</p>
                         </Link>
                         <Nav.Link className="disable-link p-0">
@@ -55,13 +55,14 @@ const NavBar = (props) => {
                     </motion.div>
                     <motion.div
                         className={"d-flex flex-column justify-content-center align-items-center  link-container mr-2 ml-2 align-items-center " + props.textStyleHome}
-
                         onClick={() => {
                             transitionFinish(2, "/projects")
                         }}
                         whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
+                        <Link to="/portfolio/projects">
                         <img src={CodingTag} className="mr-1" alt="projects"/>
-                        <p className="nav-name-link p-0 m-0">Projects</p>
+                            <p className="nav-name-link p-0 m-0">Projects</p>
+                        </Link>
                         <Nav.Link className="disable-link p-0"/>
                     </motion.div>
                     <motion.div
@@ -70,8 +71,10 @@ const NavBar = (props) => {
                             transitionFinish(3, "/contact")
                         }}
                         whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
+                        <Link to="/portfolio/contact">
                         <img src={Send} className="mr-1" alt="contact"/>
-                        <p className="nav-name-link p-0 m-0">Contact</p>
+                            <p className="nav-name-link p-0 m-0">Contact</p>
+                        </Link>
                         <Nav.Link className="disable-link p-0"/>
                     </motion.div>
                 </Nav>

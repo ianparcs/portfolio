@@ -77,7 +77,7 @@ const Work = (props) => {
                 </motion.div>
                 <Card.Text as="div">
                     <motion.p
-                        className="pt-4"
+                        className="pt-3 pb-4"
                         initial="contentHidden"
                         animate={contentControl}
                         transition={transition}

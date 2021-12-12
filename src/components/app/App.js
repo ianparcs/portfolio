@@ -19,7 +19,7 @@ import Contact from "../contact/Contact";
 import AboutNav from "../about/AboutNav";
 import Education from "../about/Education";
 import WorkExperience from "../about/WorkExperience";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 import Footer from "./Footer";
 
 import Projects from "../project/Projects";
@@ -84,8 +84,7 @@ export default function App() {
                     <Container id={"about"} className="h-100 w-100 bg-white" fluid="false">
                         <Row>
                             <Col>
-                                <AboutNav skillRef={skillRef} aboutRef={aboutRef} educationRef={educationRef}
-                                          workExpRef={workRef}/>
+                                <AboutNav/>
                             </Col>
                         </Row>
                         <Row className="m-0 h-0 w-100">
@@ -104,7 +103,7 @@ export default function App() {
                                         </CenterView>
                                     </Route>
                                     <Route path="/portfolio/skills">
-                                        <CenterView sectionName="skill" bg="bg-white">
+                                        <CenterView sectionName="Skill" bg="bg-white">
                                             <Skills/>
                                         </CenterView>
                                     </Route>
@@ -116,7 +115,7 @@ export default function App() {
                                     </Route>
 
                                     <Route path="/portfolio/education">
-                                        <CenterView sectionName="education" bg="bg-white">
+                                        <CenterView sectionName="Education" bg="bg-white">
                                             <Education/>
                                         </CenterView>
                                     </Route>
@@ -125,11 +124,14 @@ export default function App() {
                             </Col>
                         </Row>
                     </Container>
+
+
                     <Container className="w-100 section-container" fluid="true">
                         <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}
                                 navPosition="sticky-top" linkColor={"black"} textStyleWork="text-decoration-underline"/>
                         <Projects/>
                     </Container>
+
                     <Container className="w-100 section-container" fluid="false">
                         <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}
                                 navPosition="sticky-top" linkColor={"black"}
@@ -142,6 +144,7 @@ export default function App() {
                         </CenterView>
                     </Container>
                 </AwesomeSlider>
+                <Redirect exact from="/" to="/portfolio" />
             </Router>
         </>
     )

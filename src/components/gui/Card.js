@@ -46,12 +46,13 @@ const Card = ({path, progName}) => {
         progTitleControl.start("hidden");
     }
 
-    const popover = (
-        <Popover id="popover-basic" className="text-dark" delay={{show: 100, hide: 100}}>
-            <Popover.Title as="h3" className="text-dark">{progName}</Popover.Title>
-            <Popover.Content>
 
-            </Popover.Content>
+    const popover = (
+        <Popover id="popover-basic" className="text-dark">
+            <Popover.Header as="h3" className="text-dark">{progName}</Popover.Header>
+        {/*    <Popover.Body>
+        TODO: add years exp or other info here
+            </Popover.Body>*/}
         </Popover>
     );
     return (
