@@ -36,7 +36,7 @@ const NavBar = (props) => {
                         whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
                         <Link to="/portfolio">
                         <img src={HouseIcon} className="mr-1" alt="home"/>
-                            <p className="nav-name-link p-0 m-0"> About</p>
+                            <p className="nav-name-link p-0 m-0">Home</p>
                         </Link>
                         <Nav.Link className="disable-link p-0"/>
                     </motion.div>

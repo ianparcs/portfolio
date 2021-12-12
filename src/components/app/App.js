@@ -19,11 +19,12 @@ import Contact from "../contact/Contact";
 import AboutNav from "../about/AboutNav";
 import Education from "../about/Education";
 import WorkExperience from "../about/WorkExperience";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 import Footer from "./Footer";
 
 import Projects from "../project/Projects";
 import PageNotFound from "../PageNotFound";
+import Home from "../home/home";
 
 
 export default function App() {
@@ -72,15 +73,13 @@ export default function App() {
                     fillParent={true}
                     mobileTouch={false}
                     animation="cubeAnimation"
-                    transitionDelay={200}
-                >
+                    transitionDelay={200}>
+
                     <Container className="h-100 w-100" fluid="true">
                         <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}
                                 navPosition="fixed-top" textStyleHome="text-decoration-underline"/>
-                        <CenterView>
-                            <Scene/>
-                            <Footer fixedPos={"fixed-bottom"}/>
-                        </CenterView>
+
+                       <Home/>
                     </Container>
 
                     <Container id={"about"} className="h-100 w-100 bg-white" fluid="false">
@@ -121,7 +120,6 @@ export default function App() {
                                             <Education/>
                                         </CenterView>
                                     </Route>
-
                                 </Switch>
                             </Col>
                         </Row>
@@ -148,7 +146,9 @@ export default function App() {
                 </AwesomeSlider>
 
                 <Switch>
-                    <Route component={PageNotFound}/>
+                    <Route>
+                            <Redirect to="/portfolio" />
+                    </Route>
                 </Switch>
             </Router>
         </>
