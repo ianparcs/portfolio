@@ -77,12 +77,19 @@ const Work = (props) => {
                 </motion.div>
                 <Card.Text as="div">
                     <motion.p
-                        className="pt-3 pb-4"
+                        className="pt-3"
                         initial="contentHidden"
                         animate={contentControl}
                         transition={transition}
                         variants={variants}>
                         {props.content}
+                    </motion.p>
+                    <motion.p
+                        className="pb-4"
+                        initial="contentHidden"
+                        animate={contentControl}
+                        transition={transition}
+                        variants={variants}>
                         {props.skills}
                     </motion.p>
                 </Card.Text>

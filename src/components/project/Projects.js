@@ -144,7 +144,7 @@ const Projects = () => {
                 </Row>
                 <Row>
                     <Work title="RM Home Tiles"
-                          skills="Skills: Java, JavaFX, Spring MVC, Hibernate, MySQL and Maven."
+                          skills="Skills: Java, JavaFX, Spring Boot, Hibernate, MySQL and Maven."
                           content={posDescription}
                           images={[{path: Inventory_3, alt: "Inventory_3"}, {
                               path: Inventory_1,

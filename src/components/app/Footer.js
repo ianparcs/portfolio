@@ -40,10 +40,10 @@ export default function Footer(props) {
             <Row className="pb-2">
                 <Col>
                     <p className="text-white p-0 m-0">
-                        Hosted on Github Page | Built with ReactJS | v1.0.7
+                        Built with ReactJS | v1.0.7
                         <br/>
                     </p>
-                    <div>
+                    <div> 
                         <p className="text-red p-0 m-0" style={{display: "inline-block"}}>
                             © {year}
                         </p>
