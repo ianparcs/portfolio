@@ -144,12 +144,6 @@ export default function App() {
                         </CenterView>
                     </Container>
                 </AwesomeSlider>
-
-                <Switch>
-                    <Route>
-                            <Redirect to="/portfolio" />
-                    </Route>
-                </Switch>
             </Router>
         </>
     )
