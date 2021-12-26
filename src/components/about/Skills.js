@@ -112,7 +112,8 @@ const Skill = React.forwardRef((props, ref) => {
 
     return (
         <Container id="skill"
-                   className="about-container pb-5 pl-5 pr-5 d-flex flex-column justify-content-start justify-content-sm-start  justify-content-md-center justify-content-lg-center">
+                   fluid={true}
+                   className="about-container pb-5 pl-5 pr-5 d-flex flex-column justify-content-start justify-content-sm-start justify-content-md-center justify-content-lg-center">
 
             <Row className="w-100 m-auto p-2">
                 <Col>

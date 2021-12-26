@@ -23,7 +23,6 @@ import {BrowserRouter, BrowserRouter as Router, Redirect, Route, Switch} from "r
 import Footer from "./Footer";
 
 import Projects from "../project/Projects";
-import PageNotFound from "../PageNotFound";
 import Home from "../home/home";
 
 
@@ -91,7 +90,7 @@ export default function App() {
                                         textStyleAbout="text-decoration-underline"/>
                             </Col>
                         </Row>
-                        <Row className="m-0 h-100 w-100 test bg-black">
+                        <Row className="m-0 h-100 w-100 polygon">
                             <Col>
                                 <Switch>
                                     <Route path="/portfolio/about">

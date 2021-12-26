@@ -42,10 +42,8 @@ const Work = (props) => {
             </SwiperSlide>
         ));
 
-
     const componentPromise = import('./Projects');
-
-    const MyLazyComp = React.lazy(() => componentPromise);
+    React.lazy(() => componentPromise);
 
     if (headerInView) {
         const sequence = async () => {
