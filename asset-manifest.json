@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.b3e8ee69.chunk.css",
-    "main.js": "/portfolio/static/js/main.c2012d83.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.c2012d83.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.a69c786b.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.a69c786b.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.8fed2963.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.8fed2963.js.map",
     "static/css/2.a2afb218.chunk.css": "/portfolio/static/css/2.a2afb218.chunk.css",
@@ -54,7 +54,7 @@
     "static/media/knight_3.325ef2f4.png": "/portfolio/static/media/knight_3.325ef2f4.png",
     "static/media/libgdx.98d072da.svg": "/portfolio/static/media/libgdx.98d072da.svg",
     "static/media/linkedin.98a05a73.svg": "/portfolio/static/media/linkedin.98a05a73.svg",
-    "static/media/linux.43d1650d.svg": "/portfolio/static/media/linux.43d1650d.svg",
+    "static/media/linux.e9286898.svg": "/portfolio/static/media/linux.e9286898.svg",
     "static/media/mandel.d29cd7c2.jpg": "/portfolio/static/media/mandel.d29cd7c2.jpg",
     "static/media/mongo.821f5047.svg": "/portfolio/static/media/mongo.821f5047.svg",
     "static/media/mysql.b006f62c.svg": "/portfolio/static/media/mysql.b006f62c.svg",
@@ -86,6 +86,6 @@
     "static/css/2.a2afb218.chunk.css",
     "static/js/2.e63dd2d0.chunk.js",
     "static/css/main.b3e8ee69.chunk.css",
-    "static/js/main.c2012d83.chunk.js"
+    "static/js/main.a69c786b.chunk.js"
   ]
 }
