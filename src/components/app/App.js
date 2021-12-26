@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React from "react";
 import ReactGA from 'react-ga';
 
 import CenterView from "../gui/CenterView";
@@ -6,7 +6,6 @@ import NavBar from "./NavBar";
 import Skills from "../about/Skills";
 import Cursor from "../gui/Cursor";
 import About from "../about/About";
-import Scene from "../scene/Scene";
 
 import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,7 +18,7 @@ import Contact from "../contact/Contact";
 import AboutNav from "../about/AboutNav";
 import Education from "../about/Education";
 import WorkExperience from "../about/WorkExperience";
-import {BrowserRouter, BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
+import {BrowserRouter, BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Footer from "./Footer";
 
 import Projects from "../project/Projects";
@@ -41,7 +40,7 @@ export default function App() {
 
     return (
         <>
-            <BrowserRouter basename="/portfolio" />.
+            <BrowserRouter basename="/portfolio"/>.
             <Cursor/>
             <Router>
                 <AwesomeSlider
@@ -74,7 +73,7 @@ export default function App() {
                         <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}
                                 navPosition="fixed-top" textStyleHome="text-decoration-underline"/>
 
-                       <Home/>
+                        <Home/>
                     </Container>
 
                     <Container className="h-100 w-100 bg-white" fluid="true">
@@ -90,7 +89,7 @@ export default function App() {
                                         textStyleAbout="text-decoration-underline"/>
                             </Col>
                         </Row>
-                        <Row className="m-0 h-100 w-100 polygon">
+                        <Row className="m-0 h-100 w-100 polygon bg-black">
                             <Col>
                                 <Switch>
                                     <Route path="/portfolio/about">

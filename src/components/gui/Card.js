@@ -50,7 +50,7 @@ const Card = ({path, progName}) => {
     const popover = (
         <Popover id="popover-basic" className="text-dark">
             <Popover.Header as="h3" className="text-dark">{progName}</Popover.Header>
-        {/*    <Popover.Body>
+            {/*    <Popover.Body>
         TODO: add years exp or other info here
             </Popover.Body>*/}
         </Popover>

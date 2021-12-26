@@ -16,10 +16,10 @@ const NavBar = (props) => {
         props.setCount(count);
     }
 
-   /* function handleClick(url) {
-        history.push("/portfolio" + url);
-    }
-*/
+    /* function handleClick(url) {
+         history.push("/portfolio" + url);
+     }
+ */
 
     const classStyle = "link-container w-100 p-2 " + props.navPosition;
     return (
@@ -35,7 +35,7 @@ const NavBar = (props) => {
                         }}
                         whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
                         <Link to="/portfolio">
-                        <img src={HouseIcon} className="mr-1" alt="home"/>
+                            <img src={HouseIcon} className="mr-1" alt="home"/>
                             <p className="nav-name-link p-0 m-0">Home</p>
                         </Link>
                         <Nav.Link className="disable-link p-0"/>
@@ -47,7 +47,7 @@ const NavBar = (props) => {
                         }}
                         whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
                         <Link to="/portfolio/about">
-                        <img src={User} className="mr-1" alt="about"/>
+                            <img src={User} className="mr-1" alt="about"/>
                             <p className="nav-name-link p-0 m-0"> About</p>
                         </Link>
                         <Nav.Link className="disable-link p-0">
@@ -60,7 +60,7 @@ const NavBar = (props) => {
                         }}
                         whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
                         <Link to="/portfolio/projects">
-                        <img src={CodingTag} className="mr-1" alt="projects"/>
+                            <img src={CodingTag} className="mr-1" alt="projects"/>
                             <p className="nav-name-link p-0 m-0">Projects</p>
                         </Link>
                         <Nav.Link className="disable-link p-0"/>
@@ -72,7 +72,7 @@ const NavBar = (props) => {
                         }}
                         whileHover={{scale: 1.2}} whileTap={{scale: 0.9}}>
                         <Link to="/portfolio/contact">
-                        <img src={Send} className="mr-1" alt="contact"/>
+                            <img src={Send} className="mr-1" alt="contact"/>
                             <p className="nav-name-link p-0 m-0">Contact</p>
                         </Link>
                         <Nav.Link className="disable-link p-0"/>
