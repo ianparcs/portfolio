@@ -42,6 +42,11 @@ const Work = (props) => {
             </SwiperSlide>
         ));
 
+
+    const componentPromise = import('./Projects');
+
+    const MyLazyComp = React.lazy(() => componentPromise);
+
     if (headerInView) {
         const sequence = async () => {
             await headerControl.start("headerVisible");
@@ -70,6 +75,7 @@ const Work = (props) => {
                     variants={variants}>
                     <Swiper effect="cube"
                             loop={true}
+                            lazy={true}
                             spaceBetween={0}
                             pagination={{clickable: true}}>
                         {imagesList}
