@@ -28,7 +28,6 @@ hr {
 }
 
 .section-container {
-    height: 100vh !important;
     overflow-y: scroll !important;
     overflow-x: hidden !important;
 }

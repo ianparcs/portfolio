@@ -78,7 +78,7 @@ export default function App() {
                        <Home/>
                     </Container>
 
-                    <Container id={"about"} className="h-100 w-100 bg-white" fluid="false">
+                    <Container className="h-100 w-100 bg-white" fluid="true">
                         <Row>
                             <Col>
                                 <AboutNav/>
@@ -122,13 +122,13 @@ export default function App() {
                     </Container>
 
 
-                    <Container className="w-100 section-container" fluid="true">
+                    <Container className="h-100 w-100 section-container" fluid="true">
                         <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}
                                 navPosition="sticky-top" linkColor={"black"} textStyleWork="text-decoration-underline"/>
                         <Projects/>
                     </Container>
 
-                    <Container className="w-100 section-container" fluid="false">
+                    <Container className="h-100 w-100 section-container" fluid="true">
                         <NavBar setCount={setCount} count={count} endAnim={transitionEnd} index={currentIndex}
                                 navPosition="sticky-top" linkColor={"black"}
                                 textStyleContact="text-decoration-underline"/>

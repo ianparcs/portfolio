@@ -40,7 +40,7 @@ export default function Footer(props) {
             <Row className="pb-2">
                 <Col>
                     <p className="text-white p-0 m-0">
-                        Built with ReactJS | v1.1.3
+                        Built with ReactJS | v1.2.0
                         <br/>
                     </p>
                     <div>
