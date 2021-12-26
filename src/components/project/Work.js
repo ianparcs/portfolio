@@ -33,15 +33,12 @@ const Work = (props) => {
         numHidden: {opacity: 0, x: "100%", transition: {duration: 0.5}},
         numVisible: {opacity: 1, x: 0}
     };
-
-    const [count, setCount] = React.useState(false);
-
     const imagesList = props.images.map((image, index) =>
         (<SwiperSlide key={index}>
                 <Image src={image.path}
                        alt={image.alt}
                        className="image-content"
-                       />
+                       rounded={true}/>
             </SwiperSlide>
         ));
 
@@ -71,11 +68,10 @@ const Work = (props) => {
                     animate={contentControl}
                     transition={transition}
                     variants={variants}>
-                    <Swiper effect="overflow"
+                    <Swiper effect="cube"
                             loop={true}
                             spaceBetween={0}
-                            setWrapperSize={true}
-                           >
+                            pagination={{clickable: true}}>
                         {imagesList}
                     </Swiper>
                 </motion.div>
