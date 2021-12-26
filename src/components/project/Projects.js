@@ -112,7 +112,7 @@ const Projects = () => {
                 </Row>
                 <Row>
                     <Work title="GCash Mobile"
-                          skills="Skills: Java, Spring Boot, Rest API, Kafka, and Kubernetes."
+                          skills=""
                           content={gcashDescription}
                           images={[{path: Gcash_2, alt: "Gcash_1"}, {path: Gcash_3, alt: "Gcash_3"}, {
                               path: Gcash_1,
@@ -121,13 +121,13 @@ const Projects = () => {
                           workNumber={1}
                           direction="100%"/>
                     <Work title="Health Information Tracking System"
-                          skills="Skills: Java, Spring MVC, Hibernate,MySQL and Ant."
+                          skills=""
                           content={chitsDescription}
                           images={[{path: CHITS_1, alt: "Chits_1"}, {path: CHITS_2, alt: "CHITS_2"}]}
                           workNumber={2}
                           direction="-100%"/>
                     <Work title="Pa-Iwi Mobile"
-                          skills="Skills: Java, Android, Amazon S3, Firebase and Rest API."
+                          skills=""
                           content={paiwiDescription}
                           images={[{path: Paiwi_1, alt: "Paiwi mobile"}, {
                               path: Paiwi_2,

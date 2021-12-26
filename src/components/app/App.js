@@ -19,7 +19,7 @@ import Contact from "../contact/Contact";
 import AboutNav from "../about/AboutNav";
 import Education from "../about/Education";
 import WorkExperience from "../about/WorkExperience";
-import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
+import {BrowserRouter, BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 import Footer from "./Footer";
 
 import Projects from "../project/Projects";
@@ -40,13 +40,9 @@ export default function App() {
         setCount(currentIndex);
     }, [count, currentIndex, transitionEnd]);
 
-    const educationRef = useRef();
-    const workRef = useRef();
-    const aboutRef = useRef();
-    const skillRef = useRef();
-
     return (
         <>
+            <BrowserRouter basename="/portfolio" />.
             <Cursor/>
             <Router>
                 <AwesomeSlider
