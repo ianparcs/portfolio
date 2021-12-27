@@ -17,6 +17,18 @@ import {useInView} from "react-intersection-observer";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCube]);
 
+
+function getImages(props) {
+    const imagesList = props.images.map((image, index) =>
+        (<SwiperSlide key={index}>
+                <Image src={image.path}
+                       alt={image.alt}
+                       className="image-content"
+                       rounded={true}/>
+            </SwiperSlide>
+        ));
+    return imagesList
+}
 const Work = (props) => {
     const headerControl = useAnimation();
     const contentControl = useAnimation();
@@ -33,14 +45,6 @@ const Work = (props) => {
         numHidden: {opacity: 0, x: "100%", transition: {duration: 0.5}},
         numVisible: {opacity: 1, x: 0}
     };
-    const imagesList = props.images.map((image, index) =>
-        (<SwiperSlide key={index}>
-                <Image src={image.path}
-                       alt={image.alt}
-                       className="image-content"
-                       rounded={true}/>
-            </SwiperSlide>
-        ));
 
     const componentPromise = import('./Projects');
     React.lazy(() => componentPromise);
@@ -76,7 +80,7 @@ const Work = (props) => {
                             lazy={true}
                             spaceBetween={0}
                             pagination={{clickable: true}}>
-                        {imagesList}
+                        {getImages(props)}
                     </Swiper>
                 </motion.div>
                 <Card.Text as="div">
