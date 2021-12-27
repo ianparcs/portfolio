@@ -123,7 +123,7 @@ const Skill = React.forwardRef((props, ref) => {
                         initial="hidden"
                         transition={transition}
                         variants={variants}>
-                        <SectionTitle title="Skills" textColor="text-dark"/>
+                        <SectionTitle title="Skills & Tech Interest" textColor="text-dark"/>
                     </motion.div>
                     <motion.ul
                         id="skill-content"

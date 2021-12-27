@@ -127,7 +127,7 @@ const WorkExperience = React.forwardRef((props, ref) => {
                         variants={list}
                     >
                         <h4 className="text-red">Software Developer</h4>
-                        <h5>Collabera (GCash)</h5>
+                        <h5>Collabera</h5>
                         <h6>FEBRUARY 2021 – PRESENT</h6>
                     </motion.div>
                 </Col>
