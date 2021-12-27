@@ -12,7 +12,7 @@ const About = React.forwardRef((props, ref) => {
     const [contentRef, contentInView] = useInView();
 
     const transition = {
-        duration: 1,
+        duration: 2,
         ease: "easeInOut"
     };
 
@@ -28,25 +28,25 @@ const About = React.forwardRef((props, ref) => {
     };
 
     useEffect(() => {
-        if (headerInView) {
             const sequence = async () => {
                 await headerControl.start("visible");
                 return await contentControl.start("visible");
             };
             sequence();
+
+        const icons = document.getElementsByClassName("about-icon");
+        if (icons !== null) {
+            for (let i = 0; i < icons.length; i++) {
+                if (0 === i) {
+                    icons.item(0).style.fill = "#dc3545";
+                } else {
+                    icons.item(i).style.fill = "white";
+                }
+            }
         }
     }, [headerControl, headerInView, contentControl, contentInView]);
 
-    const icons = document.getElementsByClassName("about-icon");
-    if (icons !== null) {
-        for (let i = 0; i < icons.length; i++) {
-            if (0 === i) {
-                icons.item(0).style.fill = "#dc3545";
-            } else {
-                icons.item(i).style.fill = "white";
-            }
-        }
-    }
+
 
     return (
         <Container className="about-container p-5  d-flex flex-column justify-content-center">
