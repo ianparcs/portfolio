@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import SwiperCore, {A11y, Autoplay, EffectCube, Navigation, Pagination, Scrollbar} from 'swiper';
 import Card from 'react-bootstrap/Card'
 
@@ -17,17 +17,16 @@ import {useInView} from "react-intersection-observer";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCube]);
 
-
 function getImages(props) {
-    const imagesList = props.images.map((image, index) =>
+    return props.images.map((image, index) =>
         (<SwiperSlide key={index}>
                 <Image src={image.path}
                        alt={image.alt}
+                       fluid={true}
                        className="image-content"
                        rounded={true}/>
             </SwiperSlide>
-        ));
-    return imagesList
+        ))
 }
 const Work = (props) => {
     const headerControl = useAnimation();
@@ -42,18 +41,18 @@ const Work = (props) => {
         headerVisible: {opacity: 1, x: 0, transition: {duration: 0.5}},
         contentHidden: {opacity: 0, transition: {duration: 0.5}},
         contentVisible: {opacity: 1, x: 0, transition: {duration: 0.5}},
-        numHidden: {opacity: 0, x: "100%", transition: {duration: 0.5}},
-        numVisible: {opacity: 1, x: 0}
     };
 
-    if (headerInView) {
-        const sequence = async () => {
-            await headerControl.start("headerVisible");
-            return contentControl.start("contentVisible");
-        };
-        sequence();
-    }
+    useEffect(() => {
+        if (headerInView) {
+            const sequence = async () => {
+                await headerControl.start("headerVisible");
+                return await contentControl.start("visible");
+            };
+            sequence()
+        }
 
+    }, [headerInView, contentControl, headerControl]);
     return (
         <Col className="col-lg-4 col-sm-2 col-md-2 w-100 d-flex text-center">
             <Card className="bg-transparent text-white">
@@ -74,7 +73,7 @@ const Work = (props) => {
                     variants={variants}>
                     <Swiper effect="flip"
                             loop={true}
-                            lazy={true}
+                            lazy={false}
                             spaceBetween={0}
                             pagination={{clickable: true}}>
                         {getImages(props)}

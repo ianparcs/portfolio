@@ -267,7 +267,7 @@ const Projects = () => {
                               {path: Robot_3, alt: "Robot Arena"},
                           ]}
                           direction="-100%"/>
-                    <Work title="Space Matrix (My First Game)"
+                    <Work title="Space Matrix"
                           skills="Skills: Java"
                           content={spaceMatrixDesc}
                           images={[
@@ -277,7 +277,7 @@ const Projects = () => {
                           ]}
                           direction="100%"/>
                     <Work title="Sierpiński triangle"
-                          skills="Skills: C++ and SFML."
+                          skills="Skills: C++ and OpenGL."
                           content={triangleDesc}
                           images={[
                               {path: Triangle_1, alt: "Sierpiński triangle"},
