@@ -46,9 +46,6 @@ const Work = (props) => {
         numVisible: {opacity: 1, x: 0}
     };
 
-    const componentPromise = import('./Projects');
-    React.lazy(() => componentPromise);
-
     if (headerInView) {
         const sequence = async () => {
             await headerControl.start("headerVisible");
@@ -75,7 +72,7 @@ const Work = (props) => {
                     animate={contentControl}
                     transition={transition}
                     variants={variants}>
-                    <Swiper effect="cube"
+                    <Swiper effect="flip"
                             loop={true}
                             lazy={true}
                             spaceBetween={0}

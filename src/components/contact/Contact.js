@@ -48,18 +48,6 @@ export default function Contact() {
     };
 
     useEffect(() => {
-        const sequence = async () => {
-            if (headerInView) {
-                await headerControl.start("headerVisible");
-                return await contentControl.start("visible");
-            }
-        };
-        sequence()
-
-    }, [headerInView, contentControl, headerControl, visible, setVisible]);
-
-
-    useEffect(() => {
         if (headerInView) {
             const sequence = async () => {
                 await headerControl.start("headerVisible");
