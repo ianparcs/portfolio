@@ -54,7 +54,7 @@ const Work = (props) => {
 
     }, [headerInView, contentControl, headerControl]);
     return (
-        <Col className="col-lg-4 col-sm-2 col-md-2 w-100 d-flex text-center">
+        <Col className="col-lg-4 col-sm-1 col-md-2 text-center">
             <Card className="bg-transparent text-white">
                 <Card.Title>
                     <motion.p className="w-100 p-2 white-border"
@@ -71,7 +71,7 @@ const Work = (props) => {
                     animate={contentControl}
                     transition={transition}
                     variants={variants}>
-                    <Swiper effect="flip"
+                    <Swiper effect={"slide"}
                             loop={true}
                             lazy={false}
                             spaceBetween={0}
