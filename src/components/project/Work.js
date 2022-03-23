@@ -73,8 +73,9 @@ const Work = (props) => {
                     variants={variants}>
                     <Swiper effect={"slide"}
                             loop={true}
-                            lazy={false}
                             spaceBetween={0}
+                            passiveListeners={true}
+                            preloadImages={true}
                             pagination={{clickable: true}}>
                         {getImages(props)}
                     </Swiper>
