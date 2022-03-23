@@ -82,8 +82,8 @@ export default function Contact() {
                         <br/>
                     </p>
                     <p>
-                        <i>- &nbsp;We are what we think. All that we are arises with our thoughts. With our thoughts, we
-                            make the world.</i>
+                        <i>- &nbsp;"We are what we think. All that we are arises with our thoughts. With our thoughts, we
+                            make the world".</i>
                     </p>
                 </Alert>
             );
@@ -101,7 +101,7 @@ export default function Contact() {
                         animate={headerControl}
                         initial="hidden"
                         variants={variants}>
-                        <SectionTitle title="Contact" textColor="text-white"/>
+                        <SectionTitle title="Contact Us" textColor="text-white"/>
                     </motion.div>
                 </Col>
             </Row>
@@ -117,12 +117,12 @@ export default function Contact() {
                                 <motion.input variants={variants}
                                               className="w-100 custom-input" type="input"
                                               name="sender_name"
-                                              placeholder="Name"/>
+                                              placeholder="Your Name"/>
                             </Row>
                             <Row className="p-2">
                                 <motion.input variants={variants}
                                               className="w-100 custom-input" type="email" name="sender_email"
-                                              placeholder="Enter Email"/>
+                                              placeholder="Your Email"/>
                             </Row>
                             <Row className="p-2">
                                 <motion.textarea variants={variants}
