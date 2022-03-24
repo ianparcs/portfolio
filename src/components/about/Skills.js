@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {motion, useAnimation} from "framer-motion";
 import {useInView} from "react-intersection-observer";
 import Javascript from "../../assets/img/logo/javascript.svg";
+import Kubernetes from "../../assets/img/logo/kubernetes.svg";
 import Bootstrap from "../../assets/img/logo/bootstrap.svg";
 import Hibernate from "../../assets/img/logo/hibernate.svg";
 import ReactLogo from "../../assets/img/logo/react.svg";
@@ -141,6 +142,7 @@ const Skill = React.forwardRef((props, ref) => {
                         <motion.li variants={reactAnimation} transition={transitionInfinite}><Card progName="ReactJS"
                                                                                                    path={ReactLogo}/>
                         </motion.li>
+                        <motion.li variants={item}><Card progName="Kubernetes" path={Kubernetes}/></motion.li>
                         <motion.li variants={item}><Card progName="MongoDB" path={Mongo}/></motion.li>
                         <motion.li variants={item}><Card progName="Libgdx" path={Libgdx}/></motion.li>
                         <motion.li variants={item}><Card progName="Bootstrap" path={Bootstrap}/></motion.li>
