@@ -14,7 +14,7 @@ function LightStars({count}) {
         group.current.scale.set(s, s, s);
     });
     const [geo, mat, coords] = useMemo(() => {
-        const geo = new THREE.SphereBufferGeometry(0.8, 15, 15);
+        const geo = new THREE.SphereBufferGeometry(0.8, 20, 20);
         const mat = new THREE.MeshBasicMaterial({color: new THREE.Color('#abd8f4')});
         const coords = new Array(count).fill().map(i => [Math.random() * 800 - 400, Math.random() * 800 - 400, Math.random() * 800 - 400]);
         return [geo, mat, coords]

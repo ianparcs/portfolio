@@ -30,7 +30,7 @@ function Effects({children, mouseClick}) {
 
             <effectComposer ref={composer} args={[gl]}>
                 <renderPass attachArray="passes" scene={scene} camera={camera}/>
-                <unrealBloomPass attachArray="passes" args={[aspect, 1.5, 1, 0]}/>
+                <unrealBloomPass attachArray="passes" args={[aspect, 1.35, 1, 0]}/>
                 <sMAAPass attachArray="passes"/>
                 <outlinePass
                     attachArray="passes"
