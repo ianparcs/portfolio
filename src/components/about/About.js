@@ -28,11 +28,11 @@ const About = React.forwardRef((props, ref) => {
     };
 
     useEffect(() => {
-            const sequence = async () => {
-                await headerControl.start("visible");
-                return await contentControl.start("visible");
-            };
-            sequence();
+        const sequence = async () => {
+            await headerControl.start("visible");
+            return await contentControl.start("visible");
+        };
+        sequence();
 
         const icons = document.getElementsByClassName("about-icon");
         if (icons !== null) {
@@ -45,7 +45,6 @@ const About = React.forwardRef((props, ref) => {
             }
         }
     }, [headerControl, headerInView, contentControl, contentInView]);
-
 
 
     return (

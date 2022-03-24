@@ -82,7 +82,8 @@ export default function Contact() {
                         <br/>
                     </p>
                     <p>
-                        <i>- &nbsp;"We are what we think. All that we are arises with our thoughts. With our thoughts, we
+                        <i>- &nbsp;"We are what we think. All that we are arises with our thoughts. With our thoughts,
+                            we
                             make the world".</i>
                     </p>
                 </Alert>

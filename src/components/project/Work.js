@@ -28,6 +28,7 @@ function getImages(props) {
             </SwiperSlide>
         ))
 }
+
 const Work = (props) => {
     const headerControl = useAnimation();
     const contentControl = useAnimation();
@@ -54,7 +55,7 @@ const Work = (props) => {
 
     }, [headerInView, contentControl, headerControl]);
     return (
-        <Col className="col-lg-4 col-sm-1 col-md-2 text-center">
+        <Col className={"col-xl-2 col-lg-3 col-md-6 col-sm-12 text-center"}>
             <Card className="bg-transparent text-white">
                 <Card.Title>
                     <motion.p className="w-100 p-2 white-border"

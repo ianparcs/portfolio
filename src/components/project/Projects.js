@@ -88,182 +88,174 @@ const Projects = () => {
 
     return (
         <Container className="w-100 pl-5 pr-5" fluid={true}>
-                <Row className="pt-4 pb-4 pr-4">
-                    <h1>Work Projects</h1>
-                    <ColoredLine color="white"/>
-                </Row>
-                <Row>
-                    <Work title="GCash Mobile"
-                          skills=""
-                          content={gcashDescription}
-                          images={[{path: Gcash_2, alt: "Gcash_1"}, {path: Gcash_3, alt: "Gcash_3"}, {
-                              path: Gcash_1,
-                              alt: "Gcash_2"
-                          }]}
-                          workNumber={1}
-                          direction="100%"/>
-                    <Work title="Health Information Tracking System"
-                          skills=""
-                          content={chitsDescription}
-                          images={[{path: CHITS_1, alt: "Chits_1"}, {path: CHITS_2, alt: "CHITS_2"}]}
-                          workNumber={2}
-                          direction="-100%"/>
-                    <Work title="Pa-Iwi Mobile"
-                          skills=""
-                          content={paiwiDescription}
-                          images={[{path: Paiwi_1, alt: "Paiwi mobile"}, {
-                              path: Paiwi_2,
-                              alt: "Paiwi mobile"
-                          }]}
-                          workNumber={3}
-                          direction="100%"/>
-                </Row>
-                <Row className="pt-4 pb-4 pr-4">
-                    <h1>Personal Projects</h1>
-                    <ColoredLine color="white"/>
-                </Row>
-                <Row>
-                    <Work title="RM Home Tiles"
-                          skills="Skills: Java, JavaFX, Spring Boot, Hibernate, MySQL and Maven."
-                          content={posDescription}
-                          images={[{path: Inventory_3, alt: "Inventory_3"}, {
-                              path: Inventory_1,
-                              alt: "Inventory_1"
-                          }, {path: Inventory_2, alt: "Inventory_2"},]}
-                          workNumber={4}
-                          direction="-100%"/>
-                    <Work title="Portfolio"
-                          skills="Skills: HTML5, CSS3, ReactJS and NodeJS"
-                          content={portfolioDescription}
-                          images={[{path: Portfolio_2, alt: "Portfolio_2"}, {
-                              path: Portfolio_1,
-                              alt: "Portfolio_1"
-                          }]}
-                          workNumber={5}
-                          direction="100%"/>
-                    <Work title="Elementary Cellular Auomaton"
-                          skills="Skills: Java and Libgdx"
-                          content={autoCellDescription}
-                          images={[
-                              {path: AutoCell_2, alt: "Elementary Automata Cellular"},
-                              {path: AutoCell_1, alt: "Elementary Automata Cellular"},
-                              {path: AutoCell_3, alt: "Elementary Automata Cellular"},
-                          ]}
-                          workNumber={5}
-                          direction="100%"/>
-                </Row>
-                <Row>
-                    <Work title="Conway's Game of Life"
-                          skills="Skills: Java and Libgdx"
-                          content={gameOfLifeDesc}
-                          images={[
-                              {path: Gol_1, alt: "Conway's Game of Life"},
-                              {path: Gol_2, alt: "Conway's Game of Life"},
-                              {path: Gol_3, alt: "Conway's Game of Life"},
-                          ]}
-                          direction="-100%"/>
-                    <Work title="Sorting Algorithm"
-                          skills="Skills: C++ and SFML"
-                          content={sortAlgoDesc}
-                          images={[
-                              {path: Sort_1, alt: "Sorting Algorithm"},
-                              {path: Sort_2, alt: "Sorting Algorithm"},
-                              {path: Sort_3, alt: "Sorting Algorithm"},
-                          ]}
-                          workNumber={5}
-                          direction="100%"/>
-                    <Work title="Space Matrix"
-                          skills="Skills: Java"
-                          content={spaceMatrixDesc}
-                          images={[
-                              {path: Space_1, alt: "Space Matrix"},
-                              {path: Space_2, alt: "Space Matrix"},
-                              {path: Space_3, alt: "Space Matrix"},
-                          ]}
-                          direction="100%"/>
-                </Row>
-                <Row>
-                    <Work title="Mandelbrot Set"
-                          skills="Skills: C++ and SFML"
-                          content={mandelbrotDesc}
-                          images={[
-                              {path: Mandel_1, alt: "Mandelbrot Set"}
-                          ]}
-                          direction="-100%"/>
-                    <Work title="Dungeon Room Generator"
-                          skills="Skills: Java and Libgdx"
-                          content={bspDesc}
-                          images={[
-                              {path: BSP_1, alt: "Dungeon Room Generator"},
-                              {path: BSP_2, alt: "Dungeon Room Generator"},
-                          ]}
-                          direction="100%"/>
-                    <Work title="Tales of the Fallen Knight"
-                          skills="Skills: Java and Libgdx"
-                          content={knightDesc}
-                          images={[
-                              {path: Knight_1, alt: "2D Platformer Game"},
-                              {path: Knight_2, alt: "2D Platformer Game"},
-                              {path: Knight_3, alt: "2D Platformer Game"},
-                          ]}
-                          direction="100%"/>
-                </Row>
-                <Row>
-                    <Work title="Snake Clone"
-                          skills="Skills: Java and Libgdx"
-                          content={snakeDesc}
-                          images={[
-                              {path: Snake_2, alt: "Snake Clone"},
-                              {path: Snake_1, alt: "Snake Clone"}
+            <Row className="pt-4 pb-4 pr-4">
+                <h1>Work Projects</h1>
+                <ColoredLine color="white"/>
+            </Row>
+            <Row>
+                <Work title="GCash Mobile"
+                      skills=""
+                      content={gcashDescription}
+                      images={[{path: Gcash_2, alt: "Gcash_1"}, {path: Gcash_3, alt: "Gcash_3"}, {
+                          path: Gcash_1,
+                          alt: "Gcash_2"
+                      }]}
+                      workNumber={1}
+                      direction="100%"/>
+                <Work title="Health Information Tracking System"
+                      skills=""
+                      content={chitsDescription}
+                      images={[{path: CHITS_1, alt: "Chits_1"}, {path: CHITS_2, alt: "CHITS_2"}]}
+                      workNumber={2}
+                      direction="-100%"/>
+                <Work title="Pa-Iwi Mobile"
+                      skills=""
+                      content={paiwiDescription}
+                      images={[{path: Paiwi_1, alt: "Paiwi mobile"}, {
+                          path: Paiwi_2,
+                          alt: "Paiwi mobile"
+                      }]}
+                      workNumber={3}
+                      direction="100%"/>
+            </Row>
+            <Row className="pt-4 pb-4 pr-4">
+                <h1>Personal Projects</h1>
+                <ColoredLine color="white"/>
+            </Row>
+            <Row>
+                <Work title="RM Home Tiles"
+                      skills="Skills: Java, JavaFX, Spring Boot, Hibernate, MySQL and Maven."
+                      content={posDescription}
+                      images={[{path: Inventory_3, alt: "Inventory_3"}, {
+                          path: Inventory_1,
+                          alt: "Inventory_1"
+                      }, {path: Inventory_2, alt: "Inventory_2"},]}
+                      workNumber={4}
+                      direction="-100%"/>
+                <Work title="Portfolio"
+                      skills="Skills: HTML5, CSS3, ReactJS and NodeJS"
+                      content={portfolioDescription}
+                      images={[{path: Portfolio_2, alt: "Portfolio_2"}, {
+                          path: Portfolio_1,
+                          alt: "Portfolio_1"
+                      }]}
+                      workNumber={5}
+                      direction="100%"/>
+                <Work title="Elementary Cellular Auomaton"
+                      skills="Skills: Java and Libgdx"
+                      content={autoCellDescription}
+                      images={[
+                          {path: AutoCell_2, alt: "Elementary Automata Cellular"},
+                          {path: AutoCell_1, alt: "Elementary Automata Cellular"},
+                          {path: AutoCell_3, alt: "Elementary Automata Cellular"},
+                      ]}
+                      workNumber={5}
+                      direction="100%"/>
+                <Work title="Conway's Game of Life"
+                      skills="Skills: Java and Libgdx"
+                      content={gameOfLifeDesc}
+                      images={[
+                          {path: Gol_1, alt: "Conway's Game of Life"},
+                          {path: Gol_2, alt: "Conway's Game of Life"},
+                          {path: Gol_3, alt: "Conway's Game of Life"},
+                      ]}
+                      direction="-100%"/>
+                <Work title="Sorting Algorithm"
+                      skills="Skills: C++ and SFML"
+                      content={sortAlgoDesc}
+                      images={[
+                          {path: Sort_1, alt: "Sorting Algorithm"},
+                          {path: Sort_2, alt: "Sorting Algorithm"},
+                          {path: Sort_3, alt: "Sorting Algorithm"},
+                      ]}
+                      workNumber={5}
+                      direction="100%"/>
+                <Work title="Space Matrix"
+                      skills="Skills: Java"
+                      content={spaceMatrixDesc}
+                      images={[
+                          {path: Space_1, alt: "Space Matrix"},
+                          {path: Space_2, alt: "Space Matrix"},
+                          {path: Space_3, alt: "Space Matrix"},
+                      ]}
+                      direction="100%"/>
+                <Work title="Mandelbrot Set"
+                      skills="Skills: C++ and SFML"
+                      content={mandelbrotDesc}
+                      images={[
+                          {path: Mandel_1, alt: "Mandelbrot Set"}
+                      ]}
+                      direction="-100%"/>
+                <Work title="Dungeon Room Generator"
+                      skills="Skills: Java and Libgdx"
+                      content={bspDesc}
+                      images={[
+                          {path: BSP_1, alt: "Dungeon Room Generator"},
+                          {path: BSP_2, alt: "Dungeon Room Generator"},
+                      ]}
+                      direction="100%"/>
+                <Work title="Tales of the Fallen Knight"
+                      skills="Skills: Java and Libgdx"
+                      content={knightDesc}
+                      images={[
+                          {path: Knight_1, alt: "2D Platformer Game"},
+                          {path: Knight_2, alt: "2D Platformer Game"},
+                          {path: Knight_3, alt: "2D Platformer Game"},
+                      ]}
+                      direction="100%"/>
+                <Work title="Snake Clone"
+                      skills="Skills: Java and Libgdx"
+                      content={snakeDesc}
+                      images={[
+                          {path: Snake_2, alt: "Snake Clone"},
+                          {path: Snake_1, alt: "Snake Clone"}
 
-                          ]}
-                          direction="-100%"/>
-                    <Work title="Sierpiński triangle"
-                          skills="Skills: C++ and OpenGL."
-                          content={triangleDesc}
-                          images={[
-                              {path: Triangle_1, alt: "Sierpiński triangle"},
-                          ]}
-                          direction="100%"/>
-                    <Work title="Breakout Escape Clone"
-                          skills="Skills: Java and Libgdx."
-                          content={breakoutDesc}
-                          images={[
-                              {path: Breakout_1, alt: "Breakout Escape Clone"},
-                              {path: Breakout_2, alt: "Breakout Escape Clone"},
-                              {path: Breakout_3, alt: "Breakout Escape Clone"},
-                          ]}
-                          direction="100%"/>
-                </Row>
-                <Row>
-                    <Work title="Robot Arena"
-                          skills="Skills: C++ and SFML"
-                          content={robotArenaDesc}
-                          images={[
-                              {path: Robot_1, alt: "Robot Arena"},
-                              {path: Robot_2, alt: "Robot Arena"},
-                              {path: Robot_3, alt: "Robot Arena"},
-                          ]}
-                          direction="-100%"/>
-                    <Work title="Asteroid Shoot 'Em Up"
-                          skills="Skills: Java and Libgdx"
-                          content={assroidDesc}
-                          images={[
-                              {path: Asteroid_1, alt: "Asteroid Shoot 'Em Up"},
-                              {path: Asteroid_2, alt: "Asteroid Shoot 'Em Up"},
-                              {path: Asteroid_3, alt: "Asteroid Shoot 'Em Up"},
-                          ]}
-                          workNumber={5}
-                          direction="100%"/>
-                    <Work title="Thesis: Path Finder"
-                          skills="Skills: Java, Libgdx and File Parse"
-                          content={thesisDesc}
-                          images={[
-                              {path: Thesis_1, alt: "Thesis: Path Finder"},
-                              {path: Thesis_2, alt: "Thesis: Path Finder"},
-                          ]}
-                          direction="100%"/>
-                </Row>
+                      ]}
+                      direction="-100%"/>
+                <Work title="Sierpiński triangle"
+                      skills="Skills: C++ and OpenGL."
+                      content={triangleDesc}
+                      images={[
+                          {path: Triangle_1, alt: "Sierpiński triangle"},
+                      ]}
+                      direction="100%"/>
+                <Work title="Breakout Escape Clone"
+                      skills="Skills: Java and Libgdx."
+                      content={breakoutDesc}
+                      images={[
+                          {path: Breakout_1, alt: "Breakout Escape Clone"},
+                          {path: Breakout_2, alt: "Breakout Escape Clone"},
+                          {path: Breakout_3, alt: "Breakout Escape Clone"},
+                      ]}
+                      direction="100%"/>
+                <Work title="Robot Arena"
+                      skills="Skills: C++ and SFML"
+                      content={robotArenaDesc}
+                      images={[
+                          {path: Robot_1, alt: "Robot Arena"},
+                          {path: Robot_2, alt: "Robot Arena"},
+                          {path: Robot_3, alt: "Robot Arena"},
+                      ]}
+                      direction="-100%"/>
+                <Work title="Asteroid Shoot 'Em Up"
+                      skills="Skills: Java and Libgdx"
+                      content={assroidDesc}
+                      images={[
+                          {path: Asteroid_1, alt: "Asteroid Shoot 'Em Up"},
+                          {path: Asteroid_2, alt: "Asteroid Shoot 'Em Up"},
+                          {path: Asteroid_3, alt: "Asteroid Shoot 'Em Up"},
+                      ]}
+                      workNumber={5}
+                      direction="100%"/>
+                <Work title="Thesis: Path Finder"
+                      skills="Skills: Java, Libgdx and File Parse"
+                      content={thesisDesc}
+                      images={[
+                          {path: Thesis_1, alt: "Thesis: Path Finder"},
+                          {path: Thesis_2, alt: "Thesis: Path Finder"},
+                      ]}
+                      direction="100%"/>
+            </Row>
             <CenterView sectionName="Project" bg="bg-black">
                 <Footer fixedPos="sticky-bottom"/>
             </CenterView>
