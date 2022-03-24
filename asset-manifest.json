@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.b3e8ee69.chunk.css",
-    "main.js": "/portfolio/static/js/main.40dc6162.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.40dc6162.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.5690cad3.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.5690cad3.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.8fed2963.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.8fed2963.js.map",
     "static/css/2.e1ebf2f7.chunk.css": "/portfolio/static/css/2.e1ebf2f7.chunk.css",
@@ -52,6 +52,7 @@
     "static/media/knight_1.6289fe1c.png": "/portfolio/static/media/knight_1.6289fe1c.png",
     "static/media/knight_2.d41a225e.png": "/portfolio/static/media/knight_2.d41a225e.png",
     "static/media/knight_3.325ef2f4.png": "/portfolio/static/media/knight_3.325ef2f4.png",
+    "static/media/kubernetes.25c5ad0e.svg": "/portfolio/static/media/kubernetes.25c5ad0e.svg",
     "static/media/libgdx.98d072da.svg": "/portfolio/static/media/libgdx.98d072da.svg",
     "static/media/linkedin.98a05a73.svg": "/portfolio/static/media/linkedin.98a05a73.svg",
     "static/media/linux.6e11411c.svg": "/portfolio/static/media/linux.6e11411c.svg",
@@ -86,6 +87,6 @@
     "static/css/2.e1ebf2f7.chunk.css",
     "static/js/2.143e4f88.chunk.js",
     "static/css/main.b3e8ee69.chunk.css",
-    "static/js/main.40dc6162.chunk.js"
+    "static/js/main.5690cad3.chunk.js"
   ]
 }
