@@ -55,7 +55,7 @@ const Work = (props) => {
 
     }, [headerInView, contentControl, headerControl]);
     return (
-        <Col className={"col-xl-2 col-lg-3 col-md-6 col-sm-12 text-center"}>
+        <Col className={"col-xl-3 col-lg-3 col-md-6 col-sm-12 text-center"}>
             <Card className="bg-transparent text-white">
                 <Card.Title>
                     <motion.p className="w-100 p-2 white-border"
