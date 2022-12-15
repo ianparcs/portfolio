@@ -33,7 +33,7 @@ export default function App() {
 
     const aboutRef = useRef();
     const skillRef = useRef();
-
+console.log("test")
     return (
         <>
             <Cursor/>
