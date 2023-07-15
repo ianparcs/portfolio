@@ -87,9 +87,9 @@ const Projects = () => {
     const spaceMatrixDesc = "My first game developed in Java. A Shoot 'em up type of game."
 
     return (
-        <Container className="w-100 pl-5 pr-5" fluid={true}>
+        <Container className="w-75 pl-5 pr-5 bg-black" fluid={true}>
             <Row className="pt-4 pb-4 pr-4">
-                <h1>Work Projects</h1>
+                <h2>Work Projects</h2>
                 <ColoredLine color="white"/>
             </Row>
             <Row>
@@ -102,7 +102,7 @@ const Projects = () => {
                       }]}
                       workNumber={1}
                       direction="100%"/>
-                <Work title="Health Information Tracking System"
+                <Work title="Health Information System"
                       skills=""
                       content={chitsDescription}
                       images={[{path: CHITS_1, alt: "Chits_1"}, {path: CHITS_2, alt: "CHITS_2"}]}
@@ -119,7 +119,7 @@ const Projects = () => {
                       direction="100%"/>
             </Row>
             <Row className="pt-4 pb-4 pr-4">
-                <h1>Personal Projects</h1>
+                <h2>Personal Projects</h2>
                 <ColoredLine color="white"/>
             </Row>
             <Row>

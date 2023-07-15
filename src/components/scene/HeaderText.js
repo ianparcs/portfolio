@@ -9,7 +9,7 @@ function HeaderText() {
     const ref1 = useRef();
 
     const letterSpacingLimit = 0.05;
-    const scaleLimit = 5;
+    const scaleLimit = 4;
 
     const scale = useAspect(
         "cover",
@@ -33,12 +33,7 @@ function HeaderText() {
         }
 
         if (transitionDone) {
-            if (ref1.current.scale.x <= scaleLimit - 2) {
-                ref1.current.scale.x += 7 * time;
-                ref1.current.scale.y += 7 * time;
-            } else if (ref1.current.letterSpacing <= letterSpacingLimit) {
-                ref1.current.letterSpacing += 0.1 * time;
-            }
+
         }
 
     }, transitionDone);
@@ -58,23 +53,9 @@ function HeaderText() {
                 outlineWidth={0.005}
                 outlineColor={"white"}
             >
-                Hello! I'm Ian.
+                The Dark Side of the Moon
             </Text>
-            <Text
-                ref={ref1}
-                color={"black"}
-                overflowWrap={"break-word"}
-                letterSpacing={-0.5}
-                textAlign="center"
-                position={[-0.05, (viewport.height) / 3.9, 0.0]}
-                maxWidth={(viewport.width / 100) * 30}
-                scale={scale}
-                font={font}
-                outlineWidth={0.005}
-                outlineColor={"white"}
-            >
-                Software developer & Game developer.
-            </Text>
+
         </>
     )
 }

@@ -76,7 +76,7 @@ export default function App() {
                         <Home/>
                     </Container>
 
-                    <Container className="h-100 w-100 bg-white" fluid="true">
+                    <Container className="h-100 w-100" fluid="true">
                         <Row>
                             <Col>
                                 <AboutNav/>
@@ -89,7 +89,7 @@ export default function App() {
                                         textStyleAbout="text-decoration-underline"/>
                             </Col>
                         </Row>
-                        <Row className="m-0 h-100 w-100 polygon bg-black">
+                        <Row className="m-0 h-100 w-100">
                             <Col>
                                 <Switch>
                                     <Route path="/portfolio/about">

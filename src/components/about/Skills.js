@@ -16,6 +16,7 @@ import Libgdx from "../../assets/img/logo/libgdx.svg";
 import MySQL from "../../assets/img/logo/mysql.svg";
 import Mongo from "../../assets/img/logo/mongo.svg";
 import Linux from "../../assets/img/logo/linux.svg";
+import ScalaLogo from "../../assets/img/logo/scala.svg";
 import HTML from "../../assets/img/logo/html.svg";
 import CSS from "../../assets/img/logo/css3.svg";
 import CPlus from "../../assets/img/logo/c.svg";
@@ -27,34 +28,14 @@ import {Col, Container, Row} from "react-bootstrap";
 import SectionTitle from "../gui/SectionTitle";
 
 const Skill = React.forwardRef((props, ref) => {
-    const headerControl = useAnimation();
     const contentControl = useAnimation();
-    const [headerRef, headerInView] = useInView();
-    const [contentRef] = useInView();
+    const [contentRef, contentInView] = useInView();
     const [visible, setVisible] = useState(false);
-
-    const transition = {
-        duration: 1,
-        ease: "easeInOut",
-    };
 
     const transitionInfinite = {
         duration: 5,
         ease: "easeInOut",
         repeat: Infinity
-    };
-    const list = {
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                delayChildren: 0.3,
-                staggerChildren: 0.2,
-            },
-        },
-        hidden: {
-            opacity: 0,
-        },
     };
 
     const reactAnimation = {
@@ -64,27 +45,18 @@ const Skill = React.forwardRef((props, ref) => {
         },
     };
 
-    const item = {
-        visible: {
-            opacity: 1,
-            scale: 1,
-            y: 0
-        },
-        hidden: {
-            opacity: 0,
-            scale: 0,
-            y: "100%"
-        },
+    const transition = {
+        duration: 1,
+        ease: "easeInOut",
     };
-
-    const variants = {
+    
+    const fade = {
         visible: {
             opacity: 1,
-            x: 0
+            transition: {duration: 1, delay: 0.5},
         },
         hidden: {
             opacity: 0,
-            x: "-100%",
             transition: {duration: 1}
         },
     };
@@ -101,61 +73,59 @@ const Skill = React.forwardRef((props, ref) => {
     }
 
     useEffect(() => {
-        if (headerInView) {
+        if (contentInView) {
             const sequence = async () => {
-                await headerControl.start("visible");
                 return await contentControl.start("visible");
             };
             sequence()
         }
 
-    }, [headerInView, icons, contentControl, headerControl, visible, setVisible]);
+    }, [icons, contentControl, visible, setVisible, contentInView]);
 
     return (
         <Container id="skill"
                    fluid={true}
                    className="about-container pb-5 pl-5 pr-5 d-flex flex-column justify-content-start justify-content-sm-start justify-content-md-center justify-content-lg-center">
 
-            <Row className="w-100 m-auto p-2">
+            <Row className="w-75 m-auto p-2">
                 <Col>
                     <motion.div
-                        ref={headerRef}
-                        animate={headerControl}
+                        ref={contentRef}
+                        animate={contentControl}
                         initial="hidden"
                         transition={transition}
-                        variants={variants}>
+                        variants={fade}>
                         <SectionTitle title="Skills & Tech Interest" textColor="text-dark"/>
                     </motion.div>
                     <motion.ul
                         id="skill-content"
-                        className="list-group flex-md-row list-inline p-1
-                        "
                         ref={contentRef}
                         initial="hidden"
                         animate={contentControl}
                         transition={transition}
-                        variants={list}>
-                        <motion.li variants={item}><Card progName="Java" path={JavaLogo}/></motion.li>
-                        <motion.li variants={item}><Card progName="C++" path={CPlus}/></motion.li>
-                        <motion.li variants={item}><Card progName="Android" path={Android}/></motion.li>
-                        <motion.li variants={item}><Card progName="Spring" path={Spring}/></motion.li>
+                        variants={fade}>
+                        <motion.li variants={fade}><Card progName="Java" path={JavaLogo}/></motion.li>
+                        <motion.li variants={fade}><Card progName="Scala" path={ScalaLogo}/></motion.li>
+                        <motion.li variants={fade}><Card progName="C++" path={CPlus}/></motion.li>
+                        <motion.li variants={fade}><Card progName="Android" path={Android}/></motion.li>
+                        <motion.li variants={fade}><Card progName="Spring" path={Spring}/></motion.li>
                         <motion.li variants={reactAnimation} transition={transitionInfinite}><Card progName="ReactJS"
                                                                                                    path={ReactLogo}/>
                         </motion.li>
-                        <motion.li variants={item}><Card progName="Kubernetes" path={Kubernetes}/></motion.li>
-                        <motion.li variants={item}><Card progName="MongoDB" path={Mongo}/></motion.li>
-                        <motion.li variants={item}><Card progName="Libgdx" path={Libgdx}/></motion.li>
-                        <motion.li variants={item}><Card progName="Bootstrap" path={Bootstrap}/></motion.li>
-                        <motion.li variants={item}><Card progName="MySQL" path={MySQL}/></motion.li>
-                        <motion.li variants={item}><Card progName="Git" path={Git}/></motion.li>
-                        <motion.li variants={item}><Card progName="Github" path={Github}/></motion.li>
-                        <motion.li variants={item}><Card progName="Javascript" path={Javascript}/></motion.li>
-                        <motion.li variants={item}><Card progName="HTML" path={HTML}/></motion.li>
-                        <motion.li variants={item}><Card progName="CSS3" path={CSS}/></motion.li>
-                        <motion.li variants={item}><Card progName="Hibernate" path={Hibernate}/></motion.li>
-                        <motion.li variants={item}><Card progName="Gradle" path={Gradle}/></motion.li>
-                        <motion.li variants={item}><Card progName="Linux" path={Linux}/></motion.li>
-                        <motion.li variants={item}><Card progName="Jquery" path={Jquery}/></motion.li>
+                        <motion.li variants={fade}><Card progName="Kubernetes" path={Kubernetes}/></motion.li>
+                        <motion.li variants={fade}><Card progName="MongoDB" path={Mongo}/></motion.li>
+                        <motion.li variants={fade}><Card progName="Libgdx" path={Libgdx}/></motion.li>
+                        <motion.li variants={fade}><Card progName="Bootstrap" path={Bootstrap}/></motion.li>
+                        <motion.li variants={fade}><Card progName="MySQL" path={MySQL}/></motion.li>
+                        <motion.li variants={fade}><Card progName="Git" path={Git}/></motion.li>
+                        <motion.li variants={fade}><Card progName="Github" path={Github}/></motion.li>
+                        <motion.li variants={fade}><Card progName="Javascript" path={Javascript}/></motion.li>
+                        <motion.li variants={fade}><Card progName="HTML" path={HTML}/></motion.li>
+                        <motion.li variants={fade}><Card progName="CSS3" path={CSS}/></motion.li>
+                        <motion.li variants={fade}><Card progName="Hibernate" path={Hibernate}/></motion.li>
+                        <motion.li variants={fade}><Card progName="Gradle" path={Gradle}/></motion.li>
+                        <motion.li variants={fade}><Card progName="Linux" path={Linux}/></motion.li>
+                        <motion.li variants={fade}><Card progName="Jquery" path={Jquery}/></motion.li>
                     </motion.ul>
                 </Col>
             </Row>

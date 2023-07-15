@@ -10,8 +10,6 @@ import {Link, useHistory} from "react-router-dom";
 
 const NavBar = (props) => {
 
-    const history = useHistory();
-
     function transitionFinish(count, url) {
         props.setCount(count);
     }
@@ -21,9 +19,9 @@ const NavBar = (props) => {
      }
  */
 
-    const classStyle = "link-container w-100 p-2 " + props.navPosition;
+    const classStyle = "link-container w-100 p-2 border-white" + props.navPosition;
     return (
-        <Navbar id="navbar" className={classStyle} style={{backgroundColor: props.linkColor}}>
+        <Navbar id="navbar" className={classStyle}>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav"
                              className="link-container d-flex flex-row  justify-content-center justify-content-md-end align-items-center">

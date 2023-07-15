@@ -14,9 +14,8 @@ function Pyramid() {
 
     return (
         <mesh
-
-            rotation={[0.5, -0.5, -0.25]}
-            position={[0, -1, 0]}
+            rotation={[0.6, -0.5, -0.345]}
+            position={[0, 0, 0]}
             scale={[2.5, 2.5, 2.5]}
             onClick={() => setPress(!onPress)}
             userData={onPress}
@@ -24,11 +23,10 @@ function Pyramid() {
         >
             <tetrahedronBufferGeometry attach="geometry"/>
             <meshBasicMaterial
-                transparent={true}
-                opacity={1}
+                transparent={false}
                 attach="material"
                 color="#2D2D2D"
-                roughness={0.2}
+                roughness={0.5}
                 metalness={1}/>
         </mesh>
     )

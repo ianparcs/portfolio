@@ -70,15 +70,15 @@ export default function Contact() {
     }
 
     function AlertDismissibleExample() {
+
         if (show) {
             return (
                 <Alert variant="success" className="custom-alert w-75 p-3 m-auto" onClose={() => setShow(false)}
                        dismissible>
                     <Alert.Heading>Message Successfully Sent</Alert.Heading>
                     <p className="m-auto w-100">
-                        Thank you for getting in touch!
-                        We appreciate you contacting us about.
-                        We'll be in touch soon. Have a great day!
+                        Thank you for getting in touch,
+                        I'll be in touch soon. Have a great day!
                         <br/>
                     </p>
                     <p>
@@ -102,7 +102,7 @@ export default function Contact() {
                         animate={headerControl}
                         initial="hidden"
                         variants={variants}>
-                        <SectionTitle title="Contact Us" textColor="text-white"/>
+                        <SectionTitle title="Contact Me" textColor="text-white"/>
                     </motion.div>
                 </Col>
             </Row>
@@ -138,6 +138,13 @@ export default function Contact() {
                         </Container>
                     </Form>
                 </motion.div>
+            </Row>
+            <Row className="w-100 p-5">
+                <p className="w-100 custom-alert">
+                    <i>- &nbsp;"We are what we think. All that we are arises with our thoughts. With our thoughts,
+                        we
+                        make the world".</i>
+                </p>
             </Row>
         </Container>
     );

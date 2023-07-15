@@ -21,7 +21,7 @@ function Scene() {
                     <HeaderText/>
                     <Effects mouseClick={onPress}>
                         <Pyramid/>
-                        <LightStars count={1500}/>
+                        <LightStars count={2000}/>
                         <RainbowLight/>
                     </Effects>
                 </Canvas>

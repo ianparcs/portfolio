@@ -30,74 +30,32 @@ function getImages(props) {
 }
 
 const Work = (props) => {
-    const headerControl = useAnimation();
-    const contentControl = useAnimation();
-    const [headerRef, headerInView] = useInView();
 
-    const transition = {duration: 1, ease: "easeInOut"};
-    const variants = {
-        visible: {opacity: 1, y: 0},
-        hidden: {opacity: 0, y: props.direction, transition: {duration: 0.5}},
-        headerHidden: {opacity: 0, x: "-100%", transition: {duration: 0.5}},
-        headerVisible: {opacity: 1, x: 0, transition: {duration: 0.5}},
-        contentHidden: {opacity: 0, transition: {duration: 0.5}},
-        contentVisible: {opacity: 1, x: 0, transition: {duration: 0.5}},
-    };
-
-    useEffect(() => {
-        if (headerInView) {
-            const sequence = async () => {
-                await headerControl.start("headerVisible");
-                return await contentControl.start("visible");
-            };
-            sequence()
-        }
-
-    }, [headerInView, contentControl, headerControl]);
     return (
         <Col className={"col-xl-3 col-lg-3 col-md-6 col-sm-12 text-center"}>
             <Card className="bg-transparent text-white">
                 <Card.Title>
-                    <motion.p className="w-100 p-2 white-border"
-                              ref={headerRef}
-                              animate={headerControl}
-                              initial="headerHidden"
-                              transition={transition}
-                              variants={variants}>
+                    <h5 className="w-100 p-2 white-border">
                         {props.title}
-                    </motion.p>
+                    </h5>
                 </Card.Title>
-                <motion.div
-                    initial="contentHidden"
-                    animate={contentControl}
-                    transition={transition}
-                    variants={variants}>
+                <div>
                     <Swiper effect={"slide"}
                             loop={true}
                             spaceBetween={0}
                             passiveListeners={true}
-                            preloadImages={true}
+                            preloadImages={false}
                             pagination={{clickable: true}}>
                         {getImages(props)}
                     </Swiper>
-                </motion.div>
+                </div>
                 <Card.Text as="div">
-                    <motion.p
-                        className="pt-3"
-                        initial="contentHidden"
-                        animate={contentControl}
-                        transition={transition}
-                        variants={variants}>
+                    <p className="pt-3">
                         {props.content}
-                    </motion.p>
-                    <motion.p
-                        className="pb-4"
-                        initial="contentHidden"
-                        animate={contentControl}
-                        transition={transition}
-                        variants={variants}>
+                    </p>
+                    <p className="pb-4">
                         {props.skills}
-                    </motion.p>
+                    </p>
                 </Card.Text>
             </Card>
         </Col>

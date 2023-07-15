@@ -17,129 +17,72 @@ const Education = React.forwardRef((props, ref) => {
         }
     }
 
-    const headerControl = useAnimation();
-    const headerControl1 = useAnimation();
-    const headerControl2 = useAnimation();
-    const headerControl3 = useAnimation();
-
     const contentControl = useAnimation();
-
-    const listControl = useAnimation();
-    const jobControl2 = useAnimation();
-
-    const [headerRef, headerInView] = useInView();
+    const [contentRef,contentView] = useInView();
 
     const transition = {
         duration: 0.5,
         ease: "easeInOut"
     };
 
-    const list = {
+    const fade = {
         visible: {
             opacity: 1,
-            y: 0,
-            transition: {
-                delayChildren: 0.3,
-                staggerChildren: 0.2,
-            },
+            transition: {duration: 1, delay: 0.5},
         },
         hidden: {
             opacity: 0,
-        },
-    };
-
-    const item = {
-        visible: {
-            opacity: 1,
-            x: 0
-        },
-        visible0: {
-            opacity: 1,
-            scale: 1,
-            y: 0
-        },
-
-        hidden0: {
-            opacity: 0,
-            scale: 0,
-            y: "100%"
-        },
-
-        hidden1: {
-            opacity: 0,
-            x: "100%"
-        },
-        hidden2: {
-            opacity: 0,
-            x: "-100%"
-        },
-        hidden3: {
-            opacity: 0,
-            x: "100%"
-        },
-    };
-    const variants = {
-        visible: {
-            opacity: 1,
-            x: 0
-        },
-        hidden: {
-            opacity: 0,
-            x: "-100%",
             transition: {duration: 1}
         },
     };
 
+
     useEffect(() => {
-        if (headerInView) {
+        if (contentView) {
             const sequence = async () => {
-                await headerControl.start("visible");
-                await headerControl1.start("visible");
-                await headerControl2.start("visible");
-                await headerControl3.start("visible");
-                return await listControl.start("visible0");
+                return await contentControl.start("visible");
             };
             sequence();
         }
 
-    }, [listControl, jobControl2, headerInView, contentControl, headerControl, headerControl1, headerControl2, headerControl3]);
+    }, [contentView, contentControl]);
     return (
         <Container className="about-container p-5 d-flex flex-column justify-content-center">
-            <Row ref={headerRef}>
+            <Row ref={contentRef()}>
                 <Col>
-                    <motion.div ref={headerRef}
-                                animate={headerControl}
+                    <motion.div ref={contentRef}
+                                animate={contentControl}
                                 initial="hidden"
                                 transition={transition}
-                                variants={variants}>
+                                variants={fade}>
                         <SectionTitle title="Education" textColor="text-dark"/>
                     </motion.div>
-                    <motion.h5 initial="hidden1"
-                               animate={headerControl1}
+                    <motion.h5 initial="hidden"
+                               animate={contentControl}
                                transition={transition}
-                               variants={item} className="text-dark">University of Saint Louis, Tuguegarao, Cagayan
+                               variants={fade} className="text-dark">University of Saint Louis, Tuguegarao, Cagayan
                         Valley
                     </motion.h5>
-                    <motion.h6 initial="hidden2"
-                               animate={headerControl2}
+                    <motion.h6 initial="hidden"
+                               animate={contentControl}
                                transition={transition}
-                               variants={item} className="text-dark">Bachelor of Science in Computer Science
+                               variants={fade} className="text-dark">Bachelor of Science in Computer Science
                     </motion.h6>
-                    <motion.h6 initial="hidden3"
-                               animate={headerControl3}
+                    <motion.h6 initial="hidden"
+                               animate={contentControl}
                                transition={transition}
-                               variants={item} className="text-dark">April 2017
+                               variants={fade} className="text-dark">April 2017
                     </motion.h6>
                     <motion.ul
-                        initial="hidden0"
-                        animate={listControl}
+                        initial="hidden"
+                        animate={contentControl}
                         transition={transition}
-                        variants={list}
+                        variants={fade}
                         className="text-dark text-center pt-3 pb-3">
-                        <motion.li variants={item} className="text-dark"><p className="text-dark">Managed team members
+                        <motion.li variants={fade} className="text-dark"><p className="text-dark">Managed team members
                             of thesis and allocated resources to fit needs of software development, documents and
                             research</p></motion.li>
-                        <motion.li variants={item} className="text-dark"><p className="text-dark">Created a <a
+                        <motion.li variants={fade} className="text-dark"><p className="text-dark">Created a <a
                             href="https://github.com/ianparcs/location-finder">Navigation System</a> which navigate user
                             from current location to target location for local school universities.</p></motion.li>
                     </motion.ul>
