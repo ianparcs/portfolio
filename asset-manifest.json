@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.b3e8ee69.chunk.css",
-    "main.js": "/portfolio/static/js/main.28aa76ec.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.28aa76ec.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.3ec599ad.chunk.css",
+    "main.js": "/portfolio/static/js/main.f3db1c4c.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.f3db1c4c.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.8fed2963.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.8fed2963.js.map",
     "static/css/2.e1ebf2f7.chunk.css": "/portfolio/static/css/2.e1ebf2f7.chunk.css",
-    "static/js/2.bb3cb6a3.chunk.js": "/portfolio/static/js/2.bb3cb6a3.chunk.js",
-    "static/js/2.bb3cb6a3.chunk.js.map": "/portfolio/static/js/2.bb3cb6a3.chunk.js.map",
+    "static/js/2.51c6411d.chunk.js": "/portfolio/static/js/2.51c6411d.chunk.js",
+    "static/js/2.51c6411d.chunk.js.map": "/portfolio/static/js/2.51c6411d.chunk.js.map",
     "index.html": "/portfolio/index.html",
     "static/css/2.e1ebf2f7.chunk.css.map": "/portfolio/static/css/2.e1ebf2f7.chunk.css.map",
-    "static/css/main.b3e8ee69.chunk.css.map": "/portfolio/static/css/main.b3e8ee69.chunk.css.map",
-    "static/js/2.bb3cb6a3.chunk.js.LICENSE.txt": "/portfolio/static/js/2.bb3cb6a3.chunk.js.LICENSE.txt",
+    "static/css/main.3ec599ad.chunk.css.map": "/portfolio/static/css/main.3ec599ad.chunk.css.map",
+    "static/js/2.51c6411d.chunk.js.LICENSE.txt": "/portfolio/static/js/2.51c6411d.chunk.js.LICENSE.txt",
     "static/media/android.a401782f.svg": "/portfolio/static/media/android.a401782f.svg",
     "static/media/assroid_3.cc455119.PNG": "/portfolio/static/media/assroid_3.cc455119.PNG",
     "static/media/auto_1.68841ba6.png": "/portfolio/static/media/auto_1.68841ba6.png",
@@ -67,6 +67,7 @@
     "static/media/robot_1.0ea94af0.png": "/portfolio/static/media/robot_1.0ea94af0.png",
     "static/media/robot_2.17996b00.png": "/portfolio/static/media/robot_2.17996b00.png",
     "static/media/robot_3.0cc68c6a.png": "/portfolio/static/media/robot_3.0cc68c6a.png",
+    "static/media/scala.22b218d8.svg": "/portfolio/static/media/scala.22b218d8.svg",
     "static/media/send.a95e39fe.svg": "/portfolio/static/media/send.a95e39fe.svg",
     "static/media/snake_2.d6be273d.png": "/portfolio/static/media/snake_2.d6be273d.png",
     "static/media/sort_1.ac2c0f81.PNG": "/portfolio/static/media/sort_1.ac2c0f81.PNG",
@@ -85,8 +86,8 @@
   "entrypoints": [
     "static/js/runtime-main.8fed2963.js",
     "static/css/2.e1ebf2f7.chunk.css",
-    "static/js/2.bb3cb6a3.chunk.js",
-    "static/css/main.b3e8ee69.chunk.css",
-    "static/js/main.28aa76ec.chunk.js"
+    "static/js/2.51c6411d.chunk.js",
+    "static/css/main.3ec599ad.chunk.css",
+    "static/js/main.f3db1c4c.chunk.js"
   ]
 }
