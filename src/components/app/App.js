@@ -30,7 +30,8 @@ import Home from "../home/home";
 
 export default function App() {
 
-  ReactGA.initialize('UA-187469000-1');
+
+  ReactGA.initialize('396902969');
   ReactGA.pageview(window.location.pathname + window.location.search);
 
   const [count, setCount] = React.useState(0);
