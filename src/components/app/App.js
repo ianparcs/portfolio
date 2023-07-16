@@ -114,7 +114,7 @@ export default function App() {
                       index={currentIndex}
                       navPosition="sticky-top" linkColor={"black"}
                       textStyleContact="text-decoration-underline"/>
-              <CenterView sectionName="contact" bg="bg-black">
+              <CenterView sectionName="contact" bg="bg-black" height="h-100">
                 <Contact/>
                 <Footer fixedPos="sticky-bottom"/>
               </CenterView>

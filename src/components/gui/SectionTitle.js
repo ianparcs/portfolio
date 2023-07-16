@@ -6,11 +6,11 @@ const SectionTitle = (props) => {
     return (
         <Container>
             <Row>
-                <Col>
-                    <h4 className={style}>
+                <Col className="h-100 w-100 p-4">
+                    <h3 className={style}>
                         {props.title}
-                    </h4>
-                    <hr className="mx-auto bg-danger w-50 mt-1"/>
+                    </h3>
+                    <hr className="mx-auto bg-danger w-50 mt-2"/>
                 </Col>
             </Row>
         </Container>

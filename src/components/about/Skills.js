@@ -72,7 +72,7 @@ const Skill = React.forwardRef((props, ref) => {
     }, [ contentControl, visible, setVisible, contentInView]);
 
     return (
-        <Container className="d-flex flex-column justify-content-center w-75 h-100">
+        <Container className="d-flex flex-column justify-content-center w-75 h-100 p-5">
             <Row>
                 <Col>
                     <motion.div

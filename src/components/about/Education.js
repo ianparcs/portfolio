@@ -36,7 +36,7 @@ const Education = React.forwardRef((props, ref) => {
 
   }, [contentView, contentControl]);
   return (
-      <Container className="d-flex flex-column justify-content-center w-75 h-100" ref={contentRef}>
+      <Container className="d-flex flex-column justify-content-center w-75 h-100 p-5" ref={contentRef}>
         <Row >
           <Col>
             <motion.div
