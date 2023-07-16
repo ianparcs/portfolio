@@ -61,17 +61,6 @@ const Skill = React.forwardRef((props, ref) => {
         },
     };
 
-    const icons = document.getElementsByClassName("about-icon");
-    if (icons !== null) {
-        for (let i = 0; i < icons.length; i++) {
-            if (1 === i) {
-                icons.item(1).style.fill = "#dc3545";
-            } else {
-                icons.item(i).style.fill = "black";
-            }
-        }
-    }
-
     useEffect(() => {
         if (contentInView) {
             const sequence = async () => {
@@ -80,14 +69,11 @@ const Skill = React.forwardRef((props, ref) => {
             sequence()
         }
 
-    }, [icons, contentControl, visible, setVisible, contentInView]);
+    }, [ contentControl, visible, setVisible, contentInView]);
 
     return (
-        <Container id="skill"
-                   fluid={true}
-                   className="about-container pb-5 pl-5 pr-5 d-flex flex-column justify-content-start justify-content-sm-start justify-content-md-center justify-content-lg-center">
-
-            <Row className="w-75 m-auto p-2">
+        <Container className="d-flex flex-column justify-content-center w-75 h-100">
+            <Row>
                 <Col>
                     <motion.div
                         ref={contentRef}
@@ -95,7 +81,7 @@ const Skill = React.forwardRef((props, ref) => {
                         initial="hidden"
                         transition={transition}
                         variants={fade}>
-                        <SectionTitle title="Skills & Tech Interest" textColor="text-dark"/>
+                        <SectionTitle title="Skills & Tech Interests" textColor="text-dark"/>
                     </motion.div>
                     <motion.ul
                         id="skill-content"

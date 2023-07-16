@@ -7,9 +7,9 @@ const SectionTitle = (props) => {
         <Container>
             <Row>
                 <Col>
-                    <h2 className={style}>
+                    <h4 className={style}>
                         {props.title}
-                    </h2>
+                    </h4>
                     <hr className="mx-auto bg-danger w-50 mt-1"/>
                 </Col>
             </Row>

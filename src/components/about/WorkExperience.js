@@ -9,16 +9,6 @@ const WorkExperience = React.forwardRef((props, ref) => {
     const contentControl = useAnimation();
     const [contentRef] = useInView();
 
-    const icons = document.getElementsByClassName("about-icon");
-    if (icons !== null) {
-        for (let i = 0; i < icons.length; i++) {
-            if (2 === i) {
-                icons.item(2).style.fill = "#dc3545";
-            } else {
-                icons.item(i).style.fill = "white";
-            }
-        }
-    }
     const transition = {
         duration: 1,
         ease: "easeInOut"
@@ -35,22 +25,20 @@ const WorkExperience = React.forwardRef((props, ref) => {
         },
     };
 
-
     useEffect(() => {
         if (contentRef) {
             const sequence = async () => {
-                await contentControl.start("visible");
+             return  await contentControl.start("visible");
             };
             sequence();
         }
 
     }, [ contentControl, contentRef]);
     return (
-        <Container className="about-container p-5 d-flex flex-column justify-content-start w-75" fluid={true}>
-            <Row className="pt-3" ref={contentRef}>
+        <Container className="w-75 h-100">
+            <Row className="pt-3">
                 <Col>
                     <motion.div
-                        ref={contentRef}
                         animate={contentControl}
                         initial="hidden"
                         transition={transition}
@@ -87,7 +75,6 @@ const WorkExperience = React.forwardRef((props, ref) => {
             <Row>
                 <Col className="pt-4 col-12 col-lg-4 d-flex flex-column justify-content-center">
                     <motion.div
-                        ref={contentRef}
                         initial="hidden"
                         animate={contentControl}
                         transition={transition}
@@ -100,7 +87,6 @@ const WorkExperience = React.forwardRef((props, ref) => {
                 </Col>
                 <Col className="col-12 col-lg-8">
                     <motion.ul className="text-left pt-3"
-                               ref={contentRef}
                                initial="hidden"
                                animate={contentControl}
                                transition={transition}
@@ -116,7 +102,6 @@ const WorkExperience = React.forwardRef((props, ref) => {
             <Row>
                 <Col className="pt-4 col-12 col-lg-4 d-flex flex-column justify-content-center">
                     <motion.div
-                        ref={contentRef}
                         initial="hidden"
                         animate={contentControl}
                         transition={transition}
@@ -129,7 +114,6 @@ const WorkExperience = React.forwardRef((props, ref) => {
                 </Col>
                 <Col className="col-12 col-lg-8">
                     <motion.ul className="text-left pt-3"
-                               ref={contentRef}
                                initial="hidden"
                                animate={contentControl}
                                transition={transition}
@@ -149,7 +133,6 @@ const WorkExperience = React.forwardRef((props, ref) => {
             <Row>
                 <Col className="pt-4 col-12 col-lg-4 d-flex flex-column justify-content-center">
                     <motion.div
-                        ref={contentRef}
                         initial="hidden"
                         animate={contentControl}
                         transition={transition}
@@ -162,7 +145,6 @@ const WorkExperience = React.forwardRef((props, ref) => {
                 </Col>
                 <Col className="col-12 col-lg-8">
                     <motion.ul className="text-left pt-3"
-                               ref={contentRef}
                                initial="hidden"
                                animate={contentControl}
                                transition={transition}
@@ -178,7 +160,6 @@ const WorkExperience = React.forwardRef((props, ref) => {
             <Row>
                 <Col className="pt-4 col-12 col-lg-4 d-flex flex-column justify-content-center">
                     <motion.div
-                        ref={contentRef}
                         initial="hidden"
                         animate={contentControl}
                         transition={transition}
@@ -191,7 +172,6 @@ const WorkExperience = React.forwardRef((props, ref) => {
                 </Col>
                 <Col className="col-12 col-lg-8 pb-5">
                     <motion.ul className="text-left pt-3"
-                               ref={contentRef}
                                initial="hidden"
                                animate={contentControl}
                                transition={transition}

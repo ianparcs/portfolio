@@ -93,7 +93,7 @@ export default function Contact() {
     }
 
     return (
-        <Container className="vh-100 p-5 w-100 d-flex flex-column justify-content-center">
+        <Container className="d-flex flex-column justify-content-center w-75">
             <AlertDismissibleExample/>
             <Row className="pt-5 w-100" ref={headerRef}>
                 <Col>
@@ -140,11 +140,11 @@ export default function Contact() {
                 </motion.div>
             </Row>
             <Row className="w-100 p-5">
-                <p className="w-100 custom-alert">
+                <motion.p className="w-100 custom-alert">
                     <i>- &nbsp;"We are what we think. All that we are arises with our thoughts. With our thoughts,
                         we
                         make the world".</i>
-                </p>
+                </motion.p>
             </Row>
         </Container>
     );

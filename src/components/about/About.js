@@ -45,8 +45,7 @@ const About = React.forwardRef((props, ref) => {
   }, [headerInView, contentControl, contentInView]);
 
   return (
-      <Container
-          className="about-container p-5  d-flex flex-column justify-content-center">
+      <Container className="d-flex flex-column justify-content-center w-75 h-100">
         <Row>
           <Col>
             <motion.div
@@ -69,18 +68,15 @@ const About = React.forwardRef((props, ref) => {
                 animate={contentControl}
                 transition={transition}
                 variants={variants}>
-              As a passionate Software Developer with a strong
+              A passionate Software Developer with a strong
               background in building robust and scalable Web and Mobile
               applications using Java and Scala, I constantly strive to stay
               updated with the latest industry trends and best practices. In my
-              free time, I indulge in various activities that nourish my mind
-              and soul, including immersing myself in the captivating world of
+              free time, I indulge in various activities, including immersing myself in the captivating world of
               video games, delving into thought-provoking books that broaden my
               horizons, embracing new learning opportunities that expand my
-              skill set, and reflecting on my personal journey through the art
-              of journaling. These activities not only provide me with a
-              well-rounded perspective but also fuel my creativity and drive to
-              excel in my professional endeavors.
+              skill set, and reflecting on my personal journey through
+              journaling.
             </motion.p>
           </Col>
         </Row>
