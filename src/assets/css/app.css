@@ -47,11 +47,9 @@ hr {
 
 }
 
-/*
 ::-webkit-scrollbar {
     width: 0;
     height: 0;
-    background: transparent; !* make scrollbar transparent *!
+    background: transparent; /* make scrollbar transparent */
 }
-*/
 

@@ -11,52 +11,33 @@ export default function Contact() {
     const [show, setShow] = useState(false);
 
     const contentControl = useAnimation();
-    const headerControl = useAnimation();
-    const [headerRef, headerInView] = useInView();
+    const [contentRef, contentView] = useInView();
     const [visible, setVisible] = useState(false);
 
-    const variants = {
-        headerVisible: {
-            transition: {duration: 1.5, delay: 0.2},
-            opacity: 1,
-            x: 0
-        },
-        visible: {
-            transition: {duration: 1},
-            opacity: 1,
-            x: 0
-        },
-        hidden: {
-            opacity: 0,
-            x: "-100%",
-            transition: {duration: 1}
-        },
+    const transition = {
+        duration: 1,
+        ease: "easeInOut"
     };
-    const list = {
+
+    const fade = {
         visible: {
             opacity: 1,
-            y: 0,
-            transition: {
-                delayChildren: 0.3,
-                staggerChildren: 0.2,
-            },
+            transition: {duration: 1, delay: 1},
         },
         hidden: {
             opacity: 0,
-            y: "-100%"
+            transition: {duration: 1}
         },
     };
 
     useEffect(() => {
-        if (headerInView) {
+        if (contentView) {
             const sequence = async () => {
-                await headerControl.start("headerVisible");
                 return await contentControl.start("visible");
             };
-            sequence()
+            sequence();
         }
-
-    }, [headerInView, contentControl, headerControl, visible, setVisible]);
+    }, [contentControl, contentRef, contentView]);
 
     function sendEmail(e) {
         e.preventDefault();
@@ -81,11 +62,6 @@ export default function Contact() {
                         I'll be in touch soon. Have a great day!
                         <br/>
                     </p>
-                    <p>
-                        <i>- &nbsp;"We are what we think. All that we are arises with our thoughts. With our thoughts,
-                            we
-                            make the world".</i>
-                    </p>
                 </Alert>
             );
         }
@@ -93,15 +69,15 @@ export default function Contact() {
     }
 
     return (
-        <Container className="d-flex flex-column justify-content-center w-75">
+        <Container className="d-flex flex-column justify-content-center w-75" ref={contentRef}>
             <AlertDismissibleExample/>
-            <Row className="pt-5 w-100" ref={headerRef}>
+            <Row className="pt-5 w-100">
                 <Col>
                     <motion.div
-                        ref={headerRef}
-                        animate={headerControl}
+                        animate={contentControl}
                         initial="hidden"
-                        variants={variants}>
+                        transition={transition}
+                        variants={fade}>
                         <SectionTitle title="Contact Me" textColor="text-white"/>
                     </motion.div>
                 </Col>
@@ -110,28 +86,29 @@ export default function Contact() {
                 <motion.div
                     className="w-100 m-auto"
                     initial="hidden"
+                    transition={transition}
                     animate={contentControl}
-                    variants={list}>
+                    variants={fade}>
                     <Form className="w-75 m-auto pt-4" onSubmit={sendEmail}>
                         <Container>
                             <Row className="p-2">
-                                <motion.input variants={variants}
+                                <motion.input variants={fade}
                                               className="w-100 custom-input" type="input"
                                               name="sender_name"
                                               placeholder="Your Name"/>
                             </Row>
                             <Row className="p-2">
-                                <motion.input variants={variants}
+                                <motion.input variants={fade}
                                               className="w-100 custom-input" type="email" name="sender_email"
                                               placeholder="Your Email"/>
                             </Row>
                             <Row className="p-2">
-                                <motion.textarea variants={variants}
+                                <motion.textarea variants={fade}
                                                  className="w-100 custom-input" name="sender_message"
                                                  placeholder="Your Message" rows={9}/>
                             </Row>
                             <Row className="p-2">
-                                <motion.input variants={variants}
+                                <motion.input variants={fade}
                                               whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}
                                               className="custom-input w-25 ml-auto" type="submit" value="Send"/>
                             </Row>
@@ -140,7 +117,11 @@ export default function Contact() {
                 </motion.div>
             </Row>
             <Row className="w-100 p-5">
-                <motion.p className="w-100 custom-alert">
+                <motion.p className="w-100 custom-alert"
+                          animate={contentControl}
+                          initial="hidden"
+                          transition={transition}
+                          variants={fade}>
                     <i>- &nbsp;"We are what we think. All that we are arises with our thoughts. With our thoughts,
                         we
                         make the world".</i>

@@ -53,7 +53,7 @@ const Skill = React.forwardRef((props, ref) => {
     const fade = {
         visible: {
             opacity: 1,
-            transition: {duration: 1, delay: 0.5},
+            transition: {duration: 1, delay: 1},
         },
         hidden: {
             opacity: 0,

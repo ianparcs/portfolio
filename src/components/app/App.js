@@ -72,11 +72,11 @@ export default function App() {
               animation="cubeAnimation"
               transitionDelay={200}>
 
-            <Container className="h-100 w-100" fluid="true">
+            <Container className="h-100 w-100">
               <NavBar setCount={setCount} count={count} endAnim={transitionEnd}
                       index={currentIndex}
                       navPosition="fixed-top"
-                      textStyleHome="text-decoration-underline"/>
+                      bg="bg-transparent"/>
 
               <Home/>
             </Container>
@@ -84,8 +84,9 @@ export default function App() {
             <Container className="w-100 h-100 section-container" fluid="true" >
               <NavBar setCount={setCount} count={count} endAnim={transitionEnd}
                       index={currentIndex}
-                      navPosition="fixed-top"
-                      textStyleHome="text-decoration-underline"/>
+                      navPosition="sticky-top"
+                      bg="bg-black"
+                      />
               <CenterView bg="bg-black">
                 <About/>
               </CenterView>
@@ -97,6 +98,7 @@ export default function App() {
               </CenterView>
               <CenterView bg="bg-white">
                 <Education/>
+                <Footer fixedPos="sticky-bottom" color="bg-black"/>
               </CenterView>
             </Container>
 
@@ -104,19 +106,24 @@ export default function App() {
             <Container className="h-100 w-100 section-container" fluid="true">
               <NavBar setCount={setCount} count={count} endAnim={transitionEnd}
                       index={currentIndex}
+                      bg="bg-black"
                       navPosition="sticky-top" linkColor={"black"}
                       textStyleWork="text-decoration-underline"/>
-              <Projects/>
+              <CenterView bg="bg-black">
+                <Projects/>
+                <Footer fixedPos="sticky-bottom" color="bg-black"/>
+              </CenterView>
             </Container>
 
             <Container className="h-100 w-100 section-container" fluid="true">
               <NavBar setCount={setCount} count={count} endAnim={transitionEnd}
                       index={currentIndex}
+                      bg="bg-black"
                       navPosition="sticky-top" linkColor={"black"}
                       textStyleContact="text-decoration-underline"/>
               <CenterView sectionName="contact" bg="bg-black" height="h-100">
                 <Contact/>
-                <Footer fixedPos="sticky-bottom"/>
+                <Footer fixedPos="sticky-bottom" color="bg-black"/>
               </CenterView>
             </Container>
           </AwesomeSlider>

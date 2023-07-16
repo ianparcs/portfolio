@@ -17,7 +17,7 @@ export default function Footer(props) {
     }
 
     return (
-        <Container className={"p-2 w-100 border-top " + props.fixedPos} fluid="true">
+        <Container className={props.color + " p-2 w-100 border-top " + props.fixedPos} fluid="true">
             <Row>
                 <Col>
                     <motion.img src={Instagram} className="contact-logo"
@@ -40,7 +40,7 @@ export default function Footer(props) {
             <Row className="pb-2">
                 <Col>
                     <p className="text-white p-0 m-0">
-                        Built with ReactJS | v1.4.1
+                        Built with React | v1.5.0
                         <br/>
                     </p>
                     <div>

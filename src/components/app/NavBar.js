@@ -6,7 +6,7 @@ import CodingTag from "../../assets/img/icon/coding.svg"
 import Send from "../../assets/img/icon/send.svg"
 import User from "../../assets/img/icon/user.svg"
 import "../../assets/css/navbar.css"
-import {Link, useHistory} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const NavBar = (props) => {
 
@@ -19,7 +19,7 @@ const NavBar = (props) => {
      }
  */
 
-    const classStyle = "link-container w-100 p-2 border-white" + props.navPosition;
+    const classStyle = "link-container w-100 p-2 " + props.navPosition + " " + props.bg;
     return (
         <Navbar id="navbar" className={classStyle}>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>

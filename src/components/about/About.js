@@ -15,10 +15,10 @@ const About = React.forwardRef((props, ref) => {
     ease: "easeInOut"
   };
 
-  const variants = {
+  const fade = {
     visible: {
       opacity: 1,
-      transition: {duration: 1, delay: 0.5},
+      transition: {duration: 1, delay: 1},
     },
     hidden: {
       opacity: 0,
@@ -32,16 +32,6 @@ const About = React.forwardRef((props, ref) => {
     };
     sequence();
 
-    const icons = document.getElementsByClassName("about-icon");
-    if (icons !== null) {
-      for (let i = 0; i < icons.length; i++) {
-        if (0 === i) {
-          icons.item(0).style.fill = "#dc3545";
-        } else {
-          icons.item(i).style.fill = "white";
-        }
-      }
-    }
   }, [headerInView, contentControl, contentInView]);
 
   return (
@@ -53,7 +43,7 @@ const About = React.forwardRef((props, ref) => {
                 animate={contentControl}
                 initial="hidden"
                 transition={transition}
-                variants={variants}>
+                variants={fade}>
               <SectionTitle title="About" textColor="text-white"/>
             </motion.div>
           </Col>
@@ -67,7 +57,7 @@ const About = React.forwardRef((props, ref) => {
                 initial="hidden"
                 animate={contentControl}
                 transition={transition}
-                variants={variants}>
+                variants={fade}>
               A passionate Software Developer with a strong
               background in building robust and scalable Web and Mobile
               applications using Java and Scala, I constantly strive to stay

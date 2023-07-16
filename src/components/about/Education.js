@@ -18,7 +18,7 @@ const Education = React.forwardRef((props, ref) => {
   const fade = {
     visible: {
       opacity: 1,
-      transition: {duration: 1, delay: 0.5},
+      transition: {duration: 0.5, delay: 0.5},
     },
     hidden: {
       opacity: 0,

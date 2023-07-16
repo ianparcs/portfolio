@@ -8,7 +8,7 @@ export default function Home() {
     return (
         <CenterView>
             <Scene/>
-            <Footer fixedPos={"fixed-bottom"}/>
+            <Footer fixedPos={"fixed-bottom"} color="bg-transparent"/>
         </CenterView>
     );
 }

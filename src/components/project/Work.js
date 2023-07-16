@@ -22,7 +22,7 @@ function getImages(props) {
         (<SwiperSlide key={index}>
                 <Image src={image.path}
                        alt={image.alt}
-                       fluid={true}
+                       loading="lazy"
                        className="image-content"
                        rounded={true}/>
             </SwiperSlide>
@@ -32,7 +32,7 @@ function getImages(props) {
 const Work = (props) => {
 
     return (
-        <Col className={"col-xl-3 col-lg-3 col-md-6 col-sm-12 text-center"}>
+        <Col className={"col-xl-2 col-lg-2 col-md-6 col-sm-12 text-center"}>
             <Card className="bg-transparent text-white">
                 <Card.Title>
                     <h5 className="w-100 p-2 white-border">
@@ -43,7 +43,7 @@ const Work = (props) => {
                     <Swiper effect={"slide"}
                             loop={true}
                             spaceBetween={0}
-                            passiveListeners={true}
+                            passiveListeners={false}
                             preloadImages={false}
                             pagination={{clickable: true}}>
                         {getImages(props)}
