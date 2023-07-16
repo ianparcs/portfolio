@@ -1,5 +1,5 @@
 import React, {useRef} from "react";
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 import CenterView from "../gui/CenterView";
 import NavBar from "./NavBar";
@@ -20,8 +20,7 @@ import WorkExperience from "../about/WorkExperience";
 import {
   BrowserRouter,
   BrowserRouter as Router,
-  Route,
-  Switch
+
 } from "react-router-dom";
 import Footer from "./Footer";
 
@@ -30,9 +29,7 @@ import Home from "../home/home";
 
 export default function App() {
 
-
   ReactGA.initialize('G-ZK2Z3JJJN8');
-  ReactGA.pageview(window.location.pathname + window.location.search);
 
   const [count, setCount] = React.useState(0);
   const [transitionEnd, setTransitionEnd] = React.useState(true);
