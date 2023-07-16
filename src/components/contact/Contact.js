@@ -69,9 +69,9 @@ export default function Contact() {
     }
 
     return (
-        <Container className="d-flex flex-column justify-content-center w-75" ref={contentRef}>
+        <Container className="d-flex flex-column justify-content-center w-100" ref={contentRef}>
             <AlertDismissibleExample/>
-            <Row className="pt-5 w-100">
+            <Row className="pt-5">
                 <Col>
                     <motion.div
                         animate={contentControl}
@@ -82,9 +82,9 @@ export default function Contact() {
                     </motion.div>
                 </Col>
             </Row>
-            <Row className="w-100">
+            <Row>
                 <motion.div
-                    className="w-100 m-auto"
+                    className="w-100"
                     initial="hidden"
                     transition={transition}
                     animate={contentControl}
@@ -95,17 +95,17 @@ export default function Contact() {
                                 <motion.input variants={fade}
                                               className="w-100 custom-input" type="input"
                                               name="sender_name"
-                                              placeholder="Your Name"/>
+                                              placeholder="Name"/>
                             </Row>
                             <Row className="p-2">
                                 <motion.input variants={fade}
                                               className="w-100 custom-input" type="email" name="sender_email"
-                                              placeholder="Your Email"/>
+                                              placeholder="Email"/>
                             </Row>
                             <Row className="p-2">
                                 <motion.textarea variants={fade}
                                                  className="w-100 custom-input" name="sender_message"
-                                                 placeholder="Your Message" rows={9}/>
+                                                 placeholder="Message" rows={9}/>
                             </Row>
                             <Row className="p-2">
                                 <motion.input variants={fade}
@@ -122,9 +122,9 @@ export default function Contact() {
                           initial="hidden"
                           transition={transition}
                           variants={fade}>
-                    <i>- &nbsp;"We are what we think. All that we are arises with our thoughts. With our thoughts,
+                    <i>&nbsp;"We are what we think. All that we are arises with our thoughts. With our thoughts,
                         we
-                        make the world".</i>
+                        make the world."</i>
                 </motion.p>
             </Row>
         </Container>

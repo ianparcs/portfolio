@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import ReactGA from 'react-ga';
 
 import CenterView from "../gui/CenterView";
@@ -36,6 +36,7 @@ export default function App() {
   const [count, setCount] = React.useState(0);
   const [transitionEnd, setTransitionEnd] = React.useState(true);
   const [currentIndex, setCurrentIndex] = React.useState(0);
+  const scrollRef = useRef(null);
 
   React.useEffect(() => {
     setCount(currentIndex);
@@ -88,10 +89,10 @@ export default function App() {
                       bg="bg-black"
                       />
               <CenterView bg="bg-black">
-                <About/>
+                <About  ref={scrollRef}/>
               </CenterView>
               <CenterView bg="bg-white">
-                <Skills/>
+                <Skills ref={scrollRef}/>
               </CenterView>
               <CenterView bg="bg-black">
                 <WorkExperience/>

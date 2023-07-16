@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {motion, useAnimation} from "framer-motion";
 import {useInView} from "react-intersection-observer";
-import {Col, Container, Image, Row} from "react-bootstrap";
+import {Col, Container, Row} from "react-bootstrap";
 import SectionTitle from "../gui/SectionTitle";
 import DownArrow from "../../assets/img/icon/down-arrow.svg";
 
@@ -28,6 +28,12 @@ const About = React.forwardRef((props, ref) => {
     },
   };
 
+  const scrollToBottom = () => {
+    ref.current?.scrollIntoView({
+      behavior: "smooth"
+    })
+  }
+
   useEffect(() => {
     const sequence = async () => {
       return await contentControl.start("visible");
@@ -37,7 +43,8 @@ const About = React.forwardRef((props, ref) => {
   }, [headerInView, contentControl, contentInView]);
 
   return (
-      <Container className="d-flex flex-column justify-content-center w-75 min-vh-100 h-100">
+      <Container
+          className="d-flex flex-column justify-content-center w-75 min-vh-100 h-100">
         <Row>
           <Col>
             <motion.div
@@ -64,7 +71,8 @@ const About = React.forwardRef((props, ref) => {
               background in building robust and scalable Web and Mobile
               applications using Java and Scala, I constantly strive to stay
               updated with the latest industry trends and best practices. In my
-              free time, I indulge in various activities, including immersing myself in the captivating world of
+              free time, I indulge in various activities, including immersing
+              myself in the captivating world of
               video games, delving into thought-provoking books that broaden my
               horizons, embracing new learning opportunities that expand my
               skill set, and reflecting on my personal journey through
@@ -72,17 +80,17 @@ const About = React.forwardRef((props, ref) => {
             </motion.p>
           </Col>
         </Row>
-        <Row className="h-100"
-
-        >
+        <Row className="h-100">
           <Col className="h-15 w-15 align-bottom">
             <motion.img
-                ref={headerRef}
+                onClick={scrollToBottom}
+                ref={contentRef}
                 animate={contentControl}
                 initial="hidden"
                 transition={transition}
                 variants={fade}
-                src={DownArrow} className="align-bottom"/>
+                whileHover={{scale: 1.5}} whileTap={{scale: 1.5}}
+                src={DownArrow}/>
 
           </Col>
         </Row>
