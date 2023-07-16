@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.4ac89c0a.chunk.css",
-    "main.js": "/portfolio/static/js/main.a3d56ceb.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.a3d56ceb.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.a27944cf.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.a27944cf.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.8fed2963.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.8fed2963.js.map",
     "static/css/2.e1ebf2f7.chunk.css": "/portfolio/static/css/2.e1ebf2f7.chunk.css",
@@ -27,7 +27,7 @@
     "static/media/chits-1.71cdf14f.png": "/portfolio/static/media/chits-1.71cdf14f.png",
     "static/media/coding.2a4f998a.svg": "/portfolio/static/media/coding.2a4f998a.svg",
     "static/media/css3.de380515.svg": "/portfolio/static/media/css3.de380515.svg",
-    "static/media/down-arrow.6da2f0c6.svg": "/portfolio/static/media/down-arrow.6da2f0c6.svg",
+    "static/media/down-arrow.f5e1d4a3.svg": "/portfolio/static/media/down-arrow.f5e1d4a3.svg",
     "static/media/font.68976a23.woff": "/portfolio/static/media/font.68976a23.woff",
     "static/media/gcash-1.648d3aca.png": "/portfolio/static/media/gcash-1.648d3aca.png",
     "static/media/gcash-2.5ec91e60.png": "/portfolio/static/media/gcash-2.5ec91e60.png",
@@ -87,6 +87,6 @@
     "static/css/2.e1ebf2f7.chunk.css",
     "static/js/2.f59605ee.chunk.js",
     "static/css/main.4ac89c0a.chunk.css",
-    "static/js/main.a3d56ceb.chunk.js"
+    "static/js/main.a27944cf.chunk.js"
   ]
 }
