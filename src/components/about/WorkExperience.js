@@ -10,14 +10,14 @@ const WorkExperience = React.forwardRef((props, ref) => {
   const [contentRef,contentView] = useInView();
 
   const transition = {
-    duration: 1,
+    duration: 1.5,
     ease: "easeInOut"
   };
 
   const fade = {
     visible: {
       opacity: 1,
-      transition: {duration: 1, delay: 1},
+      transition: {duration: 1, delay: 0.5},
     },
     hidden: {
       opacity: 0,
@@ -35,7 +35,7 @@ const WorkExperience = React.forwardRef((props, ref) => {
 
   }, [contentControl, contentRef, contentView]);
   return (
-      <Container className="d-flex flex-column justify-content-center w-75 h-100 p-5" fluid={true}>
+      <Container className="d-flex flex-column justify-content-center w-100 h-100 min-vh-100 pt-5">
         <Row>
           <Col>
             <motion.div

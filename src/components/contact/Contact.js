@@ -15,14 +15,14 @@ export default function Contact() {
     const [visible, setVisible] = useState(false);
 
     const transition = {
-        duration: 1,
+        duration: 1.5,
         ease: "easeInOut"
     };
 
     const fade = {
         visible: {
             opacity: 1,
-            transition: {duration: 1, delay: 1},
+            transition: {duration: 1, delay: 0.5},
         },
         hidden: {
             opacity: 0,

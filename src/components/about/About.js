@@ -1,8 +1,10 @@
 import React, {useEffect} from 'react';
 import {motion, useAnimation} from "framer-motion";
 import {useInView} from "react-intersection-observer";
-import {Col, Container, Row} from "react-bootstrap";
+import {Col, Container, Image, Row} from "react-bootstrap";
 import SectionTitle from "../gui/SectionTitle";
+import DownArrow from "../../assets/img/icon/down-arrow.svg";
+
 import "./about.css"
 
 const About = React.forwardRef((props, ref) => {
@@ -11,14 +13,14 @@ const About = React.forwardRef((props, ref) => {
   const [contentRef, contentInView] = useInView();
 
   const transition = {
-    duration: 2,
+    duration: 1.5,
     ease: "easeInOut"
   };
 
   const fade = {
     visible: {
       opacity: 1,
-      transition: {duration: 1, delay: 1},
+      transition: {duration: 1, delay: 0.5},
     },
     hidden: {
       opacity: 0,
@@ -35,7 +37,7 @@ const About = React.forwardRef((props, ref) => {
   }, [headerInView, contentControl, contentInView]);
 
   return (
-      <Container className="d-flex flex-column justify-content-center w-75 h-100">
+      <Container className="d-flex flex-column justify-content-center w-75 min-vh-100 h-100">
         <Row>
           <Col>
             <motion.div
@@ -68,6 +70,20 @@ const About = React.forwardRef((props, ref) => {
               skill set, and reflecting on my personal journey through
               journaling.
             </motion.p>
+          </Col>
+        </Row>
+        <Row className="h-100"
+
+        >
+          <Col className="h-15 w-15 align-bottom">
+            <motion.img
+                ref={headerRef}
+                animate={contentControl}
+                initial="hidden"
+                transition={transition}
+                variants={fade}
+                src={DownArrow} className="align-bottom"/>
+
           </Col>
         </Row>
       </Container>

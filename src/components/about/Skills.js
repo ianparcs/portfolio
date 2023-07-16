@@ -46,14 +46,14 @@ const Skill = React.forwardRef((props, ref) => {
     };
 
     const transition = {
-        duration: 1,
+        duration: 1.5,
         ease: "easeInOut",
     };
     
     const fade = {
         visible: {
             opacity: 1,
-            transition: {duration: 1, delay: 1},
+            transition: {duration: 1, delay: 0.5},
         },
         hidden: {
             opacity: 0,
@@ -72,7 +72,7 @@ const Skill = React.forwardRef((props, ref) => {
     }, [ contentControl, visible, setVisible, contentInView]);
 
     return (
-        <Container className="d-flex flex-column justify-content-center w-75 h-100 p-5">
+        <Container className="d-flex flex-column justify-content-center w-75 min-vh-100 h-100 p-5">
             <Row>
                 <Col>
                     <motion.div
