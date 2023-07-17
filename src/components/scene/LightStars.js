@@ -15,7 +15,7 @@ function LightStars({count}) {
   });
 
   const [geo, mat, coords] = useMemo(() => {
-    const geo = new THREE.SphereBufferGeometry(0.4, 5, 5);
+    const geo = new THREE.SphereBufferGeometry(0.4, 15, 15);
     const mat = new THREE.MeshBasicMaterial(
         {color: new THREE.Color('#ffffff')});
 
