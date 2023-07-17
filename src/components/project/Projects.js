@@ -89,7 +89,7 @@ const Projects = () => {
   const spaceMatrixDesc = "My first game developed in Java. A Shoot 'em up type of game."
 
   return (
-      <Container className="w-100 pl-5 pr-5 bg-black" fluid={true}>
+      <Container className="w-100 pl-5 pr-5 bg-black" fluid="true">
         <Row className="pt-4 pb-4 pr-4">
           <h2>Work Projects</h2>
           <ColoredLine color="white"/>

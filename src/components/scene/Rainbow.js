@@ -30,10 +30,11 @@ function RainbowLight() {
   return (
       <>
         <Line
-            points={[[-500, -100.5, 50], [0, 0.7, 0.5], [0, 0, 0]]}
-            vertexColors={[[5, 5, 5], [0, 0, 0]]}
+            points={[[-100, -25, 5], [0, 0.8, 0.5]]}
+            // points={[[0.1,0.9,0.3], [-90, -20,15]]}
+            vertexColors={[[11,11,11], [0,0,0]]}
             color="white"
-            lineWidth={20}
+            lineWidth={15}
         />
         <Line
             ref={ref1}
