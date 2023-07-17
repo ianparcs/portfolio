@@ -12,7 +12,7 @@ import Context from "./HoverContext"
 
 extend({EffectComposer, RenderPass, OutlinePass, ShaderPass, UnrealBloomPass, SMAAPass, GlitchPass});
 
-function Effects({children, mouseClick}) {
+function Effects({children}) {
     const composer = useRef();
     const {scene, gl, size, camera} = useThree();
     const aspect = useMemo(() => new Vector2(size.width, size.height), [size]);
@@ -30,20 +30,20 @@ function Effects({children, mouseClick}) {
 
             <effectComposer ref={composer} args={[gl]}>
                 <renderPass attachArray="passes" scene={scene} camera={camera}/>
-                <unrealBloomPass attachArray="passes" args={[aspect, 1.35, 1, 0]}/>
+                <unrealBloomPass attachArray="passes" args={[aspect, 1, 0.5, 0]}/>
                 <sMAAPass attachArray="passes"/>
                 <outlinePass
                     attachArray="passes"
                     args={[aspect, scene, camera]}
                     selectedObjects={hovered}
                     visibleEdgeColor="white"
-                    edgeStrength={12}
-                    edgeGlow={1}
-                    edgeThickness={1}
+                    edgeStrength={2}
+                    edgeGlow={2.5}
+                    edgeThickness={1.5}
                 />
-                <glitchPass attachArray="passes" factor={0.5}
-                            curF={mouseClick ? 0.1 : 0}
-                            randX={mouseClick ? 0.74 : 0}
+                <glitchPass attachArray="passes"
+                            curF={Object.keys(hovered).length !== 0 ? 0.05 : 0}
+                            randX={Object.keys(hovered).length !== 0 ? 0.21 : 0}
                 />
             </effectComposer>
         </Context.Provider>

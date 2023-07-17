@@ -8,22 +8,22 @@ import Effects from "./Effect";
 import "../../assets/css/scene.css"
 
 function Scene() {
-    const [onPress, setPress] = useState(false);
 
     return (
         <>
             <div id="canvas">
                 <Canvas
-                    pixelRatio={window.devicePixelRatio}
-                    onPointerUp={() => setPress(false)}
-                    onPointerDown={() => setPress(true)}>
+                    pixelRatio={window.devicePixelRatio}>
                     <color attach="background" args={['black']}/>
                     <HeaderText/>
-                    <Effects mouseClick={onPress}>
+
+                    <Effects>
                         <Pyramid/>
-                        <LightStars count={2000}/>
+                        <LightStars count={4000}/>
                         <RainbowLight/>
+
                     </Effects>
+
                 </Canvas>
 
 
