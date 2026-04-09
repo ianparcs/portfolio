@@ -70,9 +70,12 @@ const About = React.forwardRef((props, ref) => {
                         Hey, I’m Ian! I’ve spent the past 8 years building Android apps and Java projects, and I’ve
                         never really stopped creating. I love making games whether in Java or Godot sometimes small,
                         sometimes experimental, always fun.
+                        <br/>
+                        <br/>
 
                         When I’m not in front of my laptop, I’m probably outside. Hiking, running, exploring anything
-                        that gets me moving. I’m all about learning new things and enjoying the process along the way. 😋
+                        that gets me moving. I’m all about learning new things and enjoying the process along the way.
+                        😋
                     </motion.p>
                 </Col>
             </Row>
