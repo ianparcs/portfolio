@@ -6,7 +6,8 @@
     cursor: none;
     color: white;
     overscroll-behavior-y: contain !important;
-    font-family: Roboto, serif !important;
+    font-family: Helvetica Neue !important;
+    font-size: 1.01em
 }
 
 

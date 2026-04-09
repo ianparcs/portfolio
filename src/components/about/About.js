@@ -8,93 +8,89 @@ import DownArrow from "../../assets/img/icon/down-arrow.svg";
 import "./about.css"
 
 const About = React.forwardRef((props, ref) => {
-  const contentControl = useAnimation();
-  const [headerRef, headerInView] = useInView();
-  const [contentRef, contentInView] = useInView();
+    const contentControl = useAnimation();
+    const [headerRef, headerInView] = useInView();
+    const [contentRef, contentInView] = useInView();
 
-  const transition = {
-    duration: 1.5,
-    ease: "easeInOut"
-  };
-
-  const fade = {
-    visible: {
-      opacity: 1,
-      transition: {duration: 1, delay: 0.5},
-    },
-    hidden: {
-      opacity: 0,
-      transition: {duration: 1}
-    },
-  };
-
-  const scrollToBottom = () => {
-    ref.current?.scrollIntoView({
-      behavior: "smooth"
-    })
-  }
-
-  useEffect(() => {
-    const sequence = async () => {
-      return await contentControl.start("visible");
+    const transition = {
+        duration: 1.5,
+        ease: "easeInOut"
     };
-    sequence();
 
-  }, [headerInView, contentControl, contentInView]);
+    const fade = {
+        visible: {
+            opacity: 1,
+            transition: {duration: 1, delay: 0.5},
+        },
+        hidden: {
+            opacity: 0,
+            transition: {duration: 1}
+        },
+    };
 
-  return (
-      <Container
-          className="d-flex flex-column justify-content-center w-75 min-vh-100 h-100">
-        <Row>
-          <Col>
-            <motion.div
-                ref={headerRef}
-                animate={contentControl}
-                initial="hidden"
-                transition={transition}
-                variants={fade}>
-              <SectionTitle title="About" textColor="text-white"/>
-            </motion.div>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <motion.p
-                className="pb-5 pr-1 pl-1"
-                ref={contentRef}
-                id="content"
-                initial="hidden"
-                animate={contentControl}
-                transition={transition}
-                variants={fade}>
-              A passionate Software Developer with a strong
-              background in building robust and scalable Web and Mobile
-              applications using Java and Scala, I constantly strive to stay
-              updated with the latest industry trends and best practices. In my
-              free time, I indulge in various activities, including immersing
-              myself in the captivating world of
-              video games, delving into thought-provoking books that broaden my
-              horizons, embracing new learning opportunities that expand my
-              skill set, and reflecting on my personal journey through
-              journaling.
-            </motion.p>
-          </Col>
-        </Row>
-        <Row className="h-100">
-          <Col className="h-15 w-15 align-bottom">
-            <motion.img
-                onClick={scrollToBottom}
-                ref={contentRef}
-                animate={contentControl}
-                initial="hidden"
-                transition={transition}
-                variants={fade}
-                whileHover={{scale: 1.5}} whileTap={{scale: 1.5}}
-                src={DownArrow}/>
+    const scrollToBottom = () => {
+        ref.current?.scrollIntoView({
+            behavior: "smooth"
+        })
+    }
 
-          </Col>
-        </Row>
-      </Container>
-  );
+    useEffect(() => {
+        const sequence = async () => {
+            return await contentControl.start("visible");
+        };
+        sequence();
+
+    }, [headerInView, contentControl, contentInView]);
+
+    return (
+        <Container
+            className="d-flex flex-column justify-content-center w-75 min-vh-100 h-100">
+            <Row>
+                <Col>
+                    <motion.div
+                        ref={headerRef}
+                        animate={contentControl}
+                        initial="hidden"
+                        transition={transition}
+                        variants={fade}>
+                        <SectionTitle title="About" textColor="text-white"/>
+                    </motion.div>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <motion.p
+                        className="pb-5 pr-5 pl-5"
+                        ref={contentRef}
+                        id="content"
+                        initial="hidden"
+                        animate={contentControl}
+                        transition={transition}
+                        variants={fade}>
+                        Hey, I’m Ian! I’ve spent the past 8 years building Android apps and Java projects, and I’ve
+                        never really stopped creating. I love making games whether in Java or Godot sometimes small,
+                        sometimes experimental, always fun.
+
+                        When I’m not in front of my laptop, I’m probably outside. Hiking, running, exploring anything
+                        that gets me moving. I’m all about learning new things and enjoying the process along the way. 😋
+                    </motion.p>
+                </Col>
+            </Row>
+            <Row className="h-100">
+                <Col className="h-15 w-15 align-bottom">
+                    <motion.img
+                        onClick={scrollToBottom}
+                        ref={contentRef}
+                        animate={contentControl}
+                        initial="hidden"
+                        transition={transition}
+                        variants={fade}
+                        whileHover={{scale: 1.5}} whileTap={{scale: 1.5}}
+                        src={DownArrow}/>
+
+                </Col>
+            </Row>
+        </Container>
+    );
 });
 export default About;
